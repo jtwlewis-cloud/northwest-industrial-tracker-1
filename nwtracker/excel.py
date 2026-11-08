@@ -391,9 +391,13 @@ def build_workbook(path, recs, changes, coverage, pairs, history, run_date, excl
         rows.append([c["change_type"], c["property_id"], c.get("property_name") or rec.get("property_name"),
                      rec.get("county"), rec.get("submarket"), rec.get("max_sqft"), rec.get("availability_status"),
                      ", ".join(rec.get("agents") or []), c["details"]])
-    if not changes:
+    baseline = any(r.get("change_flag") == "Baseline (first run)" for r in recs)
+    if not changes and baseline:
         rows.append(["No previous search – this run is the baseline", None, None, None, None, None, None, None,
                      "Every property in the Master sheet is flagged 'Baseline (first run)'. Changes will be listed from the next run."])
+    elif not changes:
+        rows.append(["No changes", None, None, None, None, None, None, None,
+                     "No new, changed or removed advertisements since the previous search."])
     _write_table(ws, 1, ["Change", "Property ID", "Property", "County", "Submarket", "Max sq ft", "Status", "Agents",
                          "Details"], rows, "Changes", widths=[16, 11, 40, 17, 24, 12, 22, 30, 80],
                  formats=[None, None, None, None, None, "#,##0", None, None, None])

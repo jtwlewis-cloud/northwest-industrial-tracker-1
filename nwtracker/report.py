@@ -85,8 +85,10 @@ def write_report(path, run_id, run_date, results, records, changes, pairs, exclu
         w(f"| {label} | {miss} | {miss / n:.0%} |")
     w("\n## 5. Changes since previous search\n")
     cnt = Counter(c["change_type"] for c in changes)
-    if not changes:
+    if not changes and any(r.get("change_flag") == "Baseline (first run)" for r in records):
         w("This is the first (baseline) run – no previous search to compare against.")
+    elif not changes:
+        w("No new, changed or removed advertisements since the previous search.")
     for k, v in cnt.items():
         w(f"- {k}: {v}")
     w("\n## 6. Exclusions applied\n")

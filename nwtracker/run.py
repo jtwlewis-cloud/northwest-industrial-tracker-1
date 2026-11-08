@@ -67,6 +67,76 @@ def flag_overlaps(records: list[dict], listings, pairs, rec_of_listing) -> list[
     return rows
 
 
+def rebuild(db_path: str, out_dir, run_id: int | None = None) -> int:
+    """Regenerate the workbook and report for the latest completed run from
+    the database only (no web requests)."""
+    import json
+    from types import SimpleNamespace
+
+    db = HistoryDB(db_path)
+    c = db.conn
+    latest_id = c.execute("SELECT MAX(run_id) FROM runs WHERE finished_at IS NOT NULL").fetchone()[0]
+    row = c.execute("SELECT run_id, started_at FROM runs WHERE finished_at IS NOT NULL AND run_id=?",
+                    (run_id or latest_id,)).fetchone()
+    if not row:
+        log.error("No completed run in %s", db_path)
+        return 1
+    run_id, run_date = row["run_id"], row["started_at"][:10]
+    prev = db.previous_run_id(run_id)
+    records = [json.loads(r["data"]) for r in c.execute("SELECT data FROM property_snapshots WHERE run_id=?", (run_id,))]
+    flags = {r["property_id"]: r["change_type"] for r in c.execute("SELECT property_id, change_type FROM changes WHERE run_id=?", (run_id,))}
+    first = {r["property_id"]: r["first_seen"] for r in c.execute("SELECT property_id, first_seen FROM properties")}
+    for r in records:
+        r["change_flag"] = "Baseline (first run)" if prev is None else flags.get(r["property_id"], "Unchanged")
+        r["first_seen"] = first.get(r["property_id"], run_date)
+    changes = []
+    for r in c.execute("SELECT * FROM changes WHERE run_id=?", (run_id,)):
+        ch = dict(r)
+        if prev and ch["change_type"] in ("Removed", "Merged", "Not re-checked"):
+            old = c.execute("SELECT data FROM property_snapshots WHERE run_id=? AND property_id=?", (prev, ch["property_id"])).fetchone()
+            ch["record"] = json.loads(old["data"]) if old else {}
+        changes.append(ch)
+    coverage = []
+    for r in c.execute("SELECT * FROM agent_runs WHERE run_id=?", (run_id,)):
+        coverage.append(SimpleNamespace(agent=r["agent"], website=r["website"], status=r["status"], method=r["method"],
+                                        search_urls=json.loads(r["search_urls"] or "[]"), listings_scanned=r["scanned"],
+                                        candidates=r["candidates"], included=[None] * r["included"],
+                                        excluded=[None] * r["excluded"], brochures_read=r["brochures_read"],
+                                        brochure_errors=r["brochure_errors"], duration_s=r["duration_s"],
+                                        message=r["message"], errors=json.loads(r["errors"] or "[]")))
+    order = {AGENTS[k].name: i for i, k in enumerate(AGENTS)}
+    coverage.sort(key=lambda x: order.get(x.agent, 99))
+    lst = {}
+    for r in c.execute("SELECT url, data FROM listings WHERE run_id=?", (run_id,)):
+        lst[r["url"]] = json.loads(r["data"])
+    pairs = []
+    for r in c.execute("SELECT * FROM duplicate_reviews WHERE run_id=?", (run_id,)):
+        a, b = lst.get(r["url_a"], {}), lst.get(r["url_b"], {})
+        label = "Merged – same property" if r["decision"] == "merge" else "Possible duplicate – manual check"
+        if r["decision"] == "merge" and "flagged" in (r["reason"] or ""):
+            label = "Merged – check (sizes differ)"
+        pairs.append({**dict(r), "decision_label": label, "agent_a": a.get("agent"), "name_a": a.get("title"),
+                      "size_a": a.get("max_sqft"), "agent_b": b.get("agent"), "name_b": b.get("title"), "size_b": b.get("max_sqft")})
+    pairs.sort(key=lambda p: (p["decision"] != "ambiguous", p["property_id_a"] or ""))
+    excluded_counts: dict = {"_reasons": Counter()}
+    for r in c.execute("SELECT agent, excluded_reason FROM listings WHERE run_id=? AND included=0", (run_id,)):
+        excluded_counts[r["agent"]] = excluded_counts.get(r["agent"], 0) + 1
+        excluded_counts["_reasons"][(r["agent"], (r["excluded_reason"] or "").split(" (")[0])] += 1
+    n_listings = c.execute("SELECT COUNT(*) FROM listings WHERE run_id=? AND included=1", (run_id,)).fetchone()[0]
+    latest = out_dir / config.WORKBOOK_NAME
+    dated = out_dir / "history" / config.WORKBOOK_NAME.replace(".xlsx", f" {run_date} run{run_id}.xlsx")
+    history = [h for h in db.history_summary() if h["run_id"] <= run_id]
+    build_workbook(dated, records, changes, coverage, pairs, history, run_date, excluded_counts)
+    if run_id == latest_id:
+        shutil.copyfile(dated, latest)
+    report = write_report(out_dir / "reports" / f"Run Report {run_date} run{run_id}.md", run_id, run_date, coverage,
+                          records, changes, pairs, excluded_counts, [None] * n_listings)
+    if run_id == latest_id:
+        shutil.copyfile(report, out_dir / "Latest Run Report.md")
+    log.info("Rebuilt workbook and report for run %s from the database: %s", run_id, dated)
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="North West Industrial & Logistics availability tracker")
     ap.add_argument("--agents", help="comma-separated agent keys to run (default: all). Keys: " + ", ".join(AGENTS))
@@ -74,6 +144,8 @@ def main(argv=None) -> int:
     ap.add_argument("--delay", type=float, default=config.REQUEST_DELAY_SECONDS, help="seconds between requests per host")
     ap.add_argument("--db", default=str(config.DB_PATH))
     ap.add_argument("--output-dir", default=str(config.OUTPUT_DIR))
+    ap.add_argument("--rebuild", nargs="?", const=0, type=int, metavar="RUN",
+                    help="regenerate a run's workbook and report from the database, no web requests (default: latest run)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
 
@@ -85,6 +157,8 @@ def main(argv=None) -> int:
     (out_dir / "history").mkdir(parents=True, exist_ok=True)
     (out_dir / "reports").mkdir(parents=True, exist_ok=True)
 
+    if args.rebuild is not None:
+        return rebuild(args.db, out_dir, args.rebuild or None)
     keys = [k.strip() for k in args.agents.split(",")] if args.agents else list(AGENTS)
     fetcher = Fetcher(delay=args.delay)
     geo = Geo(fetcher, args.db)

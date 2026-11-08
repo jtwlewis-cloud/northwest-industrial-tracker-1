@@ -77,6 +77,8 @@ python -m nwtracker --no-brochures       # faster, web pages only
 python -m nwtracker --agents jll,b8,dtre # selected agents only
 python -m nwtracker --delay 2            # slower, gentler crawling (seconds between requests per site)
 python -m nwtracker -v                   # debug logging
+python -m nwtracker --rebuild            # regenerate the latest workbook + report from the database (no web access)
+python -m nwtracker --rebuild 2          # regenerate the workbook + report for run 2
 ```
 
 Agent keys: `jll, cbre, cushman, avisonyoung, willsill, b8, dtre, cpp, bc, daviesharrison, legatowen, lsh,
@@ -157,11 +159,13 @@ county/size band and by submarket, changes since the previous run and a supply h
 | `listing_map` | Listing URL → stable property ID |
 | `properties` | Property register: first/last seen, active/removed |
 | `property_snapshots` | Full merged record per property per run (for trend analysis) |
-| `changes` | New / Changed / Removed / Re-listed / Not re-checked events |
+| `changes` | New / Changed / Removed / Re-listed / Merged / Not re-checked events |
 | `duplicate_reviews` | Merge and ambiguous-match decisions with reasons |
 | `geo_cache` | Cached postcode lookups |
 
 A property whose only agents could not be searched in a run is reported as "Not re-checked" rather than removed.
+When a newly searched agent's listing shows that two previously separate records are the same property, the
+retired ID is reported as "Merged" (still advertised) rather than "Removed".
 
 ## Responsible access
 
