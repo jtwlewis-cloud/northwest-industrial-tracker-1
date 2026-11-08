@@ -106,8 +106,11 @@ LIMITATIONS = [
     "instructions appear only where another of the 12 agents markets the same property jointly.",
     "Cushman & Wakefield's UK site currently publishes no lease listings and its sale listings contain no North West "
     "industrial property; the search ran successfully but returned nothing in scope.",
-    "CPP (Commercial Property Partners) is a Sheffield/Nottingham-based agency; its industrial listings were checked "
-    "and only North West postcodes are kept.",
+    "CPP (Commercial Property Partners) markets property across the North West, Yorkshire and the Midlands; all its "
+    "industrial and trade-counter listings were checked and only North West locations kept.",
+    "Brochures hosted on cdn.sharplaunch.com (Avison Young) and AgencyPilot (Legat Owen, LSH) are linked in the "
+    "schedule but not read, because those hosts' robots.txt files disallow automated access. Brochures over 20 MB "
+    "are also skipped.",
     "JLL's robots.txt disallows its search pages, so JLL listings are enumerated from its published property sitemap. "
     "Multi-unit JLL schemes load their unit-by-unit accommodation table with JavaScript; the scheme-level size range "
     "is recorded and the number of availabilities is noted.",

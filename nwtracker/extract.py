@@ -377,7 +377,7 @@ def classify_availability(marketing_status: str, text: str, avail_date: str, bui
     if flags["under_offer"] and not ms:
         return "Under Offer", conflicts
     if build == "Design & Build" or (flags["proposed"] and not flags["vacant"] and build != "Existing – Refurbished"
-                                     and not flags["under_construction"]):
+                                     and not flags["under_construction"] and not avail_date):
         if flags["vacant"]:
             conflicts.append("Text mentions both design & build and immediate availability")
         return "Proposed / Design and Build", conflicts

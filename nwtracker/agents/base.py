@@ -218,6 +218,7 @@ class AgentScraper:
         if flags["investment"] and not re.search(r"to let|vacant|available|owner[\s-]occupi|for occupation", (ms + " " + full).lower()):
             l.excluded_reason = "Investment sale without occupier availability"
             return
+        self.sanity(l)
         if not l.build_status:
             l.build_status = ex.build_status(full)
         l.availability_status, conf = ex.classify_availability(l.marketing_status, full, l.availability_date, l.build_status)
@@ -239,12 +240,25 @@ class AgentScraper:
         if "web" not in l.sources:
             l.sources.insert(0, "web")
 
+    @staticmethod
+    def sanity(l: Listing) -> None:
+        if l.eaves_m and l.eaves_m > 18 and (l.max_sqft or 0) < 100_000 and l.build_status != "Design & Build" \
+                and "design" not in l.property_type.lower():
+            l.notes.append(f"Eaves figure of {l.eaves_m}m found in text looks implausible for this size – not used")
+            l.eaves_m = None
+        if l.dock_doors and l.max_sqft and l.dock_doors > max(4, l.max_sqft / 4000):
+            l.notes.append(f"{l.dock_doors} dock doors found in text looks implausible for this size – not used")
+            l.dock_doors = None
+
     def read_brochure(self, l: Listing) -> None:
         for url in l.brochure_urls[:2]:
             try:
                 text = brochure_text(self.f, url)
-            except (RobotsDisallowed, AccessBlocked) as e:
-                l.notes.append(f"Brochure not read: {e}")
+            except RobotsDisallowed:
+                l.notes.append("Brochure linked but not read – the brochure host's robots.txt disallows automated access")
+                return
+            except AccessBlocked as e:
+                l.notes.append(f"Brochure not read – access refused ({e})")
                 return
             except Exception as e:
                 self.result.brochure_errors += 1
@@ -254,6 +268,7 @@ class AgentScraper:
                 self.result.brochures_read += 1
                 before = l.availability_status
                 ex.apply_text(l, text, "brochure")
+                self.sanity(l)
                 bflags = ex.marketing_flags(text)
                 if bflags["under_offer"] and before != "Under Offer":
                     l.conflicts.append("Brochure text mentions under offer / let agreed – check")

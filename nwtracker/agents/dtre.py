@@ -71,6 +71,12 @@ class DTRE(AgentScraper):
         ag = re.search(r"please contact our agents:\s*\|(.{0,500}?)(?:\|\s*Featured|$)", text, re.I)
         if ag:
             l.agent_contacts = ex.clean(ag.group(1).replace("| Contact agent", ";").replace("|", " "))
+        if not l.agent_contacts:
+            names = re.findall(r"\|\s*([A-Z][a-z]+(?: [A-Z][a-z'\-]+)+)\s*\|\s*T:\s*([\d ]+)", text)
+            if names:
+                l.agent_contacts = "; ".join(f"{n} T: {t.strip()}" for n, t in names)
+            else:
+                l.agent_contacts = self.contacts(soup.find("main") or soup) or "DTRE – 020 3328 9080 (no individual agent named on listing)"
         l.brochure_urls = self.pdf_links(soup, l.url)
         m = re.search(r"Energy Performance Rating\s*\|([^|]*\|){0,3}", text)
         if m and "exempt" in m.group(0).lower():

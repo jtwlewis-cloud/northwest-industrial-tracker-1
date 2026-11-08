@@ -84,7 +84,7 @@ class B8RealEstate(AgentScraper):
             l.marketing_status = "For Sale"
         elif "TO LET" in lead:
             l.marketing_status = "To Let"
-        ag = re.search(r"\|\s*Agent\s*\|(.{0,300}?)(?:\|\s*Other properties|$)", text)
+        ag = re.search(r"\|\s*Agents?\s*\|(.{0,300}?)(?:\|\s*Other properties|$)", text)
         if ag:
             l.agent_contacts = ex.clean(ag.group(1).replace("|", " "))
         l.brochure_urls = self.pdf_links(soup, l.url)

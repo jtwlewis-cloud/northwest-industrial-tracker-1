@@ -23,7 +23,10 @@ STOP = set("""unit units the and of at to a plot plots building road rd lane ln 
 industrial estate park business trading trade centre center court place point hub works distribution logistics warehouse
 north south east west greater manchester merseyside cheshire lancashire cumbria uk england liverpool warrington
 wigan bolton stockport salford trafford preston kirkby huyton speke runcorn widnes crewe for lease sale let to new
-nr near off phase site land""".split())
+nr near off phase site land park trafford speke knowsley haydock omega birchwood skelmersdale bootle runcorn
+widnes salford stretford wythenshawe bredbury ashton oldham rochdale bury heywood middleton leyland chorley preston
+blackburn burnley st helens wirral birkenhead ellesmere port chester crewe winsford northwich middlewich macclesfield
+congleton sandbach altrincham broadheath manchester's industrial/warehouse warehouse/industrial available""".split())
 
 KEY_FIELDS = ["max_sqft", "availability_status", "marketing_status", "rent_psf", "eaves_m", "epc", "price_text"]
 
@@ -52,10 +55,9 @@ def name_tokens(l: Listing) -> set:
 def name_sim(a: Listing, b: Listing) -> float:
     ta, tb = name_tokens(a), name_tokens(b)
     jac = len(ta & tb) / len(ta | tb) if ta and tb else 0.0
-    sa = (a.estate or a.property_name or a.title).lower()
-    sb = (b.estate or b.property_name or b.title).lower()
+    sa, sb = " ".join(sorted(ta)), " ".join(sorted(tb))
     seq = SequenceMatcher(None, sa, sb).ratio() if sa and sb else 0.0
-    return max(jac, seq * 0.9)
+    return max(jac, seq * 0.85)
 
 
 def size_rel(a: Listing, b: Listing) -> float | None:
@@ -112,12 +114,13 @@ def compare(a: Listing, b: Listing) -> tuple[str, float, str]:
     if sr is None:
         if units_equal or ns >= 0.75:
             return "merge", score, desc
-        return ("ambiguous" if ns >= 0.4 else "distinct"), score, desc
+        return ("ambiguous" if ns >= 0.6 or (pa and pa == pb and ns >= 0.35) else "distinct"), score, desc
     if sr <= 0.05 and (units_equal or ns >= 0.3 or (pa and pa == pb and not ua and not ub)):
         return "merge", score, desc
     if sr <= 0.2 and (units_equal or ns >= 0.6):
         return "merge", score, desc + "; sizes differ – flagged"
-    if ns >= 0.4 or units_equal or (ua or ub) and ns >= 0.3:
+    same_pc = bool(pa and pa == pb)
+    if ns >= 0.6 or units_equal or (same_pc and ns >= 0.35):
         return "ambiguous", score, desc + "; possibly different unit/phase or estate-level vs unit-level listing"
     return "distinct", score, desc
 

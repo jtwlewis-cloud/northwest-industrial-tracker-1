@@ -34,7 +34,7 @@ class DaviesHarrison(AgentScraper):
         l.description = text
         l.property_type = "Office" if re.search(r"\boffice (suite|building|accommodation to let)\b", l.title, re.I) \
             else "Industrial / warehouse"
-        l.brochure_urls = self.pdf_links(soup, l.url)
+        l.brochure_urls = [re.sub(r"^https?://daviesharrison\.com", BASE, u) for u in self.pdf_links(soup, l.url)]
         l.agent_contacts = self.contacts(soup.find("main") or soup)
         names = re.findall(r"\|\s*([A-Z][a-z]+ [A-Z][a-z]+)\s*\|\s*0\d{3,4} \d{3} \d{4}", text)
         if names:

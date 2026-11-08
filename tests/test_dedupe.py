@@ -28,8 +28,8 @@ def test_different_units_same_estate_not_merged():
 
 
 def test_different_buildings_same_postcode_different_size_flagged_not_merged():
-    ls = [L("JLL", "a", "Haydock Point Building A", "WA11 9TH", 150000),
-          L("DTRE", "b", "Haydock Point Building B", "WA11 9TH", 60000)]
+    ls = [L("JLL", "a", "Florida Farm Building A", "WA11 9TH", 150000),
+          L("DTRE", "b", "Florida Farm Building B", "WA11 9TH", 60000)]
     groups, pairs = deduplicate(ls)
     assert len(groups) == 2
     assert any(p.decision == "ambiguous" for p in pairs)
@@ -63,3 +63,10 @@ def test_unit_tokens():
     assert unit_tokens("1&2") == frozenset({"1", "2"})
     assert unit_tokens("A1-A10") == frozenset({"A1-A10"})
     assert unit_tokens("") == frozenset()
+
+
+def test_generic_place_words_do_not_create_matches():
+    ls = [L("B8 Real Estate", "a", "Premier Park, Acheson Way, Trafford Park", "M17 1AA", 120000, la="Trafford"),
+          L("DTRE", "b", "Grand Central, Westinghouse Road, Trafford Park", "M17 1PQ", 16000, la="Trafford")]
+    groups, pairs = deduplicate(ls)
+    assert len(groups) == 2 and not pairs

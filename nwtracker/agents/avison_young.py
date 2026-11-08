@@ -58,9 +58,13 @@ class AvisonYoung(AgentScraper):
                 l.marketing_status = "Under Offer"
             lo, hi = it.get("availabilities_min_rent"), it.get("availabilities_max_rent")
             if lo or hi:
-                lo = lo or hi
-                l.rent_psf = float(lo)
-                l.rent_text = f"£{float(lo):.2f} psf" if not hi or hi == lo else f"£{float(lo):.2f}–£{float(hi):.2f} psf"
+                lo = float(lo or hi)
+                hi = float(hi or lo)
+                if hi <= 60:  # £ per sq ft
+                    l.rent_psf = lo
+                    l.rent_text = f"£{lo:.2f} psf" if hi == lo else f"£{lo:.2f}–£{hi:.2f} psf"
+                else:          # feed holds an annual rent for these units
+                    l.rent_text = f"£{lo:,.0f} pa" if hi == lo else f"£{lo:,.0f}–£{hi:,.0f} pa"
             if it.get("sale_price"):
                 l.price_text = f"£{int(float(it['sale_price'])):,}"
             l.description = ex.clean(it.get("meta_description") or it.get("description") or "")
