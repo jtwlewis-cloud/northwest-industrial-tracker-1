@@ -1,6 +1,6 @@
 # North West Industrial & Logistics Availability Tracker
 
-A reusable Python application that searches the public websites of 12 commercial property agents,
+A reusable Python application that searches the public websites of 18 commercial property agents,
 collects every advertised industrial and logistics property in the North West of England, removes
 duplicate (jointly marketed) listings, keeps a permanent history in SQLite and produces a dated,
 filterable Excel availability schedule with a market supply analysis.
@@ -32,6 +32,12 @@ filterable Excel availability schedule with a market supply analysis.
 | 10 | Davies Harrison | Availability tiles on the home page, detail pages |
 | 11 | Legat Owen | Industrial property filter, all pages, detail pages |
 | 12 | Lambert Smith Hampton | The site's own search endpoint, 180 km radius around the North West, detail pages |
+| 13 | Savills | North West industrial search (to let + for sale); listing data embedded in the server-rendered pages |
+| 14 | Knight Frank | Playwright renders the UK industrial search (to let + for sale) and pages through it; the data the page loads is read; NW postcodes kept |
+| 15 | Colliers | Checked each run; currently returns a Cloudflare bot challenge → recorded as **Blocked** (never bypassed) |
+| 16 | Taylor Weaver | Full property list page (use encoded in URL) + detail pages |
+| 17 | LM6 | Property search, all pages + detail pages |
+| 18 | Fisher German | Industrial to-rent and for-sale searches (England & Wales, all pages), NW postcodes kept, detail pages |
 
 PDF brochures linked from each in-scope listing are downloaded (max 20 MB, cached 7 days) and read with
 PyMuPDF (pdfplumber fallback) to fill specification fields the web page does not state.
@@ -60,23 +66,28 @@ python -m playwright install chromium      # only needed for Avison Young
 
 The machine needs outbound HTTPS to the agents' websites, `api.postcodes.io`, and the brochure hosts
 (`s3-eu-west-1.amazonaws.com`, `cdn.sharplaunch.com`, `hive.agencypilot.com`, `legatowencrm.agencypilot.com`,
-`pse-api.sharplaunch.com`, `sdk.sharplaunch.com`, `assets.cushmanwakefield.com`).
+`pse-api.sharplaunch.com`, `sdk.sharplaunch.com`, `assets.cushmanwakefield.com`, `assets.savills.com`,
+`api-v2.web.prd-knightfrank.com`, `content.knightfrank.com`).
 
 ## Running
 
 ```bash
-python -m nwtracker                      # full run: all 12 agents + brochures (≈20–30 min)
+python -m nwtracker                      # full run: all 18 agents + brochures (≈20–30 min)
 python -m nwtracker --no-brochures       # faster, web pages only
 python -m nwtracker --agents jll,b8,dtre # selected agents only
 python -m nwtracker --delay 2            # slower, gentler crawling (seconds between requests per site)
 python -m nwtracker -v                   # debug logging
 ```
 
-Agent keys: `jll, cbre, cushman, avisonyoung, willsill, b8, dtre, cpp, bc, daviesharrison, legatowen, lsh`.
+Agent keys: `jll, cbre, cushman, avisonyoung, willsill, b8, dtre, cpp, bc, daviesharrison, legatowen, lsh,
+savills, knightfrank, colliers, taylorweaver, lm6, fishergerman`.
+
+Sources considered but not included: **Novaloca** (its terms of use prohibit commercial use or storage of its
+listings without written permission) and **LoopNet** (CoStar's terms prohibit automated access).
 
 Each run:
 
-1. Searches the 12 agencies in parallel – each agent is an independent module, so one failing website
+1. Searches the 18 agencies in parallel – each agent is an independent module, so one failing website
    never stops the others (its status is recorded as Success / Partial / Failed / Blocked).
 2. Extracts the public listings and reads brochures.
 3. Matches listings to properties recorded in earlier runs (stable `NW-00001` style IDs).
@@ -183,7 +194,7 @@ tests/              pytest suite
 
 ## Known limitations
 
-See section 7 of `output/Latest Run Report.md` (regenerated every run). In short: CBRE blocks automated access;
+See section 7 of `output/Latest Run Report.md` (regenerated every run). In short: CBRE and Colliers block automated access;
 Cushman & Wakefield currently has no North West industrial listings online; some agents omit postcodes or
 specifications; image-only brochures cannot be read; and an online advertisement does not guarantee that
 space is still available today.

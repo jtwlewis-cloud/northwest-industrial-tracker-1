@@ -61,7 +61,7 @@ def write_report(path, run_id, run_date, results, records, changes, pairs, exclu
     multi = [r for r in records if len(r.get("agents", [])) > 1]
     merged = [p for p in pairs if p["decision"] == "merge"]
     amb = [p for p in pairs if p["decision"] == "ambiguous"]
-    w(f"- Properties marketed by more than one of the 12 agents (merged into one row): **{len(multi)}**")
+    w(f"- Properties marketed by more than one of the {len(results)} agents searched (merged into one row): **{len(multi)}**")
     w(f"- Listing pairs merged: {len(merged)} (of which flagged because sizes differ: "
       f"{sum(1 for p in merged if 'flagged' in p['reason'])})")
     w(f"- Ambiguous pairs left separate and flagged for manual checking: **{len(amb)}**")
@@ -102,13 +102,18 @@ def write_report(path, run_id, run_date, results, records, changes, pairs, exclu
 
 
 LIMITATIONS = [
-    "CBRE (cbre.co.uk) presents a Cloudflare bot challenge to automated clients. It was not bypassed, so CBRE "
-    "instructions appear only where another of the 12 agents markets the same property jointly.",
+    "CBRE (cbre.co.uk) and Colliers (colliers.com) present a Cloudflare bot challenge to automated clients. It was "
+    "not bypassed, so their instructions appear only where another searched agent markets the same property jointly.",
+    "Knight Frank and Fisher German publish UK-wide industrial searches; all pages are read and only North West "
+    "locations kept. Knight Frank's specification detail is limited to what its search data provides "
+    "(its property pages are rendered by script).",
+    "Novaloca and LoopNet are not searched: their terms of use prohibit commercial re-use/storage (Novaloca, "
+    "without written permission) or automated access (LoopNet).",
     "Cushman & Wakefield's UK site currently publishes no lease listings and its sale listings contain no North West "
     "industrial property; the search ran successfully but returned nothing in scope.",
     "CPP (Commercial Property Partners) markets property across the North West, Yorkshire and the Midlands; all its "
     "industrial and trade-counter listings were checked and only North West locations kept.",
-    "Brochures hosted on cdn.sharplaunch.com (Avison Young) and AgencyPilot (Legat Owen, LSH) are linked in the "
+    "Brochures hosted on cdn.sharplaunch.com (Avison Young) and AgencyPilot (Legat Owen, LSH, Taylor Weaver, LM6) are linked in the "
     "schedule but not read, because those hosts' robots.txt files disallow automated access. Brochures over 20 MB "
     "are also skipped.",
     "JLL's robots.txt disallows its search pages, so JLL listings are enumerated from its published property sitemap. "

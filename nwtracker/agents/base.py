@@ -105,8 +105,9 @@ class AgentScraper:
         emails, phones = [], []
         for a in soup.find_all("a", href=True):
             h = a["href"]
-            if h.startswith("mailto:"):
-                e = h[7:].split("?")[0].strip()
+            if h.lower().startswith("mailto:"):
+                m = re.search(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", h)
+                e = m.group(0) if m else ""
             elif "/cdn-cgi/l/email-protection#" in h:
                 e = self.decode_cfemail(h.split("#", 1)[1])
             else:
