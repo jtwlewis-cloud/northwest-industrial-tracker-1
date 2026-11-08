@@ -400,7 +400,7 @@ def build_workbook(path, recs, changes, coverage, pairs, history, run_date, excl
     for rr in range(2, len(rows) + 2):
         ws.cell(row=rr, column=9).alignment = WRAP
         t = ws.cell(row=rr, column=1).value
-        fill = NEW_FILL if t in ("New", "Re-listed") else CHG_FILL if t == "Changed" else FLAG_FILL if t == "Removed" else None
+        fill = NEW_FILL if t in ("New", "Re-listed") else CHG_FILL if t in ("Changed", "Merged") else FLAG_FILL if t == "Removed" else None
         if fill:
             ws.cell(row=rr, column=1).fill = fill
     ws.freeze_panes = "A2"

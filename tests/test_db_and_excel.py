@@ -71,3 +71,16 @@ def test_workbook_has_all_sheets(tmp_path):
     assert ws.freeze_panes == "D2"
     assert ws.tables  # filterable table
     assert wb["25,000–50,000 sq ft"].max_row == 2
+
+
+def test_merge_of_two_previous_records_is_not_reported_as_removed(tmp_path):
+    db = HistoryDB(tmp_path / "h.sqlite")
+    r1 = db.start_run(False)
+    a, b = rec(["u1"], "A", 30000), rec(["u2"], "A2", 30000, agents=("DTRE",))
+    db.assign_ids([a, b]); db.record(r1, [a, b], set()); db.finish_run(r1, "w", "d")
+    r2 = db.start_run(False)
+    ab = rec(["u1", "u2"], "A", 30000, agents=("JLL", "DTRE"))
+    db.assign_ids([ab])
+    changes = db.record(r2, [ab], set())
+    types = sorted(c["change_type"] for c in changes)
+    assert "Removed" not in types and "Merged" in types

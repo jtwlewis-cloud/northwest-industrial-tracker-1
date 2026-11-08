@@ -158,9 +158,17 @@ class HistoryDB:
                 changes.append({"change_type": "Changed", "property_id": pid, "details": "; ".join(diffs) or "minor change"})
             else:
                 rec["change_flag"] = "Unchanged"
-        # removals
+        # removals (or merges into another property record)
+        url_to_pid = {u: r["property_id"] for r in records for u in r.get("listing_urls", [])}
         for pid, old in prev.items():
             if pid in current_ids:
+                continue
+            merged_into = sorted({url_to_pid[u] for u in old.get("listing_urls", []) if u in url_to_pid})
+            if merged_into:
+                self.conn.execute("UPDATE properties SET active=0, removed_on=? WHERE property_id=?", (now, pid))
+                changes.append({"change_type": "Merged", "property_id": pid,
+                                "details": "Still advertised – now combined with " + ", ".join(merged_into)
+                                           + " (identified as the same property across agents)", "record": old})
                 continue
             agents = set(old.get("agents") or [])
             if agents and agents <= failed_agents:
