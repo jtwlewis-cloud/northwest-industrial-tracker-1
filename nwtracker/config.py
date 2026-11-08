@@ -11,6 +11,7 @@ HISTORY_DIR = OUTPUT_DIR / "history"
 REPORT_DIR = OUTPUT_DIR / "reports"
 LOG_DIR = ROOT / "logs"
 DB_PATH = DATA_DIR / "nw_industrial.sqlite"
+HISTORY_EXPORT_DIR = DATA_DIR / "history"   # committed per-run exports the database is rebuilt from
 WORKBOOK_NAME = "North West Industrial & Logistics Availability.xlsx"
 
 USER_AGENT = (

@@ -2,10 +2,13 @@
 property IDs, per-run snapshots and detected changes."""
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import sqlite3
+import zlib
 from datetime import datetime
+from pathlib import Path
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS runs (
@@ -42,6 +45,26 @@ TRACKED = {
 }
 
 
+SLIM_DROP = ("description", "raw")
+
+
+def slim(d: dict) -> dict:
+    """Drop bulky free text before storage (specification summary is kept)."""
+    return {k: v for k, v in d.items() if k not in SLIM_DROP}
+
+
+def pack(obj) -> bytes:
+    return zlib.compress(json.dumps(obj, default=str, separators=(",", ":")).encode(), 9)
+
+
+def unpack(v):
+    if v is None:
+        return {}
+    if isinstance(v, (bytes, memoryview)):
+        return json.loads(zlib.decompress(bytes(v)))
+    return json.loads(v)
+
+
 def fingerprint(rec: dict) -> str:
     key = {k: (sorted(rec.get(k) or []) if k == "agents" else rec.get(k)) for k in TRACKED}
     return hashlib.sha1(json.dumps(key, sort_keys=True, default=str).encode()).hexdigest()
@@ -76,10 +99,14 @@ class HistoryDB:
             (run_id, r.agent, r.website, r.status, r.method, json.dumps(r.search_urls), r.listings_scanned,
              r.candidates, len(r.included), len(r.excluded), json.dumps(r.errors[:50]), r.brochures_read,
              r.brochure_errors, r.duration_s, r.message))
-        for l in r.included + r.excluded:
+        for l in r.included:
             self.conn.execute("INSERT INTO listings VALUES (?,?,?,?,?,?,?)",
-                              (run_id, l.agent, l.url, None, int(not l.excluded_reason), l.excluded_reason,
-                               json.dumps(l.to_dict(), default=str)))
+                              (run_id, l.agent, l.url, None, 1, "", pack(slim(l.to_dict()))))
+        for l in r.excluded:
+            brief = {"agent": l.agent, "title": l.title, "postcode": l.postcode, "local_authority": l.local_authority,
+                     "property_type": l.property_type, "max_sqft": l.max_sqft}
+            self.conn.execute("INSERT INTO listings VALUES (?,?,?,?,?,?,?)",
+                              (run_id, l.agent, l.url, None, 0, l.excluded_reason, pack(brief)))
         self.conn.commit()
 
     # ----------------------------------------------------------- IDs
@@ -117,7 +144,7 @@ class HistoryDB:
         prev: dict[str, dict] = {}
         if prev_run:
             for r in self.conn.execute("SELECT property_id, data FROM property_snapshots WHERE run_id=?", (prev_run,)):
-                prev[r["property_id"]] = json.loads(r["data"])
+                prev[r["property_id"]] = unpack(r["data"])
         changes = []
         current_ids = set()
         for rec in records:
@@ -126,17 +153,16 @@ class HistoryDB:
             fp = fingerprint(rec)
             rec["fingerprint"] = fp
             self.conn.execute("INSERT INTO property_snapshots VALUES (?,?,?,?)",
-                              (run_id, pid, fp, json.dumps(rec, default=str)))
+                              (run_id, pid, fp, pack(slim(rec))))
             existing = self.conn.execute("SELECT * FROM properties WHERE property_id=?", (pid,)).fetchone()
             if existing is None:
                 self.conn.execute("INSERT INTO properties VALUES (?,?,?,?,?,?,?,?,?)",
-                                  (pid, run_id, now, run_id, now, 1, None, fp, json.dumps(rec, default=str)))
+                                  (pid, run_id, now, run_id, now, 1, None, fp, None))
                 rec["first_seen"] = now
             else:
                 rec["first_seen"] = existing["first_seen"]
                 self.conn.execute("UPDATE properties SET last_seen_run=?, last_seen=?, active=1, removed_on=NULL, "
-                                  "fingerprint=?, data=? WHERE property_id=?",
-                                  (run_id, now, fp, json.dumps(rec, default=str), pid))
+                                  "fingerprint=? WHERE property_id=?", (run_id, now, fp, pid))
             if prev_run is None:
                 rec["change_flag"] = "Baseline (first run)"
                 continue
@@ -204,3 +230,75 @@ class HistoryDB:
             FROM runs r LEFT JOIN property_snapshots s ON s.run_id = r.run_id
             WHERE r.finished_at IS NOT NULL GROUP BY r.run_id ORDER BY r.run_id""").fetchall()
         return [dict(r) for r in rows]
+
+
+# ------------------------------------------------------------------ portable history
+# The SQLite file is rebuilt from small per-run exports so the repository does
+# not carry an ever-growing binary. data/history/run-NNNN.json.gz holds one run;
+# data/history/state.json.gz holds the property register, URL→ID map, weekly
+# summaries and the postcode cache.
+RUN_TABLES = ("runs", "agent_runs", "listings", "property_snapshots", "changes", "duplicate_reviews")
+STATE_TABLES = ("properties", "listing_map", "geo_cache", "weekly_reports")
+PACKED = {("listings", "data"), ("property_snapshots", "data")}
+
+
+def _rows(conn, table, where="", args=()):
+    cur = conn.execute(f"SELECT * FROM {table} {where}", args)
+    cols = [d[0] for d in cur.description]
+    out = []
+    for row in cur.fetchall():
+        d = dict(zip(cols, row))
+        for c in cols:
+            if (table, c) in PACKED:
+                d[c] = unpack(d[c])
+        out.append(d)
+    return out
+
+
+def _table_exists(conn, t):
+    return conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (t,)).fetchone() is not None
+
+
+def export_history(conn, folder: Path, run_ids=None) -> None:
+    folder.mkdir(parents=True, exist_ok=True)
+    ids = run_ids or [r[0] for r in conn.execute("SELECT run_id FROM runs WHERE finished_at IS NOT NULL")]
+    for rid in ids:
+        payload = {t: _rows(conn, t, "WHERE run_id=?", (rid,)) for t in RUN_TABLES}
+        with gzip.open(folder / f"run-{rid:04d}.json.gz", "wt", encoding="utf-8") as f:
+            json.dump(payload, f, default=str, separators=(",", ":"))
+    state = {t: _rows(conn, t) for t in STATE_TABLES if _table_exists(conn, t)}
+    with gzip.open(folder / "state.json.gz", "wt", encoding="utf-8") as f:
+        json.dump(state, f, default=str, separators=(",", ":"))
+
+
+def import_history(db_path: Path, folder: Path) -> int:
+    """Create the database from exports (used on a fresh checkout). Returns runs imported."""
+    files = sorted(folder.glob("run-*.json.gz"))
+    if not files:
+        return 0
+    db = HistoryDB(db_path)
+    from .weekly import WEEKLY_SCHEMA
+    db.conn.executescript(WEEKLY_SCHEMA)
+    db.conn.execute("CREATE TABLE IF NOT EXISTS geo_cache (key TEXT PRIMARY KEY, value TEXT)")
+
+    def insert(table, rows):
+        for d in rows:
+            for (t, c) in PACKED:
+                if t == table and c in d:
+                    d[c] = pack(d[c])
+            cols = ",".join(d)
+            db.conn.execute(f"INSERT OR REPLACE INTO {table} ({cols}) VALUES ({','.join('?' * len(d))})", list(d.values()))
+
+    for fp in files:
+        with gzip.open(fp, "rt", encoding="utf-8") as f:
+            payload = json.load(f)
+        for t in RUN_TABLES:
+            insert(t, payload.get(t, []))
+    st = folder / "state.json.gz"
+    if st.exists():
+        with gzip.open(st, "rt", encoding="utf-8") as f:
+            state = json.load(f)
+        for t in STATE_TABLES:
+            insert(t, state.get(t, []))
+    db.conn.commit()
+    return len(files)

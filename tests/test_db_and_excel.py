@@ -84,3 +84,19 @@ def test_merge_of_two_previous_records_is_not_reported_as_removed(tmp_path):
     changes = db.record(r2, [ab], set())
     types = sorted(c["change_type"] for c in changes)
     assert "Removed" not in types and "Merged" in types
+
+
+def test_history_export_import_round_trip(tmp_path):
+    from nwtracker.db import export_history, import_history, unpack
+    db = HistoryDB(tmp_path / "h.sqlite")
+    r1 = db.start_run(False)
+    a = rec(["u1"], "A", 30000)
+    a["description"] = "long text " * 100
+    db.assign_ids([a]); db.record(r1, [a], set()); db.finish_run(r1, "w", "d")
+    export_history(db.conn, tmp_path / "hist")
+    n = import_history(tmp_path / "fresh.sqlite", tmp_path / "hist")
+    assert n == 1
+    fresh = HistoryDB(tmp_path / "fresh.sqlite")
+    snap = unpack(fresh.conn.execute("SELECT data FROM property_snapshots").fetchone()[0])
+    assert snap["property_name"] == "A" and "description" not in snap
+    assert fresh.conn.execute("SELECT property_id FROM listing_map WHERE url='u1'").fetchone()[0] == a["property_id"]

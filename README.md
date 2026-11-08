@@ -12,7 +12,8 @@ filterable Excel availability schedule with a market supply analysis.
 | `output/North West Industrial & Logistics Availability.xlsx` | Latest schedule (19 worksheets) |
 | `output/history/… <date> run<N>.xlsx` | Dated copy of every run |
 | `output/Latest Run Report.md` | Coverage, totals, duplicates, missing information, limitations |
-| `data/nw_industrial.sqlite` | Persistent history database (all runs, listings, snapshots, changes) |
+| `data/history/` | Persistent history: one compressed export per run + current state (the SQLite database is rebuilt from these) |
+| `output/weekly/` | Weekly new-stock reports (Excel + summary) |
 
 ---
 
@@ -99,10 +100,34 @@ Each run:
 7. Writes a new dated workbook plus `output/North West Industrial & Logistics Availability.xlsx` (latest).
 8. Highlights changes (green = new, yellow = changed) and lists them on *Changes Since Last Search*.
 
-To run it automatically, schedule the command, e.g. weekly with cron:
+## Weekly new-stock report
+
+```bash
+python -m nwtracker.weekly               # latest run vs the run about 7 days earlier
+```
+
+Produces `output/weekly/NW New Industrial Stock - week ending <date>.xlsx` (+ a short `.md` summary, and
+`Latest Weekly New Stock.xlsx`) with:
+
+* **Summary** – new properties and floor space to market, split into existing buildings vs pipeline; returned to
+  market; removed (let / sold / withdrawn); net change; breakdowns by size band, county, submarket and agent
+  (joint instructions count for each agent); quoted rents on new stock.
+* **New to Market**, **Returned to Market**, **Removed from Market**, **New Joint Agents** – property lists with links.
+* **Newly Covered Sources** – listings that appear only because an agent was added to the tracker that week. These
+  are *not* counted as new stock, so coverage changes never inflate the weekly figures.
+* **Weekly Trend** – one row per weekly report, building up a time series of new supply and take-up.
+
+A property counts as new to market only if an agent already being searched at the comparison run has a new
+advertisement for it.
+
+## Scheduling
+
+The full search and the weekly report run automatically every Sunday morning as a scheduled Claude Code task
+(fresh cloud session in the `northwest-industrial-tracker` environment), which commits the new workbook, weekly
+report and history export to the repository. To run it yourself on a server instead, use cron, e.g.:
 
 ```
-0 6 * * MON cd /path/to/northwest-industrial-tracker-1 && python -m nwtracker >> logs/cron.log 2>&1
+40 6 * * SUN cd /path/to/northwest-industrial-tracker-1 && python -m nwtracker && python -m nwtracker.weekly >> logs/cron.log 2>&1
 ```
 
 Logs for every run are written to `logs/`.
@@ -151,6 +176,11 @@ county/size band and by submarket, changes since the previous run and a supply h
 
 ## Database (`data/nw_industrial.sqlite`)
 
+The SQLite file is a working copy and is not committed. Each run is exported to `data/history/run-NNNN.json.gz`
+(about 0.6 MB) plus `data/history/state.json.gz`; on a fresh checkout the database is rebuilt from these
+automatically. Long descriptions are not stored (the specification summary and all extracted fields are).
+
+
 | Table | Contents |
 |---|---|
 | `runs` | One row per run |
@@ -162,6 +192,7 @@ county/size band and by submarket, changes since the previous run and a supply h
 | `changes` | New / Changed / Removed / Re-listed / Merged / Not re-checked events |
 | `duplicate_reviews` | Merge and ambiguous-match decisions with reasons |
 | `geo_cache` | Cached postcode lookups |
+| `weekly_reports` | Headline figures of each weekly new-stock report (trend) |
 
 A property whose only agents could not be searched in a run is reported as "Not re-checked" rather than removed.
 When a newly searched agent's listing shows that two previously separate records are the same property, the

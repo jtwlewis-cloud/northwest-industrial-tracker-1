@@ -10,9 +10,9 @@ from datetime import date, datetime
 
 from . import config
 from .agents import AGENTS
-from .db import HistoryDB
+from .db import HistoryDB, export_history, import_history, unpack
 from .dedupe import deduplicate, merge_group
-from .excel import build_workbook
+from .excel import build_workbook, spec_summary
 from .geo import Geo
 from .http import Fetcher
 from .report import write_report
@@ -67,6 +67,22 @@ def flag_overlaps(records: list[dict], listings, pairs, rec_of_listing) -> list[
     return rows
 
 
+def ensure_db(db_path: str) -> None:
+    """On a fresh checkout the SQLite file is absent: rebuild it from the exports."""
+    from pathlib import Path
+    p = Path(db_path)
+    if p.exists() and p.stat().st_size > 0:
+        import sqlite3
+        try:
+            if sqlite3.connect(str(p)).execute("SELECT COUNT(*) FROM runs").fetchone()[0]:
+                return
+        except sqlite3.Error:
+            pass
+    n = import_history(p, config.HISTORY_EXPORT_DIR)
+    if n:
+        log.info("Rebuilt history database from %d run exports in %s", n, config.HISTORY_EXPORT_DIR)
+
+
 def rebuild(db_path: str, out_dir, run_id: int | None = None) -> int:
     """Regenerate the workbook and report for the latest completed run from
     the database only (no web requests)."""
@@ -83,7 +99,7 @@ def rebuild(db_path: str, out_dir, run_id: int | None = None) -> int:
         return 1
     run_id, run_date = row["run_id"], row["started_at"][:10]
     prev = db.previous_run_id(run_id)
-    records = [json.loads(r["data"]) for r in c.execute("SELECT data FROM property_snapshots WHERE run_id=?", (run_id,))]
+    records = [unpack(r["data"]) for r in c.execute("SELECT data FROM property_snapshots WHERE run_id=?", (run_id,))]
     flags = {r["property_id"]: r["change_type"] for r in c.execute("SELECT property_id, change_type FROM changes WHERE run_id=?", (run_id,))}
     first = {r["property_id"]: r["first_seen"] for r in c.execute("SELECT property_id, first_seen FROM properties")}
     for r in records:
@@ -94,7 +110,7 @@ def rebuild(db_path: str, out_dir, run_id: int | None = None) -> int:
         ch = dict(r)
         if prev and ch["change_type"] in ("Removed", "Merged", "Not re-checked"):
             old = c.execute("SELECT data FROM property_snapshots WHERE run_id=? AND property_id=?", (prev, ch["property_id"])).fetchone()
-            ch["record"] = json.loads(old["data"]) if old else {}
+            ch["record"] = unpack(old["data"]) if old else {}
         changes.append(ch)
     coverage = []
     for r in c.execute("SELECT * FROM agent_runs WHERE run_id=?", (run_id,)):
@@ -108,7 +124,7 @@ def rebuild(db_path: str, out_dir, run_id: int | None = None) -> int:
     coverage.sort(key=lambda x: order.get(x.agent, 99))
     lst = {}
     for r in c.execute("SELECT url, data FROM listings WHERE run_id=?", (run_id,)):
-        lst[r["url"]] = json.loads(r["data"])
+        lst[r["url"]] = unpack(r["data"])
     pairs = []
     for r in c.execute("SELECT * FROM duplicate_reviews WHERE run_id=?", (run_id,)):
         a, b = lst.get(r["url_a"], {}), lst.get(r["url_b"], {})
@@ -157,6 +173,7 @@ def main(argv=None) -> int:
     (out_dir / "history").mkdir(parents=True, exist_ok=True)
     (out_dir / "reports").mkdir(parents=True, exist_ok=True)
 
+    ensure_db(args.db)
     if args.rebuild is not None:
         return rebuild(args.db, out_dir, args.rebuild or None)
     keys = [k.strip() for k in args.agents.split(",")] if args.agents else list(AGENTS)
@@ -188,6 +205,8 @@ def main(argv=None) -> int:
         rec = merge_group(g)
         rec["last_verified"] = run_date
         rec["count_in_totals"] = True
+        if not rec.get("specification"):
+            rec["specification"] = spec_summary(rec)
         rec["dup_flag"] = ""
         if rec.get("same_agent_repeats"):
             rec["notes"].append("Agent advertises this property on more than one page")
@@ -219,6 +238,7 @@ def main(argv=None) -> int:
                           records, changes, pair_rows, excluded_counts, listings)
     shutil.copyfile(report, out_dir / "Latest Run Report.md")
     db.finish_run(run_id, str(latest), str(dated), notes=f"log: {logfile}")
+    export_history(db.conn, config.HISTORY_EXPORT_DIR, [run_id])
     log.info("Run %s complete: %d unique properties from %d listings. Workbook: %s", run_id, len(records),
              len(listings), latest)
     return 0
