@@ -110,7 +110,7 @@ def dock_doors(text: str) -> int | None:
     m = re.search(NUM + r"\s*(?:x\s*|no\.?\s*)?(?:dock(?:[\s-]*level(?:ler)?)?|loading dock)s?\b(?:\s+(?:loading|access|leveller|level))*\s*(?:doors?|bays?|levell?ers?|loading|and\b|,|\()?", t, re.I)
     if m:
         return _n(m.group(1))
-    m = re.search(r"dock(?:[\s-]*level)?\s*(?:loading\s*)?doors?\s*[:x(]\s*(\d{1,3})", t, re.I)
+    m = re.search(r"dock(?:[\s-]*level(?:l?ers?)?)?\s*(?:loading\s*)?(?:doors?)?\s*[:x(\-–]\s*(\d{1,3})\b", t, re.I)
     if m:
         return int(m.group(1))
     return None
@@ -121,7 +121,7 @@ def level_doors(text: str) -> int | None:
     m = re.search(NUM + r"\s*(?:x\s*|no\.?\s*)?(?:(?:electric(?:ally|al)?|electronic(?:ally)?|manual(?:ly)?|operated|roller|shutter|full[\s-]height|large|new)\s+)*(?:level[\s-]*access|ground[\s-]*level|surface[\s-]*level|drive[\s-]*in|level)\s+(?:electric(?:ally operated)?\s+|electronic\s+|roller\s+shutter\s+|loading\s+|access\s+)*(?:doors?|shutters?|loading)", t, re.I)
     if m:
         return _n(m.group(1))
-    m = re.search(r"level[\s-]*access\s*(?:loading\s*)?doors?\s*[:x(]\s*(\d{1,3})", t, re.I)
+    m = re.search(r"level[\s-]*access\s*(?:loading\s*)?(?:doors?)?\s*[:x(\-–]\s*(\d{1,3})\b", t, re.I)
     if m:
         return int(m.group(1))
     return None
@@ -129,7 +129,7 @@ def level_doors(text: str) -> int | None:
 
 def yard_depth(text: str) -> float | None:
     t = clean(text)
-    for p in (r"yard depth\s*(?:of|:|up to)?\s*(?:approx\.?\s*|c\.?\s*|circa\s*)?(\d{1,3}(?:\.\d)?)\s*m",
+    for p in (r"yard depths?\s*(?:of|:|up to|-|–)?\s*(?:up to)?\s*(?:approx\.?\s*|c\.?\s*|circa\s*)?(\d{1,3}(?:\.\d)?)\s*m",
               r"(\d{1,3}(?:\.\d)?)\s*m(?:etres?|eters?)?\s*(?:deep\s+)?(?:service\s+|secure\s+|loading\s+|shared\s+)?yard(?:\s+depth)?\b(?!\s*area)",
               r"yards?\s+(?:of\s+)?(?:up to\s+)?(\d{1,3}(?:\.\d)?)\s*m(?:etres?)?\s*(?:deep|depth)"):
         m = re.search(p, t, re.I)

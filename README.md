@@ -23,7 +23,7 @@ filterable Excel availability schedule with a market supply analysis.
 |---|---|---|
 | 1 | JLL – property.jll.co.uk | Published property sitemap (robots.txt disallows the search pages) + structured JSON on each detail page |
 | 2 | CBRE – cbre.co.uk | Checked each run; currently returns a Cloudflare bot challenge → recorded as **Blocked** (never bypassed) |
-| 3 | Cushman & Wakefield | UK lease + sale search pages (server-rendered, paginated) |
+| 3 | Cushman & Wakefield | cushwakeproperty.co.uk (C&W's UK agency listings site): Logistics & Industrial search via the site's JSON search endpoint + detail pages |
 | 4 | Avison Young | Playwright renders the listings page; the JSON feed the page itself loads is read; static detail pages |
 | 5 | Williams Sillitoe | Property search filtered to Industrial, all pages, detail pages |
 | 6 | B8 Real Estate | All search-result pages, detail pages |
@@ -231,6 +231,6 @@ tests/              pytest suite
 ## Known limitations
 
 See section 7 of `output/Latest Run Report.md` (regenerated every run). In short: CBRE and Colliers block automated access;
-Cushman & Wakefield currently has no North West industrial listings online; some agents omit postcodes or
+some agents omit postcodes or
 specifications; image-only brochures cannot be read; and an online advertisement does not guarantee that
 space is still available today.

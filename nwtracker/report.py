@@ -114,8 +114,8 @@ LIMITATIONS = [
     "linked but not read.",
     "Novaloca and LoopNet are not searched: their terms of use prohibit commercial re-use/storage (Novaloca, "
     "without written permission) or automated access (LoopNet).",
-    "Cushman & Wakefield's UK site currently publishes no lease listings and its sale listings contain no North West "
-    "industrial property; the search ran successfully but returned nothing in scope.",
+    "Cushman & Wakefield is searched on cushwakeproperty.co.uk (its UK agency site); its brochures are hosted on "
+    "Novaloca's file server and are linked but not read.",
     "CPP (Commercial Property Partners) markets property across the North West, Yorkshire and the Midlands; all its "
     "industrial and trade-counter listings were checked and only North West locations kept.",
     "Brochures hosted on cdn.sharplaunch.com (Avison Young) and AgencyPilot (Legat Owen, LSH, Taylor Weaver, LM6) are linked in the "
