@@ -1,0 +1,172 @@
+{% macro src(o) %}{% if o %}{{ link(o.source, o.source_url) }}{% if o.source_type != 'official' %} *({{ o.source_type }})*{% endif %}{% else %}—{% endif %}{% endmacro %}
+{% macro bondrow(sid) %}{% set m = moves[sid] %}| {{ series[sid].label }} | {% if m.latest %}{{ m.latest.value | pct }}{% if m.stale %} ⚠ stale{% endif %}{% else %}{{ NV }}{% endif %} | {{ m.d1 | bps }}{% if '1d' in m.mixed_sources %}†{% endif %} | {{ m.d7 | bps }}{% if '7d' in m.mixed_sources %}†{% endif %} | {{ m.d30 | bps }}{% if '30d' in m.mixed_sources %}†{% endif %} | {{ m.latest.obs_date | d if m.latest else '—' }} | {{ src(m.latest) }} |{% endmacro %}
+# DAILY FINANCIAL & PROPERTY INVESTMENT BRIEFING
+
+**Date:** {{ report_date | d('%d %B %Y') }}
+**Reporting time:** 08:00 UK time
+<small>Generated {{ generated_at.strftime('%Y-%m-%d %H:%M UTC') }} · run `{{ run_id }}` · commentary source: {{ notes_source }}. Every figure shows its own observation date: markets close the previous business day, inflation is monthly, and property yields are published monthly or quarterly.</small>
+
+## Executive Summary
+
+{% if notes.get('Executive Summary') %}
+{{ notes['Executive Summary'] }}
+{% else %}
+{% for c in confirmed[:5] %}
+{{ loop.index }}. {{ c }}
+{% endfor %}
+{% endif %}
+
+## Table A — Government Bond Markets
+
+| Market | Latest Yield | Daily Change | 7-Day Change | 30-Day Change | Observation Date | Source |
+|---|---|---|---|---|---|---|
+{% for sid in ['UK_GILT_5Y','UK_GILT_10Y','US_UST_5Y','US_UST_10Y'] %}
+{{ bondrow(sid) }}
+{% endfor %}
+
+*Additional reference*
+
+| Market | Latest Yield | Daily Change | 7-Day Change | 30-Day Change | Observation Date | Source |
+|---|---|---|---|---|---|---|
+{% for sid in ['UK_GILT_2Y','UK_GILT_30Y','US_UST_2Y','US_UST_30Y'] %}
+{{ bondrow(sid) }}
+{% endfor %}
+
+**Yield curve (10Y less 5Y):** UK {% if curve_uk[0] is not none %}{{ curve_uk[0] | bps }} ({{ curve_uk[1] | d }}){% else %}{{ NV }} (5Y and 10Y not held for the same date){% endif %} · US {% if curve_us[0] is not none %}{{ curve_us[0] | bps }} ({{ curve_us[1] | d }}){% else %}{{ NV }}{% endif %}
+
+
+<small>Changes are in basis points (1 percentage point = 100bp). The 7-day and 30-day changes compare against the last observation on or before that many calendar days earlier. † = the comparison point comes from a different source or instrument than the latest figure, so treat it as indicative. UK gilt figures from the Bank of England's database are fitted par yields, not benchmark-gilt redemption yields. US figures are Treasury constant-maturity par yields.</small>
+
+## Table B — Interest Rates and Inflation
+
+| Indicator | Latest | Previous | Reporting Date | Trend | Source |
+|---|---|---|---|---|---|
+{% set br = moves['BOE_BANK_RATE'] %}
+| BoE Bank Rate | {{ br.latest.value | pct if br.latest else NV }} | {{ br.previous.value | pct if br.previous else '—' }} | {% if br.effective %}effective {{ br.effective | d }}{% elif br.latest %}as at {{ br.latest.obs_date | d }}{% endif %} | {% if br.d1 %}{{ br.d1 | bps }}{% else %}—{% endif %} | {{ src(br.latest) }} |
+{% set so = moves['SONIA'] %}
+| SONIA (overnight fixing) | {{ so.latest.value | pct(4) if so.latest else NV }} | {{ so.previous.value | pct(4) if so.previous else '—' }} | {{ so.latest.obs_date | d if so.latest else '' }} | {{ so.d1 | bps }} d/d | {{ src(so.latest) }} |
+{% set sw = moves['UK_SONIA_SWAP_5Y'] %}
+| 5Y SONIA swap (finance cost reference, not SONIA) | {{ sw.latest.value | pct if sw.latest else NV }} | {{ sw.previous.value | pct if sw.previous else '—' }} | {{ sw.latest.obs_date | d if sw.latest else '' }} | {{ sw.d30 | bps }} 30d | {{ src(sw.latest) }} |
+{% set fl, fu = moves['FED_TARGET_LOWER'], moves['FED_TARGET_UPPER'] %}
+| US Fed funds target range | {% if fl.latest and fu.latest %}{{ '%.2f' % fl.latest.value }}–{{ '%.2f' % fu.latest.value }}%{% else %}{{ NV }}{% endif %} | {% if fl.previous and fu.previous %}{{ '%.2f' % fl.previous.value }}–{{ '%.2f' % fu.previous.value }}% (to {{ fl.previous.obs_date | d }}){% else %}—{% endif %} | {% if fu.effective %}effective {{ fu.effective | d }}{% elif fu.latest %}as at {{ fu.latest.obs_date | d }}{% endif %} | — | {{ src(fu.latest) }} |
+{% for sid in ['UK_CPI_YOY','UK_CPIH_YOY','UK_CORE_CPI_YOY','US_CPI_YOY','US_CORE_CPI_YOY'] %}
+{% set m = moves[sid] %}
+| {{ series[sid].label }} | {{ m.latest.value | pct(1) if m.latest else NV }} | {{ m.previous.value | pct(1) if m.previous else '—' }} | {% if m.latest %}{{ m.latest.obs_date | d('%B %Y') }}{% if m.latest.publication_date %} (published {{ m.latest.publication_date | d }}){% endif %}{% endif %} | {{ inflation_trend[sid] }} | {{ src(m.latest) }} |
+{% endfor %}
+
+{% set nr = ons_meta.get('UK_CPI_YOY', {}).get('next_release') %}
+**Next ONS inflation release:** {{ nr or NV }}{% if nr %} ([ONS release calendar](https://www.ons.gov.uk/releasecalendar)){% endif %} · **Next MPC decision:** {{ next_mpc | d if next_mpc else NV }}
+
+<small>Trend compares the last three monthly readings: a move of more than 0.15pp is "accelerating" or "moderating"; anything smaller is "broadly stable". US annual rates are calculated from the BLS not-seasonally-adjusted index (via FRED) and rounded to one decimal place, the same way BLS rounds its headline. SONIA here is the overnight fixing, not term SONIA or SONIA swap rates.</small>
+
+### Interest rate outlook
+
+{{ notes.get('Interest Rate Outlook') or 'Market-implied expectations for the next MPC decision: Not verified. No reliable market-implied pricing (e.g. OIS or SONIA futures) was available to this run.' }}
+
+## Table C — UK Prime Property Investment Yields
+
+| Sector | Latest Yield | Basis | Previous Yield | Movement | Evidence Date | Source |
+|---|---|---|---|---|---|---|
+{% for r in property_rows %}
+{% if r.latest %}
+| {{ r.label }}{% if r.latest.substitution_note %} ‡{% endif %} | {{ r.latest.display }} | {{ r.latest.basis }} | {{ r.previous.display if r.previous else '—' }} | {% if r.previous %}{{ r.move_bp | bps }}{% else %}—{% endif %} | {{ r.latest.period }}{% if r.age_days is not none and r.age_days > 45 %} ⚠ carried forward ({{ r.age_days }} days){% endif %} | {{ link(r.latest.provider, r.latest.source_url) }} |
+{% else %}
+| {{ r.label }} | {{ NV }} | — | — | — | — | No published evidence on file |
+{% endif %}
+{% endfor %}
+
+{% set subs = property_rows | selectattr('latest') | list %}
+{% for r in subs if r.latest.substitution_note %}
+{% if loop.first %}<small>‡ Substitutions and definitions:</small>
+
+{% endif %}
+- <small>**{{ r.label }}:** {{ r.latest.substitution_note }}</small>
+{% endfor %}
+
+<small>Prime yields come from agents' published research and are carried forward until a newer figure is published. They are **not** daily valuations. Movement is the change between the two latest published figures, using the midpoint where a range is quoted. **Net initial yield (NIY)** is current net income ÷ gross price including purchaser's costs. **Equivalent yield** is the internal rate of return, assuming current rent rises or falls to market rent at review or lease expiry. The two are not interchangeable. Where a source does not state the basis, the table says "Not stated".</small>
+
+## Table D — Property Yield Versus Gilts
+
+| Spread | Property yield (basis) | UK 10Y gilt | Latest spread | Spread at property evidence date | Previous comparable spread | Change | Driver |
+|---|---|---|---|---|---|---|---|
+{% for s in spreads %}
+| {{ s.label }} | {% if s.prop %}{{ s.prop.display }} ({{ s.prop.basis }}, {{ s.prop.period }}){% else %}{{ NV }}{% endif %} | {% if s.gilt %}{{ s.gilt.value | pct }} ({{ s.gilt.obs_date | d }}){% else %}{{ NV }}{% endif %} | {{ s.spread_bp | bps }} | {% if s.spread_at_evidence_bp is not none %}{{ s.spread_at_evidence_bp | bps }} (gilt {{ s.gilt_at_evidence.value | pct }}, {{ s.gilt_at_evidence.obs_date | d }}){% else %}{{ NV }}{% endif %} | {% if s.prev_spread_bp is not none %}{{ s.prev_spread_bp | bps }} ({{ s.prev_prop.period }}){% else %}{{ NV }}{% endif %} | {{ s.change_bp | bps }}{% if s.change_bp is not none %} (property {{ s.property_contrib_bp | bps }}, gilt {{ s.gilt_contrib_bp | bps }}){% endif %} | {{ s.driver }} |
+{% endfor %}
+
+<small>The spread is a simple yield gap: the property yield (midpoint of any quoted range) minus the UK 10-year gilt yield. It ignores rental growth, depreciation, capex, liquidity and leverage, so it is **not** a complete measure of investment risk or relative value. The gilt contribution has the opposite sign to the gilt move (a higher gilt yield narrows the spread). All rows use Knight Frank prime yields so the source is consistent. Knight Frank states the basis (NIY) only for prime distribution and the North West figure; for the office rows the basis is not stated.</small>
+
+{% if bond_chart_rel or spread_chart_rel %}
+## Trend Charts
+
+{% if bond_chart_rel %}![Government bond yields]({{ bond_chart_rel }})
+{% endif %}
+{% if bond_chart_note %}<small>{{ bond_chart_note }}</small>
+{% endif %}
+
+{% if spread_chart_rel %}![Property yield spreads]({{ spread_chart_rel }})
+
+{% endif %}
+{% endif %}
+{% if spread_chart_note %}<small>{{ spread_chart_note }}</small>
+{% endif %}
+
+## Market Commentary
+
+**Confirmed developments (from verified data)**
+
+{% for c in confirmed %}
+- {{ c }}
+{% endfor %}
+
+**Interpretation**
+
+{{ notes.get('Market Commentary', '') }}
+
+## North West Industrial & Logistics Outlook
+
+{{ notes.get('North West Industrial & Logistics Outlook', '') }}
+
+## Key Events Ahead (next 7 days)
+
+{% if events %}
+| Date | Event |
+|---|---|
+{% for e in events %}
+| {{ e.date | d('%a %d %b') }} | {{ link(e.event, e.source_url) }} |
+{% endfor %}
+{% else %}
+No scheduled events on file for the next seven days. Check the [ONS release calendar](https://www.ons.gov.uk/releasecalendar) and [BLS schedule](https://www.bls.gov/schedule/news_release/cpi.htm).
+{% endif %}
+
+## Data Quality and Retrieval Failures
+
+{% if failures %}
+{% for f in failures %}
+- ⚠ {{ f }}
+{% endfor %}
+{% else %}
+- All automated sources responded.
+{% endif %}
+{% for sid, m in moves.items() if m.latest is none %}
+- {{ series[sid].label }}: no verified observation held — reported as "Not verified".
+{% endfor %}
+{% for sid, m in moves.items() if m.stale %}
+- {{ series[sid].label }}: latest observation ({{ m.latest.obs_date | d }}) is stale.
+{% endfor %}
+{% for x in discrepancies %}
+{% if loop.first %}
+
+**Source discrepancies** (lower-priority figure not used):
+
+{% endif %}
+- {{ x.label }}, {{ x.obs_date }}: {{ '%.2f' % x.kept }}% ({{ x.kept_source }}) vs {{ '%.2f' % x.other }}% ({{ link(x.other_source, x.other_url) }}), a {{ x.diff_bp | bps }} difference. Often a different instrument, e.g. benchmark gilt redemption yield vs BoE fitted par yield.
+{% endfor %}
+{% if notes.get('Analyst Sources') %}
+
+### Analyst sources
+
+{{ notes['Analyst Sources'] }}
+{% endif %}
+
+---
+<small>Prepared automatically from public sources for professional information. It is not investment advice. Full observation history: `data/observations.csv`; audit trail: `data/audit_log.csv`; property evidence register: `data/property_yields.csv`.</small>
