@@ -31,3 +31,22 @@ def test_robots_allow_beats_shorter_disallow():
     r = Robots("User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n")
     assert r.allowed("https://x/wp-admin/admin-ajax.php")
     assert not r.allowed("https://x/wp-admin/options.php")
+
+
+def test_proxy_refusal_marks_host_dead(monkeypatch):
+    import pytest
+    import requests
+    from nwtracker.http import AccessBlocked, Fetcher
+    f = Fetcher(delay=0, respect_robots=False)
+    calls = []
+
+    def boom(*a, **k):
+        calls.append(1)
+        raise requests.exceptions.ProxyError("403 Forbidden")
+
+    monkeypatch.setattr(f.session, "request", boom)
+    with pytest.raises(AccessBlocked):
+        f.get("https://blocked.example/a.pdf")
+    with pytest.raises(AccessBlocked):
+        f.get("https://blocked.example/b.pdf")
+    assert len(calls) == 1  # second request short-circuits

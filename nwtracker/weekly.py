@@ -54,7 +54,10 @@ def find_runs(db: HistoryDB, days: int, run_id: int | None = None):
     earlier = [r for r in runs if r["run_id"] < cur["run_id"]]
     if not earlier:
         raise SystemExit("Need at least two completed runs to produce a weekly report")
-    old_enough = [r for r in earlier if (t_cur - datetime.fromisoformat(r["started_at"])).days >= days - 1]
+    # latest run at least half the period earlier (so same-day re-runs are skipped, but a
+    # run 6 days 23 hours earlier still counts as "last week")
+    old_enough = [r for r in earlier
+                  if (t_cur - datetime.fromisoformat(r["started_at"])).total_seconds() >= days * 86400 / 2]
     base = old_enough[-1] if old_enough else earlier[0]
     return cur, base
 

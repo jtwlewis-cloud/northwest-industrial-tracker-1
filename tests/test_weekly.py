@@ -46,3 +46,13 @@ def test_new_stock_vs_newly_covered_and_removed(tmp_path):
     wb = openpyxl.load_workbook(p)
     assert wb.sheetnames == ["Summary", "New to Market", "Returned to Market", "Removed from Market",
                              "New Joint Agents", "Newly Covered Sources", "Weekly Trend"]
+
+
+def test_baseline_is_previous_week_not_same_day(tmp_path):
+    from nwtracker.weekly import find_runs
+    db = HistoryDB(tmp_path / "h.sqlite")
+    for when in ("2026-11-08T07:00:00", "2026-11-09T07:00:00", "2026-11-15T06:41:00", "2026-11-15T09:00:00"):
+        rid = db.start_run(False)
+        db.conn.execute("UPDATE runs SET started_at=?, finished_at=? WHERE run_id=?", (when, when, rid))
+    cur, base = find_runs(db, 7)
+    assert cur["started_at"].startswith("2026-11-15T09") and base["started_at"].startswith("2026-11-09")

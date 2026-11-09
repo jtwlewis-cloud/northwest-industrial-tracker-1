@@ -1,10 +1,10 @@
 # North West Industrial & Logistics Availability – Run Report
 
-Run 3 · 2026-11-08
+Run 4 · 2026-11-09
 
 ## 1. Website coverage
 
-16 of 18 agent websites were searched successfully.
+17 of 19 agent websites were searched successfully.
 
 | Agent | Status | Listings scanned | NW industrial listings kept | Brochures read | Notes |
 |---|---|---:|---:|---:|---|
@@ -18,7 +18,7 @@ Run 3 · 2026-11-08
 | CPP (Commercial Property Partners) | Success | 250 | 52 | 50 | 52 NW industrial listings from 250 scanned |
 | BC Real Estate | Success | 72 | 66 | 58 | 66 NW industrial listings from 72 scanned |
 | Davies Harrison | Success | 27 | 18 | 16 | 18 NW industrial listings from 27 scanned |
-| Legat Owen | Success | 236 | 107 | 0 | 107 NW industrial listings from 236 scanned |
+| Legat Owen | Success | 234 | 107 | 0 | 107 NW industrial listings from 234 scanned |
 | Lambert Smith Hampton | Success | 307 | 2 | 0 | 2 NW industrial listings from 307 scanned |
 | Savills | Success | 136 | 129 | 116 | 129 NW industrial listings from 136 scanned |
 | Knight Frank | Success | 727 | 54 | 0 | 54 NW industrial listings from 727 scanned |
@@ -26,6 +26,7 @@ Run 3 · 2026-11-08
 | Taylor Weaver | Success | 140 | 74 | 0 | 74 NW industrial listings from 140 scanned |
 | LM6 | Success | 24 | 24 | 0 | 24 NW industrial listings from 24 scanned |
 | Fisher German | Success | 188 | 21 | 21 | 21 NW industrial listings from 188 scanned |
+| Indurent (landlord) | Success | 493 | 144 | 0 | 144 NW industrial listings from 493 scanned |
 
 **Agents that could not be checked:**
 
@@ -34,47 +35,47 @@ Run 3 · 2026-11-08
 
 ## 2. Property totals
 
-- Agent listings collected (NW industrial, after exclusions): **1,107**
-- Unique properties after de-duplication: **922**
-- Advertised available (excluding under offer): **855** properties, **43,507,437 sq ft** (max available area per property, no double counting)
+- Agent listings collected (NW industrial, after exclusions): **1,251**
+- Unique properties after de-duplication: **1,015**
+- Advertised available (excluding under offer): **928** properties, **43,790,076 sq ft** (max available area per property, no double counting)
 
 | Availability status | Properties | sq ft |
 |---|---:|---:|
-| Available Now | 187 | 10,908,119 |
-| Available at a Future Date | 38 | 2,216,544 |
-| Under Construction | 24 | 2,444,789 |
+| Available Now | 233 | 11,119,391 |
+| Available at a Future Date | 70 | 3,262,477 |
+| Under Construction | 50 | 2,519,826 |
 | Proposed / Design and Build | 63 | 10,190,503 |
-| Under Offer | 67 | 751,533 |
-| Availability Unconfirmed | 543 | 17,747,482 |
+| Under Offer | 87 | 937,152 |
+| Availability Unconfirmed | 512 | 16,697,879 |
 
 | County | Properties | Available sq ft |
 |---|---:|---:|
-| Greater Manchester | 375 | 15,312,453 |
-| Merseyside | 192 | 9,197,418 |
-| Cheshire | 238 | 12,309,981 |
-| Lancashire | 112 | 6,638,776 |
+| Greater Manchester | 419 | 15,360,771 |
+| Merseyside | 201 | 9,245,774 |
+| Cheshire | 251 | 12,344,197 |
+| Lancashire | 139 | 6,790,525 |
 | Cumbria | 5 | 48,809 |
 
 ## 3. Duplicate records
 
-- Properties marketed by more than one of the 18 agents searched (merged into one row): **140**
-- Listing pairs merged: 205 (of which flagged because sizes differ: 14)
-- Ambiguous pairs left separate and flagged for manual checking: **273**
-- Records excluded from floor-space totals to avoid double counting: 70
-- Records with conflicting information between agents (flagged): 132
+- Properties marketed by more than one of the 19 agents searched (merged into one row): **168**
+- Listing pairs merged: 276 (of which flagged because sizes differ: 16)
+- Ambiguous pairs left separate and flagged for manual checking: **380**
+- Records excluded from floor-space totals to avoid double counting: 84
+- Records with conflicting information between agents (flagged): 162
 
 Most common joint instructions:
 
-- B8 Real Estate + DTRE: 24
-- B8 Real Estate + Savills: 24
+- B8 Real Estate + Savills: 22
+- B8 Real Estate + DTRE: 13
+- B8 Real Estate + Indurent (landlord): 11
+- B8 Real Estate + DTRE + Indurent (landlord): 11
 - B8 Real Estate + JLL: 9
-- B8 Real Estate + Knight Frank: 8
+- B8 Real Estate + Knight Frank: 7
 - B8 Real Estate + CPP (Commercial Property Partners): 7
-- DTRE + Knight Frank: 5
 - B8 Real Estate + BC Real Estate: 5
-- DTRE + Legat Owen: 4
-- Avison Young + B8 Real Estate: 3
-- B8 Real Estate + Williams Sillitoe: 3
+- DTRE + Knight Frank: 5
+- Indurent (landlord) + Legat Owen: 5
 
 ## 4. Missing information (share of unique properties where not disclosed)
 
@@ -82,26 +83,28 @@ Most common joint instructions:
 |---|---:|---:|
 | Full postcode | 38 | 4% |
 | Floor area | 27 | 3% |
-| Eaves height | 317 | 34% |
-| Dock-level doors | 770 | 84% |
-| Level-access doors | 613 | 66% |
-| Yard depth | 793 | 86% |
-| Site area | 832 | 90% |
-| Power supply | 463 | 50% |
-| EPC rating | 633 | 69% |
-| BREEAM rating | 774 | 84% |
-| Sprinklers | 899 | 98% |
-| Availability date | 626 | 68% |
-| Rent £psf | 838 | 91% |
-| Freehold price | 792 | 86% |
-| Warehouse area | 820 | 89% |
-| Office area | 828 | 90% |
-| PDF brochure link | 61 | 7% |
+| Eaves height | 386 | 38% |
+| Dock-level doors | 863 | 85% |
+| Level-access doors | 702 | 69% |
+| Yard depth | 886 | 87% |
+| Site area | 925 | 91% |
+| Power supply | 517 | 51% |
+| EPC rating | 722 | 71% |
+| BREEAM rating | 849 | 84% |
+| Sprinklers | 992 | 98% |
+| Availability date | 650 | 64% |
+| Rent £psf | 825 | 81% |
+| Freehold price | 885 | 87% |
+| Warehouse area | 913 | 90% |
+| Office area | 921 | 91% |
+| PDF brochure link | 60 | 6% |
 | Agent contacts | 0 | 0% |
 
 ## 5. Changes since previous search
 
-No new, changed or removed advertisements since the previous search.
+- Changed: 46
+- New: 94
+- Merged: 1
 
 ## 6. Exclusions applied
 
@@ -123,12 +126,13 @@ No new, changed or removed advertisements since the previous search.
 | Davies Harrison | Outside North West coverage | 7 |
 | Davies Harrison | Investment sale without occupier availability | 2 |
 | Fisher German | Outside North West coverage | 167 |
+| Indurent (landlord) | Outside North West coverage | 349 |
 | JLL | Outside North West coverage | 518 |
 | JLL | Not industrial | 3 |
 | Knight Frank | Outside North West coverage | 673 |
 | Lambert Smith Hampton | Outside North West coverage | 257 |
 | Lambert Smith Hampton | Not industrial | 48 |
-| Legat Owen | Outside North West coverage | 123 |
+| Legat Owen | Outside North West coverage | 121 |
 | Legat Owen | Land / open storage without a building or design-and-build proposal | 6 |
 | Savills | Land / open storage without a building or design-and-build proposal | 7 |
 | Taylor Weaver | Not industrial | 66 |
@@ -138,6 +142,7 @@ No new, changed or removed advertisements since the previous search.
 
 - CBRE (cbre.co.uk) and Colliers (colliers.com) present a Cloudflare bot challenge to automated clients. It was not bypassed, so their instructions appear only where another searched agent markets the same property jointly.
 - Knight Frank and Fisher German publish UK-wide industrial searches; all pages are read and only North West locations kept. Knight Frank's specification detail is limited to what its search data provides (its property pages are rendered by script).
+- Indurent is a landlord, not an agency: its units are listed under 'Indurent (landlord)' and merged with the letting agents' listings where the same unit is marketed by both. Its brochures (vault.industrials.co.uk) are linked but not read.
 - Novaloca and LoopNet are not searched: their terms of use prohibit commercial re-use/storage (Novaloca, without written permission) or automated access (LoopNet).
 - Cushman & Wakefield's UK site currently publishes no lease listings and its sale listings contain no North West industrial property; the search ran successfully but returned nothing in scope.
 - CPP (Commercial Property Partners) markets property across the North West, Yorkshire and the Midlands; all its industrial and trade-counter listings were checked and only North West locations kept.

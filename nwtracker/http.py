@@ -96,6 +96,7 @@ class Fetcher:
         self._robots: dict[str, Robots] = {}
         self._glock = threading.Lock()
         self.request_count = 0
+        self._dead_hosts: set[str] = set()
 
     @property
     def session(self) -> requests.Session:
@@ -150,6 +151,8 @@ class Fetcher:
         if check_robots:
             self.check_robots(url)
         host = urlparse(url).netloc
+        if host in self._dead_hosts:
+            raise AccessBlocked(f"{host} is not reachable from this network (refused earlier in this run)")
         kw.setdefault("timeout", config.REQUEST_TIMEOUT)
         err: Exception | None = None
         for attempt in range(retries):
@@ -157,6 +160,9 @@ class Fetcher:
             try:
                 r = self.session.request(method, url, **kw)
                 self.request_count += 1
+            except requests.exceptions.ProxyError as e:
+                self._dead_hosts.add(host)
+                raise AccessBlocked(f"{host} refused by the network proxy (host not allowed): {e}") from e
             except requests.RequestException as e:
                 err = e
                 time.sleep(2 ** attempt)
