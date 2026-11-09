@@ -8,6 +8,7 @@ from .cpp import CPP
 from .cushman import Cushman
 from .davies_harrison import DaviesHarrison
 from .fisher_german import FisherGerman
+from .indurent import Indurent
 from .dtre import DTRE
 from .jll import JLL
 from .knight_frank import KnightFrank
@@ -37,4 +38,5 @@ AGENTS = {
     "taylorweaver": TaylorWeaver,
     "lm6": LM6,
     "fishergerman": FisherGerman,
+    "indurent": Indurent,
 }

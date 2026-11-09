@@ -1,6 +1,6 @@
 # North West Industrial & Logistics Availability Tracker
 
-A reusable Python application that searches the public websites of 18 commercial property agents,
+A reusable Python application that searches the public websites of 18 commercial property agents and the landlord Indurent,
 collects every advertised industrial and logistics property in the North West of England, removes
 duplicate (jointly marketed) listings, keeps a permanent history in SQLite and produces a dated,
 filterable Excel availability schedule with a market supply analysis.
@@ -39,6 +39,7 @@ filterable Excel availability schedule with a market supply analysis.
 | 16 | Taylor Weaver | Full property list page (use encoded in URL) + detail pages |
 | 17 | LM6 | Property search, all pages + detail pages |
 | 18 | Fisher German | Industrial to-rent and for-sale searches (England & Wales, all pages), NW postcodes kept, detail pages |
+| 19 | Indurent (landlord) | Public unit feed behind "Find your space" (all UK units, NW kept) + unit pages. Indurent's own status is mapped: available → Available Now; coming soon → Future Date; under development → Under Construction / D&B; under offer → Under Offer. Rent £psf is derived from the quoted annual rent ÷ size |
 
 PDF brochures linked from each in-scope listing are downloaded (max 20 MB, cached 7 days) and read with
 PyMuPDF (pdfplumber fallback) to fill specification fields the web page does not state.
@@ -73,7 +74,7 @@ The machine needs outbound HTTPS to the agents' websites, `api.postcodes.io`, an
 ## Running
 
 ```bash
-python -m nwtracker                      # full run: all 18 agents + brochures (≈20–30 min)
+python -m nwtracker                      # full run: all 19 sources + brochures (≈20–30 min)
 python -m nwtracker --no-brochures       # faster, web pages only
 python -m nwtracker --agents jll,b8,dtre # selected agents only
 python -m nwtracker --delay 2            # slower, gentler crawling (seconds between requests per site)
@@ -83,14 +84,14 @@ python -m nwtracker --rebuild 2          # regenerate the workbook + report for 
 ```
 
 Agent keys: `jll, cbre, cushman, avisonyoung, willsill, b8, dtre, cpp, bc, daviesharrison, legatowen, lsh,
-savills, knightfrank, colliers, taylorweaver, lm6, fishergerman`.
+savills, knightfrank, colliers, taylorweaver, lm6, fishergerman, indurent`.
 
 Sources considered but not included: **Novaloca** (its terms of use prohibit commercial use or storage of its
 listings without written permission) and **LoopNet** (CoStar's terms prohibit automated access).
 
 Each run:
 
-1. Searches the 18 agencies in parallel – each agent is an independent module, so one failing website
+1. Searches the 18 agencies and Indurent in parallel – each agent is an independent module, so one failing website
    never stops the others (its status is recorded as Success / Partial / Failed / Blocked).
 2. Extracts the public listings and reads brochures.
 3. Matches listings to properties recorded in earlier runs (stable `NW-00001` style IDs).

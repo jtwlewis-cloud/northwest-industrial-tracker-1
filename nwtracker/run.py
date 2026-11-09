@@ -218,6 +218,7 @@ def main(argv=None) -> int:
     db.assign_ids(records)
     pair_rows = flag_overlaps(records, listings, pairs, rec_of_listing)
     failed = {r.agent for r in results if r.status in ("Failed", "Blocked")}
+    failed |= {AGENTS[k].name for k in AGENTS if k not in keys}  # agents not searched in a partial run
     changes = db.record(run_id, records, failed)
     db.save_pairs(run_id, pair_rows)
 

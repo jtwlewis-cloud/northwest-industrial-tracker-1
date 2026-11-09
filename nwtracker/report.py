@@ -109,6 +109,9 @@ LIMITATIONS = [
     "Knight Frank and Fisher German publish UK-wide industrial searches; all pages are read and only North West "
     "locations kept. Knight Frank's specification detail is limited to what its search data provides "
     "(its property pages are rendered by script).",
+    "Indurent is a landlord, not an agency: its units are listed under 'Indurent (landlord)' and merged with the "
+    "letting agents' listings where the same unit is marketed by both. Its brochures (vault.industrials.co.uk) are "
+    "linked but not read.",
     "Novaloca and LoopNet are not searched: their terms of use prohibit commercial re-use/storage (Novaloca, "
     "without written permission) or automated access (LoopNet).",
     "Cushman & Wakefield's UK site currently publishes no lease listings and its sale listings contain no North West "
