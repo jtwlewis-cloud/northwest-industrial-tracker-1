@@ -1,0 +1,14 @@
+ticker,name,group,exchange,quote_unit,nasdaq_symbol,twelvedata_symbol,twelvedata_exchange,investegate_tidm,status,corporate_action,corporate_action_url
+SGRO.L,SEGRO,primary,London Stock Exchange,GBX,,SGRO,LSE,SGRO,Listed - in offer period,"Recommended share offer from Prologis (0.0920 new Prologis shares per SEGRO share, partial cash alternative at 1,031.7p; completion expected H1 2027). Shares trade on deal terms.",https://www.slaughterandmay.com/recent-work/advising-segro-on-the-recommended-share-offer-by-prologis/
+BBOX.L,Tritax Big Box REIT,primary,London Stock Exchange,GBX,,BBOX,LSE,BBOX,Listed,,
+LMP.L,LondonMetric Property,primary,London Stock Exchange,GBX,,LMP,LSE,LMP,Listed,,
+BLND.L,British Land,uk_comparator,London Stock Exchange,GBX,,BLND,LSE,BLND,Listed,,
+LAND.L,Landsec,uk_comparator,London Stock Exchange,GBX,,LAND,LSE,LAND,Listed,,
+DLN.L,Derwent London,uk_comparator,London Stock Exchange,GBX,,DLN,LSE,DLN,Listed,,
+GPE.L,Great Portland Estates,uk_comparator,London Stock Exchange,GBX,,GPE,LSE,GPE,Listed,,
+PLD,Prologis,international,NYSE,USD,PLD,PLD,NYSE,,Listed,Acquirer of SEGRO (recommended offer).,https://www.slaughterandmay.com/recent-work/advising-segro-on-the-recommended-share-offer-by-prologis/
+EGP,EastGroup Properties,international,NYSE,USD,EGP,EGP,NYSE,,Listed,,
+FR,First Industrial Realty Trust,international,NYSE,USD,FR,FR,NYSE,,Listed,,
+REXR,Rexford Industrial Realty,international,NYSE,USD,REXR,REXR,NYSE,,Listed,,
+WDP.BR,WDP (Warehouses De Pauw),international,Euronext Brussels,EUR,,WDP,Euronext,,Listed,Also admitted on Euronext Amsterdam; Euronext information document dated 26 Oct 2026.,https://live.euronext.com/sites/default/files/2026-10/WDP%20Information%20Document%202026%2010%2026.pdf
+CTPNV.AS,CTP,international,Euronext Amsterdam,EUR,,CTPNV,Euronext,,Listed,,

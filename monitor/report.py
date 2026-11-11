@@ -59,6 +59,7 @@ td:not(:first-child) {{ font-variant-numeric: tabular-nums; }}
 a {{ color: var(--accent); }}
 img {{ max-width: 100%; height: auto; border: 1px solid var(--line); background:#fff; }}
 small, .muted {{ color: var(--muted); }}
+details {{ margin: .4rem 0 1rem; }} summary {{ cursor: pointer; color: var(--accent); font-size: 13px; }}
 blockquote {{ border-left: 3px solid var(--line); margin: 0; padding-left: 12px; color: var(--muted); }}
 </style></head><body>
 {body}
@@ -75,7 +76,7 @@ def render(ctx: dict, out_dir: Path) -> tuple[Path, Path]:
     text = env().get_template("briefing.md.j2").render(**ctx)
     md_path = out_dir / f"briefing-{rd.isoformat()}.md"
     md_path.write_text(text, encoding="utf-8")
-    body = md.markdown(text, extensions=["tables", "sane_lists"])
+    body = md.markdown(text, extensions=["tables", "sane_lists", "md_in_html"])
     html_path = out_dir / f"briefing-{rd.isoformat()}.html"
     html_path.write_text(HTML_SHELL.format(date=rd.isoformat(), body=body), encoding="utf-8")
     # convenience copies at the reports root

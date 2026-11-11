@@ -19,6 +19,7 @@ DIRECT = {
     "SONIA": ("IUDSOIA", "FRED republication of Bank of England SONIA overnight fixing"),
     "FED_TARGET_LOWER": ("DFEDTARL", "FRED: Federal Reserve target range lower limit"),
     "FED_TARGET_UPPER": ("DFEDTARU", "FRED: Federal Reserve target range upper limit"),
+    "FX_USD_PER_GBP": ("DEXUSUK", "FRED: US dollars per pound sterling, noon buying rate (H.10)"),
 }
 UST_FALLBACK = {sid: m["fred"] for sid, m in SERIES.items() if sid.startswith("US_UST") and "fred" in m}
 

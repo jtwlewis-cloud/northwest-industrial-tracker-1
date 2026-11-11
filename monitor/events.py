@@ -19,7 +19,7 @@ def upcoming(report_date: date, ons_meta: dict, days: int = 7) -> list[dict]:
             ev.append({"date": d, "event": "FOMC rate decision", "source_url": FOMC_SOURCE})
     seen = set()
     for sid, meta in (ons_meta or {}).items():
-        nr = meta.get("next_release")
+        nr = meta.get("next_release") if isinstance(meta, dict) else None
         if not nr or nr in seen:
             continue
         seen.add(nr)

@@ -52,6 +52,7 @@ SERIES: dict[str, dict] = {
     "UK_SONIA_SWAP_5Y": {"label": "5Y SONIA swap rate", "freq": "daily", "unit": "%"},
     "FED_TARGET_LOWER": {"label": "Fed funds target (lower)", "freq": "event", "unit": "%", "fred": "DFEDTARL"},
     "FED_TARGET_UPPER": {"label": "Fed funds target (upper)", "freq": "event", "unit": "%", "fred": "DFEDTARU"},
+    "FX_USD_PER_GBP": {"label": "USD per GBP", "freq": "daily", "unit": "$"},
     # Inflation (annual rates, monthly; obs_date = first day of reference month)
     "UK_CPI_YOY": {"label": "UK CPI (12m)", "freq": "monthly", "unit": "%", "ons": "d7g7"},
     "UK_CPIH_YOY": {"label": "UK CPIH (12m)", "freq": "monthly", "unit": "%", "ons": "l55o"},

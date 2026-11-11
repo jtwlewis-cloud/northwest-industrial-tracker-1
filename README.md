@@ -141,6 +141,26 @@ publication_date, source_url, sentiment, substitution_note, notes`
 - `substitution_note`: required when the series stands in for the table row (e.g. a Manchester figure used for the North West, or KF "Major Regional Cities" used for Manchester offices). It is printed under Table C.
 - Table C rows and Table D spreads are mapped in `monitor/config.py` (`PROPERTY_TABLE_C`, `PROPERTY_SPREADS`). Keep the spread rows on one consistent basis and source.
 
+## Property news, listed shares and REIT modules
+
+The briefing runs in this order: Executive Summary; bond yields; interest rates; inflation; prime yields; property-versus-gilt spreads; listed share prices; REIT valuation; UK industrial news; North West news; office and investment news; *What This Means for the North West Industrial Market*; upcoming events; then an appendix (collapsed in HTML) with data quality notes, definitions and sources.
+
+| Module | Data file | How it is filled |
+|---|---|---|
+| Daily property news (8–12 stories, labelled and ranked) | `data/news_log.csv` | Researched each morning and appended with `first_reported` = briefing date. The pipeline rejects any story whose URL or headline was reported on an earlier date, unless the row is marked `status=follow-up`. |
+| Share prices | `data/watchlist.csv`, `data/share_prices.csv` (history) | US listings come from the Nasdaq end-of-day API (no key). London and Euronext listings need a licensed feed; see below. Cited closing prices can be added to `data/manual_prices.csv` and are labelled secondary. |
+| Company announcements (RNS) | `data/announcements.csv` | Fetched automatically from Investegate for UK tickers. Routine filings (Form 8, holdings, voting rights, own-share transactions) are filtered out. |
+| REIT fundamentals (EPRA NTA, LTV, cost of debt, WAULT, occupancy, like-for-like rent growth, ERV growth, pipeline, dividend) | `data/reit_fundamentals.csv` | Entered from company results and trading updates, with reporting period, report date and source URL. The share-price premium or discount to NTA is calculated automatically. |
+| SEGRO / Prologis offer look-through | — | 0.0920 × Prologis close ÷ USD/GBP (FRED `DEXUSUK`), compared with SEGRO's price when available. |
+| Alerts | — | Daily share moves of 3% or more, prime-yield changes in the last 7 days, North West transactions flagged in the news log, and watchlist corporate actions. |
+
+**London and Euronext prices.** Yahoo Finance and Stooq refuse automated clients unless they pretend to be a web browser, which this project does not do. The London Stock Exchange site blocks automated access. To enable UK and European prices:
+1. Get a Twelve Data key on a plan that covers LSE and Euronext. The free plan is US-only.
+2. Save it as a network credential for host `api.twelvedata.com`, header `Authorization`, prefix `apikey`, and allow that host.
+3. Set the non-secret environment variable `TWELVEDATA_ENABLED=1`.
+
+Until then those rows show "Not verified", and the gap is listed in the appendix.
+
 ## Known limitations
 
 - **Market-implied BoE expectations** (OIS or SONIA futures) need a paid data source. Until one is configured, the briefing reports them as "Not verified" and gives only cited qualitative guidance.
