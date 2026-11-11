@@ -475,6 +475,8 @@ PX:FR,2026-11-05,53.92,Nasdaq (official close),https://www.nasdaq.com/market-act
 PX:FR,2026-11-06,53.76,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2026-11-09,54.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2026-11-10,54.96,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
+PX:LMP.L,2026-11-06,187.9,AJ Bell (previous close shown on 9 Nov quote),https://www.ajbell.co.uk/market-research/LSE:LMP,secondary,,2026-11-11,Pence (GBX); via web search snippet
+PX:LMP.L,2026-11-09,188.2,StockInvest.us; corroborated by AJ Bell last trade 188.2p,https://stockinvest.us/stock-price/LMP.L,secondary,,2026-11-11,Pence (GBX); two sources agree; via web search snippets
 PX:PLD,2025-12-01,128.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:PLD,2025-12-02,128.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:PLD,2025-12-03,129.19,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"

@@ -159,7 +159,7 @@ The briefing runs in this order: Executive Summary; bond yields; interest rates;
 2. Save it as a network credential for host `api.twelvedata.com`, header `Authorization`, prefix `apikey`, and allow that host.
 3. Set the non-secret environment variable `TWELVEDATA_ENABLED=1`.
 
-Until then those rows show "Not verified", and the gap is listed in the appendix.
+Until then, the daily research step records cited closing prices in `data/manual_prices.csv` (labelled secondary), but only when the source states the session date and, wherever a second source exists, the two agree within 0.5%. Anything else is "Not verified". Each row records its source URL and how it was corroborated. Year-to-date and 1-month changes appear only once enough cited history has built up.
 
 ## Known limitations
 

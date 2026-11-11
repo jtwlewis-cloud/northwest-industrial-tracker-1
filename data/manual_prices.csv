@@ -1,1 +1,3 @@
 ticker,date,close,source,source_url,retrieved_at,notes
+LMP.L,2026-11-06,187.90,AJ Bell (previous close shown on 9 Nov quote),https://www.ajbell.co.uk/market-research/LSE:LMP,2026-11-11,Pence (GBX); via web search snippet
+LMP.L,2026-11-09,188.20,StockInvest.us; corroborated by AJ Bell last trade 188.2p,https://stockinvest.us/stock-price/LMP.L,2026-11-11,Pence (GBX); two sources agree; via web search snippets

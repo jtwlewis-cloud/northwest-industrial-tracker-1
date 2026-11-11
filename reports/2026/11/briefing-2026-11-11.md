@@ -3,7 +3,7 @@
 **Date:** 11 November 2026<br>
 **Reporting time:** 08:00 UK time
 
-<small>Generated 2026-11-11 22:22 UTC · run `20261111T222220Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
+<small>Generated 2026-11-11 22:27 UTC · run `20261111T222718Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
 
 > **Alerts**
 > - Prime yield moves in the last 7 days (Knight Frank Prime Yield Guide, Nov 2026): UK Industrial & Logistics +12.5bp; Prime Distribution Warehouses +12.5bp; South East Industrial +12.5bp; Greater London Industrial +12.5bp; Prime Multi-let Industrial (Rest of UK) +12.5bp; London West End Offices +12.5bp; London City Offices +12.5bp; Manchester Offices +12.5bp; Regional UK Offices +12.5bp.
@@ -114,7 +114,7 @@ Interpretation: bond markets point to continued mild pressure on prime capital v
 |---|---|---|---|---|---|---|---|---|---|
 | SEGRO (SGRO.L) | Not verified | — | — | — | — | Not verified | — | — | — |
 | Tritax Big Box REIT (BBOX.L) | Not verified | — | — | — | — | Not verified | — | — | — |
-| LondonMetric Property (LMP.L) | Not verified | — | — | — | — | Not verified | — | — | — |
+| LondonMetric Property (LMP.L) | 188.2p | +0.2% | — | — | — | Not verified | 6.7% | 09 Nov | [StockInvest.us; corroborated by AJ Bell last trade 188.2p](https://stockinvest.us/stock-price/LMP.L) *(secondary)* |
 | British Land (BLND.L) | Not verified | — | — | — | — | Not verified | — | — | — |
 | Landsec (LAND.L) | Not verified | — | — | — | — | Not verified | — | — | — |
 | Derwent London (DLN.L) | Not verified | — | — | — | — | Not verified | — | — | — |
@@ -155,7 +155,7 @@ Interpretation: bond markets point to continued mild pressure on prime capital v
 | Development pipeline | £90m potential rent | 507MW secured power | No direct development | 
 | Dividend (annualised) | 31.1p | 8.0p | 12.6p | 
 | Report basis | [H1 2026 (30 Jun)](https://www.segro.com/media/xlibxjqh/press-release-full-version-final.pdf) | [H1 2026 (30 Jun)](https://www.investegate.co.uk/announcement/rns/tritax-big-box-reit--bbox/half-year-report/9707045) | [FY 2026 (31 Mar)](https://www.investegate.co.uk/announcement/rns/londonmetric-property--lmp/full-year-results-for-the-year-ended-31-march-2026/9578979) | 
-| Premium / (discount) to EPRA NTA | Not verified | Not verified | Not verified | 
+| Premium / (discount) to EPRA NTA | Not verified | Not verified | -6.2% <small>(price 09 Nov)</small> | 
 
 
 <small>Metrics are from each company's latest report (row "Report basis"; some metrics come from later trading updates — full detail in `data/reit_fundamentals.csv`). Share-price dates are shown separately.</small>
