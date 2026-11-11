@@ -125,7 +125,7 @@ class Store:
 
     # -- reads ------------------------------------------------------------
     def history(self, series_id: str, up_to: date | None = None, consistent: bool = True,
-                fresh_days: int = 7) -> list[Observation]:
+                fresh_days: int = 2) -> list[Observation]:
         """Observation history for one series.
 
         With consistent=True (the default), if official data exists within `fresh_days`

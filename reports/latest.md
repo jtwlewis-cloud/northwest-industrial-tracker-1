@@ -1,36 +1,36 @@
 # DAILY FINANCIAL & PROPERTY INVESTMENT BRIEFING
 
-**Date:** 10 November 2026
+**Date:** 11 November 2026
 **Reporting time:** 08:00 UK time
-<small>Generated 2026-11-10 07:48 UTC · run `20261110T074850Z` · commentary source: analyst note. Every figure shows its own observation date: markets close the previous business day, inflation is monthly, and property yields are published monthly or quarterly.</small>
+<small>Generated 2026-11-11 07:49 UTC · run `20261111T074942Z` · commentary source: analyst note. Every figure shows its own observation date: markets close the previous business day, inflation is monthly, and property yields are published monthly or quarterly.</small>
 
 ## Executive Summary
 
-1. **New property evidence: Knight Frank's November Prime Yield Guide** (prepared 6 November) moved yields out again. Prime distribution is **5.50%+ NIY**, up from 5.25–5.50%. South East and good-modern rest-of-UK multi-let estates are at 5.25–5.50% (+25bp). City prime is 5.50%+, West End prime core 4.00%+, and major regional offices 7.00%+. ([KF Nov 2026](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf))
-2. **Gilts are steady after the hike.** The BoE 10Y par yield was 5.14% on 5 November, 20bp lower over 30 days, and the 5Y was 4.77%. BoE curve data runs only to 5 November because of its usual publication lag. Knight Frank/ICAP shows the 10Y benchmark redemption yield at 5.15% on 4 November.
-3. **Swap rates are easing.** The 5Y SONIA swap, the base for fixed-rate property debt, was 4.58% on 4 November, down 16bp from 4.74% on 6 October (Knight Frank/ICAP).
-4. **US yields are edging back up ahead of today's CPI.** The US 10Y was 4.88% (+2bp) and the 2Y 4.56% (+5bp) on 9 November. October US CPI is out at 13:30 UK today, and UK Q3 GDP on Thursday.
-5. **Spreads have widened from very thin levels.** Prime industrial now sits about **+36bp** over the 10Y gilt, against about +4bp on 6 October. Both lower gilts (+20bp of the widening) and higher property yields (+12.5bp) contributed. Major regional offices are about 186bp over gilts; West End offices are still about 114bp below.
+1. **US inflation came in hot.** October CPI rose **0.4% m/m** (consensus 0.3%) and core rose 0.3% (consensus 0.2%), driven by energy and food. BLS published **no 12-month rate**, because October 2025 data was never collected during the 2025 US shutdown; our US annual figures for October are therefore "Not verified". ([CNBC](https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html), [BLS](https://www.bls.gov/news.release/cpi.nr0.htm))
+2. **US yields jumped.** The 2Y rose 17bp to 4.73% and the 10Y 10bp to 4.98% on 10 November. CNBC links the move to the CPI data and Fed Governor Waller's comments, which lifted expectations of a December Fed hike. ([CNBC](https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html))
+3. **Gilts followed.** The UK 10Y was quoted at **5.21% (+7bp)** and the 30Y at 5.63% on 10 November ([Trading Economics](https://tradingeconomics.com/united-kingdom/government-bond-yield)). These are market quotes: Bank of England data was unavailable today, so official UK yields stop at 5 November.
+4. **Property yields unchanged since last update.** Knight Frank's November guide (6 Nov) remains the latest evidence: prime distribution 5.50%+ NIY, multi-let estates 5.25–5.50%, City 5.50%+, regional offices 7.00%+. No newer agent publication was found today; figures are carried forward.
+5. **Cushion over gilts slightly thinner.** Prime industrial is about **+29bp** over the 10Y gilt, down from about +34bp on 6 November. Part of the change reflects comparing a market quote with BoE fitted yields, so treat it as indicative.
 
 ## Table A — Government Bond Markets
 
 | Market | Latest Yield | Daily Change | 7-Day Change | 30-Day Change | Observation Date | Source |
 |---|---|---|---|---|---|---|
-| UK 5-Year gilt | 4.77% | -0.8bp | -13.5bp | -12.8bp | 05 Nov 2026 | [Bank of England Database (IADB)](https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?SeriesCodes=IUDSNPY&UsingCodes=Y) |
-| UK 10-Year gilt | 5.14% | +0.3bp | -12bp | -19.8bp | 05 Nov 2026 | [Bank of England Database (IADB)](https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?SeriesCodes=IUDMNPY&UsingCodes=Y) |
-| US 5-Year Treasury | 4.67% | +3bp | -3bp | -35bp | 09 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
-| US 10-Year Treasury | 4.88% | +2bp | -3bp | -36bp | 09 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
+| UK 5-Year gilt | 4.77% ⚠ stale | -0.8bp | -13.5bp | -12.8bp | 05 Nov 2026 | [Bank of England Database (IADB)](https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?SeriesCodes=IUDSNPY&UsingCodes=Y) |
+| UK 10-Year gilt | 5.21% | +7bp | 0bp† | -18.9bp† | 10 Nov 2026 | [Trading Economics](https://tradingeconomics.com/united-kingdom/government-bond-yield) *(secondary)* |
+| US 5-Year Treasury | 4.81% | +14bp | +7bp | -21bp | 10 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
+| US 10-Year Treasury | 4.98% | +10bp | +3bp | -26bp | 10 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
 
 *Additional reference*
 
 | Market | Latest Yield | Daily Change | 7-Day Change | 30-Day Change | Observation Date | Source |
 |---|---|---|---|---|---|---|
-| UK 2-Year gilt | 4.76% | Not verified | Not verified | Not verified | 05 Nov 2026 | [News report (rallies.ai) of BoE decision-day trading](https://rallies.ai/news/bank-of-england-delivers-first-rate-hike-in-three-years-gilt-yields-rise-6c4ea0b2eeeccedd) *(secondary)* |
-| UK 30-Year gilt | Not verified | Not verified | Not verified | Not verified | — | — |
-| US 2-Year Treasury | 4.56% | +5bp | -3bp | -24bp | 09 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
-| US 30-Year Treasury | 5.26% | 0bp | -2bp | -34bp | 09 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
+| UK 2-Year gilt | 4.76% ⚠ stale | Not verified | Not verified | Not verified | 05 Nov 2026 | [News report (rallies.ai) of BoE decision-day trading](https://rallies.ai/news/bank-of-england-delivers-first-rate-hike-in-three-years-gilt-yields-rise-6c4ea0b2eeeccedd) *(secondary)* |
+| UK 30-Year gilt | 5.63% | Not verified | Not verified | Not verified | 10 Nov 2026 | [Trading Economics](https://tradingeconomics.com/united-kingdom/30-year-bond-yield) *(secondary)* |
+| US 2-Year Treasury | 4.73% | +17bp | +12bp | -7bp | 10 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
+| US 30-Year Treasury | 5.35% | +9bp | +3bp | -25bp | 10 Nov 2026 | [US Treasury - Daily Treasury Par Yield Curve Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) |
 
-**Yield curve (10Y less 5Y):** UK +36.8bp (05 Nov 2026) · US +21bp (09 Nov 2026)
+**Yield curve (10Y less 5Y):** UK Not verified (5Y and 10Y not held for the same date) · US +17bp (10 Nov 2026)
 
 <small>Changes are in basis points (1 percentage point = 100bp). The 7-day and 30-day changes compare against the last observation on or before that many calendar days earlier. † = the comparison point comes from a different source or instrument than the latest figure, so treat it as indicative. UK gilt figures from the Bank of England's database are fitted par yields, not benchmark-gilt redemption yields. US figures are Treasury constant-maturity par yields.</small>
 
@@ -39,7 +39,7 @@
 | Indicator | Latest | Previous | Reporting Date | Trend | Source |
 |---|---|---|---|---|---|
 | BoE Bank Rate | 4.00% | 3.75% | effective 05 Nov 2026 | +25bp | [Bank of England Database (IADB)](https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?SeriesCodes=IUDBEDR&UsingCodes=Y) |
-| SONIA (overnight fixing) | 3.9824% | 3.7335% | 05 Nov 2026 | +24.9bp d/d | [FRED IUDSOIA](https://fred.stlouisfed.org/series/IUDSOIA) |
+| SONIA (overnight fixing) | 3.9852% | 3.9824% | 06 Nov 2026 | +0.3bp d/d | [FRED IUDSOIA](https://fred.stlouisfed.org/series/IUDSOIA) |
 | 5Y SONIA swap (finance cost reference, not SONIA) | 4.58% | 4.74% | 04 Nov 2026 | Not verified 30d | [Knight Frank Prime Yield Guide (Macrobond/ICAP)](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) *(secondary)* |
 | US Fed funds target range | 3.75–4.00% | 3.50–3.75% (to 16 Sep 2026) | effective 17 Sep 2026 | — | [FRED DFEDTARU](https://fred.stlouisfed.org/series/DFEDTARU) |
 | UK CPI (12m) | 3.5% | 3.1% | September 2026 (published 21 Oct 2026) | Accelerating | [ONS MM23](https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7g7/mm23) |
@@ -54,11 +54,11 @@
 
 ### Interest rate outlook
 
-**Confirmed:** Bank Rate is 4.00%, effective 5 November, after an 8–1 vote. SONIA fixed at 3.98% on 5 November. The next MPC decision is on 17 December. CNBC's report on the decision says the Bank warned that inflation will approach 5% ([CNBC](https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html)).
+**Confirmed:** Bank Rate is 4.00% (since 5 Nov). SONIA fixed at 3.99% on 6 November. The Fed target range is 3.75–4.00%. Press reports say markets expect a Fed hike at the 9 December FOMC after the CPI data ([Fox Business](https://www.foxbusiness.com/economy/cpi-inflation-october-2026)).
 
-**Market-implied expectations for December: Not verified.** Today's searches found no dated, reliable OIS or futures pricing. Press commentary is mixed on whether the next move comes in December or February 2027.
+**Market-implied expectations for the 17 December MPC: Not verified.** No reliable dated OIS or futures pricing was found today.
 
-**Financing read-across (interpretation):** The fall in 5-year swaps to about 4.6% trims fixed-rate debt costs slightly. Even so, all-in senior debt (swap plus margin) still sits above prime industrial yields of about 5.50%, so leverage remains negative and pricing is set by equity buyers. Debt availability was not measured today.
+**Financing read-across (interpretation):** A rise in global yields, led by US short rates, tends to lift sterling swap rates too. The last verified 5Y SONIA swap was 4.58% on 4 November (Knight Frank/ICAP), and today's move probably pushed it higher (not verified). Fixed-rate debt costs remain above prime industrial yields, so leverage stays negative.
 
 ## Table C — UK Prime Property Investment Yields
 
@@ -69,7 +69,7 @@
 | South East Industrial ‡ | 5.25–5.50% | Not stated | 5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | Greater London Industrial | 5.25% | Not stated | 5.00–5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | Prime Multi-let Industrial (Rest of UK) ‡ | 5.25–5.50% | Not stated | 5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
-| North West Industrial ‡ | 5.25% | NIY | — | — | Q4 2025 ⚠ carried forward (314 days) | [Knight Frank LOGIC: North West 2025 Review](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/logic/2025-review-nw-industrial.pdf) |
+| North West Industrial ‡ | 5.25% | NIY | — | — | Q4 2025 ⚠ carried forward (315 days) | [Knight Frank LOGIC: North West 2025 Review](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/logic/2025-review-nw-industrial.pdf) |
 | UK Logistics (average of 71 submarkets) ‡ | 5.74% | NIY | 5.59% | +15bp | Q3 2026 | [Cushman & Wakefield UK Industrial MarketBeat](https://www.cushmanwakefield.com/en/united-kingdom/insights/uk-marketbeat/industrial-marketbeat) |
 | London West End Offices | 4.00% | Not stated | 3.75–4.00% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | London City Offices | 5.50% | Not stated | 5.25–5.50% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
@@ -92,19 +92,19 @@
 
 | Spread | Property yield (basis) | UK 10Y gilt | Latest spread | Spread at property evidence date | Previous comparable spread | Change | Driver |
 |---|---|---|---|---|---|---|---|
-| Prime UK industrial less 10Y gilt | 5.50% (NIY, Nov 2026) | 5.14% (05 Nov 2026) | +36.1bp | +36.1bp (gilt 5.14%, 05 Nov 2026) | +3.8bp (Oct 2026) | +32.3bp (property +12.5bp, gilt +19.8bp) | Both (reinforcing) |
-| Prime London (City) office less 10Y gilt | 5.50% (Not stated, Nov 2026) | 5.14% (05 Nov 2026) | +36.1bp | +36.1bp (gilt 5.14%, 05 Nov 2026) | +3.8bp (Oct 2026) | +32.3bp (property +12.5bp, gilt +19.8bp) | Both (reinforcing) |
-| Prime London (West End) office less 10Y gilt | 4.00% (Not stated, Nov 2026) | 5.14% (05 Nov 2026) | -113.9bp | -113.9bp (gilt 5.14%, 05 Nov 2026) | -146.2bp (Oct 2026) | +32.3bp (property +12.5bp, gilt +19.8bp) | Both (reinforcing) |
-| Prime Manchester office less 10Y gilt | 7.00% (Not stated, Nov 2026) | 5.14% (05 Nov 2026) | +186.1bp | +186.1bp (gilt 5.14%, 05 Nov 2026) | +153.8bp (Oct 2026) | +32.3bp (property +12.5bp, gilt +19.8bp) | Both (reinforcing) |
-| North West industrial less 10Y gilt | 5.25% (NIY, Q4 2025) | 5.14% (05 Nov 2026) | +11.1bp | +78.4bp (gilt 4.47%, 31 Dec 2025) | Not verified | Not verified | Not verified |
+| Prime UK industrial less 10Y gilt | 5.50% (NIY, Nov 2026) | 5.21% (10 Nov 2026) | +29bp | +34bp (gilt 5.16%, 06 Nov 2026) | +3.8bp (Oct 2026) | +25.2bp (property +12.5bp, gilt +12.7bp) | Both (reinforcing) |
+| Prime London (City) office less 10Y gilt | 5.50% (Not stated, Nov 2026) | 5.21% (10 Nov 2026) | +29bp | +34bp (gilt 5.16%, 06 Nov 2026) | +3.8bp (Oct 2026) | +25.2bp (property +12.5bp, gilt +12.7bp) | Both (reinforcing) |
+| Prime London (West End) office less 10Y gilt | 4.00% (Not stated, Nov 2026) | 5.21% (10 Nov 2026) | -121bp | -116bp (gilt 5.16%, 06 Nov 2026) | -146.2bp (Oct 2026) | +25.2bp (property +12.5bp, gilt +12.7bp) | Both (reinforcing) |
+| Prime Manchester office less 10Y gilt | 7.00% (Not stated, Nov 2026) | 5.21% (10 Nov 2026) | +179bp | +184bp (gilt 5.16%, 06 Nov 2026) | +153.8bp (Oct 2026) | +25.2bp (property +12.5bp, gilt +12.7bp) | Both (reinforcing) |
+| North West industrial less 10Y gilt | 5.25% (NIY, Q4 2025) | 5.21% (10 Nov 2026) | +4bp | +78.4bp (gilt 4.47%, 31 Dec 2025) | Not verified | Not verified | Not verified |
 
 <small>The spread is a simple yield gap: the property yield (midpoint of any quoted range) minus the UK 10-year gilt yield. It ignores rental growth, depreciation, capex, liquidity and leverage, so it is **not** a complete measure of investment risk or relative value. The gilt contribution has the opposite sign to the gilt move (a higher gilt yield narrows the spread). All rows use Knight Frank prime yields so the source is consistent. Knight Frank states the basis (NIY) only for prime distribution and the North West figure; for the office rows the basis is not stated.</small>
 
 ## Trend Charts
 
-![Government bond yields](2026/11/charts/bonds-2026-11-10.png)
+![Government bond yields](2026/11/charts/bonds-2026-11-11.png)
 
-![Property yield spreads](2026/11/charts/spreads-2026-11-10.png)
+![Property yield spreads](2026/11/charts/spreads-2026-11-11.png)
 
 <small>Lines overlap where the published yields are identical: Prime UK industrial less 10Y gilt and Prime London (City) office less 10Y gilt.</small>
 
@@ -112,8 +112,8 @@
 
 **Confirmed developments (from verified data)**
 
-- UK 10Y gilt 5.14% on 05 Nov 2026: was unchanged on the day, fell 12bp over 7 days, fell 19.8bp over 30 days.
-- US 10Y Treasury 4.88% on 09 Nov 2026: rose 2bp on the day, fell 3bp over 7 days, fell 36bp over 30 days.
+- UK 10Y gilt 5.21% on 10 Nov 2026: rose 7bp on the day, was unchanged over 7 days, fell 18.9bp over 30 days (mixed sources - see Table A notes).
+- US 10Y Treasury 4.98% on 10 Nov 2026: rose 10bp on the day, rose 3bp over 7 days, fell 26bp over 30 days.
 - Bank Rate 4.00% (effective 05 Nov 2026, changed +25bp from 3.75%).
 - UK CPI 3.5% in September 2026 (previous 3.1%); trend: Accelerating.
 - US CPI 3.7% in September 2026 (previous 3.4%); trend: Accelerating.
@@ -121,21 +121,20 @@
 
 **Interpretation**
 
-Since the Bank of England's 5 November hike, UK rates have been steady rather than rising. The 10-year gilt par yield held at 5.14%, about 20bp below early-October levels, and the 5-year was 4.77%. The 5-year SONIA swap eased to about 4.6%. US Treasuries edged higher on Monday, with the 2-year up 5bp, ahead of today's October CPI. A stronger US print would be the main near-term risk to gilts.
+The main development is a renewed rise in bond yields after hotter-than-expected US inflation. October US CPI rose 0.4% on the month and core 0.3%, both above consensus. Treasuries sold off from the front end, with the 2-year up 17bp and the 10-year back near 5%. Gilts moved with them: the 10-year benchmark was quoted at 5.21%, up 7bp on the day, and the 30-year at 5.63%. Official Bank of England curve data could not be retrieved today, so UK figures after 5 November are market quotes and are flagged in Table A.
 
-On the property side, the confirmed development is Knight Frank's November guide. It moved prime distribution to 5.50%+ NIY, regional and South East multi-let estates out by 25bp, and secondary distribution to 6.25–6.75%. Office yields were also moved out: City 5.50%+, West End 4.00%+, regional cities 7.00%+. This is the second consecutive month of outward movement. It largely reflects the gilt sell-off of September and early October, which has since partly reversed.
+For UK rates, the confirmed position is unchanged: Bank Rate is 4.00% and the next MPC decision is on 17 December. What has changed is the external backdrop. A Fed moving towards another hike, combined with UK inflation already at 3.5% (September) and next published on 18 November, makes further BoE tightening more plausible, though market pricing for December is not verified.
 
-Interpretation: the combination of higher property yields and lower gilts has rebuilt a modest cushion. Prime industrial is now about 36bp over gilts, against roughly zero a month ago. If gilts stay near 5.1% and the CPI and GDP data this week do not push yields back towards 5.4%, the case for further outward yield movement weakens. Pricing could then stabilise into early 2027. With negative leverage and the Bank signalling possible further tightening, capital-value pressure is still skewed to the downside. Returns depend on income and rental growth, not on yields coming in.
+For property, no new valuation evidence has been published since Knight Frank's 6 November guide, so prime yields are carried forward, not re-valued. The yield gap for prime industrial is about 29bp over gilts. If gilts move back towards 5.4%, the level reached in early October, that gap would disappear again, and agents' next updates (early December) would likely show further outward movement. On current evidence, bond markets point to continued mild pressure on prime capital values, with income growth carrying returns.
 
 ## North West Industrial & Logistics Outlook
 
-There is still no published 2026 North West prime industrial yield. The Q4 2025 Manchester benchmark of 5.25% NIY (Knight Frank) is carried forward and now looks dated against the national 5.50%+ for prime distribution and 5.25–5.50% for regional multi-let estates. A North West prime level of about 5.50% would be consistent with that evidence but is **not verified**. On demand, Knight Frank reports Manchester investment volumes up 34% year to date and Q3 activity up 77% year on year. That points to resilient investor appetite for the region despite higher finance costs. Expect equity-led buyers to favour reversionary multi-let estates, and long-let big boxes to be priced off the wider national yields.
+There is still no published 2026 North West prime industrial yield. Knight Frank's Q4 2025 Manchester figure of 5.25% NIY is carried forward and looks low against the national 5.50%+ for prime distribution; a level around 5.50% would be consistent with that evidence but is **not verified**. Investor appetite for the region has held up, with Knight Frank reporting Manchester investment volumes up 34% year to date. Occupier demand is softer: Savills reports North West take-up of 1.28m sq ft in H1 2026, 15.5% below H1 2025. With gilts rising again this week, equity-led buyers are likely to stay selective, favouring reversionary multi-let estates over long-let big boxes.
 
 ## Key Events Ahead (next 7 days)
 
 | Date | Event |
 |---|---|
-| Tue 10 Nov | [US CPI (October) - 13:30 UK](https://www.bls.gov/schedule/news_release/cpi.htm) |
 | Thu 12 Nov | [UK GDP first quarterly estimate Q3 2026 and monthly GDP (September) - 07:00](https://www.ons.gov.uk/releasecalendar) |
 | Fri 13 Nov | [US PPI (October) - 13:30 UK](https://www.bls.gov/schedule/news_release/ppi.htm) |
 | Tue 17 Nov | [UK labour market overview - 07:00](https://www.ons.gov.uk/releasecalendar) |
@@ -143,7 +142,8 @@ There is still no published 2026 North West prime industrial yield. The Q4 2025 
 ## Data Quality and Retrieval Failures
 
 - All automated sources responded.
-- UK 30-Year gilt: no verified observation held — reported as "Not verified".
+- UK 2-Year gilt: latest observation (05 Nov 2026) is stale.
+- UK 5-Year gilt: latest observation (05 Nov 2026) is stale.
 - 5Y SONIA swap rate: latest observation (04 Nov 2026) is stale.
 
 **Source discrepancies** (lower-priority figure not used):
@@ -152,12 +152,13 @@ There is still no published 2026 North West prime industrial yield. The Q4 2025 
 
 ### Analyst sources
 
-- Knight Frank, [Prime Yield Guide November 2026](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) (prepared 6 Nov 2026): property yields, Bonds & Rates panel and Manchester investment commentary.
-- Knight Frank, [Prime Yield Guide October 2026](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/10.-kf-final-october-2026-prime-yield-guide.pdf).
+- CNBC, [CPI inflation report: October 2026](https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html) and [10-year Treasury yield races back to 5%](https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html) (10 Nov 2026).
+- BLS, [Consumer Price Index Summary, October 2026](https://www.bls.gov/news.release/cpi.nr0.htm).
+- Fox Business, [October CPI: inflation trended higher](https://www.foxbusiness.com/economy/cpi-inflation-october-2026).
+- Trading Economics, [UK 10Y gilt](https://tradingeconomics.com/united-kingdom/government-bond-yield) and [UK 30Y gilt](https://tradingeconomics.com/united-kingdom/30-year-bond-yield) (10 Nov 2026 quotes).
+- Knight Frank, [Prime Yield Guide November 2026](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) (prepared 6 Nov 2026).
 - Knight Frank, [LOGIC: North West 2025 Review](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/logic/2025-review-nw-industrial.pdf).
-- CNBC, [Bank of England hikes interest rate…](https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html) (5 Nov 2026).
-- Bank of England, [Monetary Policy Summary, November 2026](https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026).
-- Market data: BoE IADB, US Treasury, FRED and ONS, as cited in the tables.
+- Savills North West H1 2026 take-up figure as reported in search results citing Savills research; the Savills report itself was not read today.
 
 ---
 <small>Prepared automatically from public sources for professional information. It is not investment advice. Full observation history: `data/observations.csv`; audit trail: `data/audit_log.csv`; property evidence register: `data/property_yields.csv`.</small>
