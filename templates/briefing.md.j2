@@ -19,7 +19,7 @@
 # DAILY FINANCIAL & PROPERTY INVESTMENT BRIEFING
 
 **Date:** {{ report_date | d('%d %B %Y') }}<br>
-**Reporting time:** 08:00 UK time
+**Reporting time:** 06:30 UK time
 
 <small>Generated {{ generated_at.strftime('%Y-%m-%d %H:%M UTC') }} · run `{{ run_id }}` · commentary: {{ notes_source }}. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
 
@@ -144,7 +144,7 @@
 {{ sharerow(r) }}
 {% endfor %}
 
-<small>Latest completed trading session before 08:00 UK; end-of-day data, not real-time. London prices are in pence (GBX); US in USD; Euronext in EUR. Changes are share-price returns only, excluding dividends (not total shareholder return). ⚑ = daily move of 3% or more. Market caps from Nasdaq are as at retrieval. Dividend yield = latest annualised dividend from company reports ÷ price, where on file. "Not verified" = no licensed price feed returned data and no cited close is on file.</small>
+<small>Latest completed trading session before the 06:30 UK briefing; end-of-day data, not real-time. London prices are in pence (GBX); US in USD; Euronext in EUR. Changes are share-price returns only, excluding dividends (not total shareholder return). ⚑ = daily move of 3% or more. Market caps from Nasdaq are as at retrieval. Dividend yield = latest annualised dividend from company reports ÷ price, where on file. "Not verified" = no licensed price feed returned data and no cited close is on file.</small>
 
 {% if look_through %}
 **SEGRO — Prologis offer look-through:** 0.0920 × Prologis close ${{ '%.2f' % look_through.pld.value }} ({{ look_through.pld.obs_date | d('%d %b') }}) ÷ ${{ '%.4f' % look_through.fx.value }}/£ ({{ look_through.fx.obs_date | d('%d %b') }}, FRED) = **{{ '%.1f' % look_through.value_p }}p** per SEGRO share in Prologis stock{% if look_through.get('sgro') %}, vs SEGRO close {{ '%.1f' % look_through.sgro.value }}p ({{ '%+.1f' % look_through.spread_pct }}% offer spread){% else %}; SEGRO's own price not verified{% endif %}. Partial cash alternative: {{ look_through.cash_p }}p (capped). <small>The FX rate lags by several days, so this is indicative only.</small>

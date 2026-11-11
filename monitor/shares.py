@@ -74,7 +74,7 @@ def load_fundamentals(report_date: date) -> dict[str, dict[str, dict]]:
 def share_rows(store, report_date: date, market_caps: dict, fundamentals: dict) -> list[ShareRow]:
     rows = []
     for w in load_watchlist():
-        # Latest COMPLETED session before the 08:00 UK briefing = any close dated before the report date.
+        # Latest COMPLETED session before the 06:30 UK briefing = any close dated before the report date.
         hist = [o for o in store.history(f"PX:{w['ticker']}") if o.obs_date < report_date]
         r = ShareRow(w)
         if hist:
