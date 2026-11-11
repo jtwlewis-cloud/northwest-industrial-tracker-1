@@ -2,7 +2,7 @@
 
 **Date:** 11 November 2026
 **Reporting time:** 08:00 UK time
-<small>Generated 2026-11-11 07:49 UTC · run `20261111T074942Z` · commentary source: analyst note. Every figure shows its own observation date: markets close the previous business day, inflation is monthly, and property yields are published monthly or quarterly.</small>
+<small>Generated 2026-11-11 07:49 UTC · run `20261111T074955Z` · commentary source: analyst note. Every figure shows its own observation date: markets close the previous business day, inflation is monthly, and property yields are published monthly or quarterly.</small>
 
 ## Executive Summary
 
@@ -138,6 +138,7 @@ There is still no published 2026 North West prime industrial yield. Knight Frank
 | Thu 12 Nov | [UK GDP first quarterly estimate Q3 2026 and monthly GDP (September) - 07:00](https://www.ons.gov.uk/releasecalendar) |
 | Fri 13 Nov | [US PPI (October) - 13:30 UK](https://www.bls.gov/schedule/news_release/ppi.htm) |
 | Tue 17 Nov | [UK labour market overview - 07:00](https://www.ons.gov.uk/releasecalendar) |
+| Wed 18 Nov | [UK consumer price inflation (October) - 07:00](https://www.ons.gov.uk/releasecalendar) |
 
 ## Data Quality and Retrieval Failures
 

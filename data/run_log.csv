@@ -8,3 +8,4 @@ run_id,report_date,started_at,finished_at,status,inserted,revised,failures,failu
 20261111T074607Z,2026-11-11,2026-11-11T07:46:07+00:00,2026-11-11T07:48:31+00:00,partial,7,0,3,US_CPI_YOY: base month for Oct 2026 missing in FRED; 12m rate not verified | US_CORE_CPI_YOY: base month for Oct 2026 missing in FRED; 12m rate not verified | Bank of England Database (IADB): unexpected response (HTTP 302); BoE may be refusing automated access (after 4 attempts)
 20261111T074901Z,2026-11-11,2026-11-11T07:49:01+00:00,2026-11-11T07:49:01+00:00,ok (offline),18,0,0,
 20261111T074942Z,2026-11-11,2026-11-11T07:49:42+00:00,2026-11-11T07:49:43+00:00,ok (offline),0,0,0,
+20261111T074955Z,2026-11-11,2026-11-11T07:49:55+00:00,2026-11-11T07:49:55+00:00,ok (offline),0,0,0,
