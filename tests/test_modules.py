@@ -71,3 +71,26 @@ def test_investegate_filters_routine_filings():
     rows = investegate.parse("LMP", page)
     assert [r["headline"] for r in rows] == ["Trading Update", "Proposed Equity Issue"]
     assert rows[0]["category"] == "Trading update" and rows[1]["category"] == "Capital / debt"
+
+
+def test_place_north_west_feed_and_window():
+    from monitor.sources import placenorthwest as pnw
+    xml = """<rss><channel>
+    <item><title><![CDATA[Shed let at Trafford Park]]></title><link>https://www.placenorthwest.co.uk/a/</link>
+    <pubDate>Wed, 11 Nov 2026 10:00:00 +0000</pubDate><guid>a</guid></item>
+    <item><title><![CDATA[Old story]]></title><link>https://www.placenorthwest.co.uk/b/</link>
+    <pubDate>Mon, 09 Nov 2026 10:00:00 +0000</pubDate><guid>b</guid></item></channel></rss>"""
+    items = pnw.parse(xml, "industrial")
+    assert [i["title"] for i in items] == ["Shed let at Trafford Park", "Old story"]
+    # Monday's window starts on Friday morning; Thursday's starts on Wednesday morning
+    assert pnw.window_start(date(2026, 11, 16)).date() == date(2026, 11, 13)
+    assert pnw.window_start(date(2026, 11, 12)).date() == date(2026, 11, 11)
+
+
+def test_north_west_stories_route_by_region():
+    s1 = news.Story({"label": "PLANNING / DEVELOPMENT", "region": "NW", "headline": "Bolton plan"})
+    s2 = news.Story({"label": "PLANNING / DEVELOPMENT", "region": "UK", "headline": "Ladywood"})
+    s3 = news.Story({"label": "NORTH WEST INDUSTRIAL", "headline": "Shed"})
+    sec = news.by_section([s1, s2, s3])
+    assert [s.headline for s in sec["north_west"]] == ["Bolton plan", "Shed"]
+    assert [s.headline for s in sec["industrial"]] == ["Ladywood"]

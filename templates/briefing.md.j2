@@ -199,8 +199,20 @@ No significant new UK industrial and logistics stories were found for this perio
 {% for s in news_sections.north_west %}
 {{ story(s) }}
 {% else %}
-No significant new North West industrial stories were found for this period.
+No North West stories were selected for full summary in this period.
 {% endfor %}
+
+**All Place North West headlines since the last briefing** <small>({{ pnw_window_start.strftime('%a %d %b %H:%M') }} onwards; stories summarised above are not repeated; industrial items first)</small>
+
+{% if pnw_headlines %}
+| Published | Headline | |
+|---|---|---|
+{% for h in pnw_headlines %}
+| {{ h.dt.strftime('%a %H:%M') }} | {{ link(h.title, h.link) }} | {% if h.industrial %}industrial{% endif %} |
+{% endfor %}
+{% else %}
+No further Place North West headlines were published in this window.
+{% endif %}
 
 {% if notes.get('North West Industrial & Logistics Outlook') %}
 **North West outlook**

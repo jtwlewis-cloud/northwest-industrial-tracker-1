@@ -3,7 +3,7 @@
 **Date:** 12 November 2026<br>
 **Reporting time:** 06:30 UK time
 
-<small>Generated 2026-11-12 06:30 UTC · run `20261112T063045Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
+<small>Generated 2026-11-12 07:31 UTC · run `20261112T073128Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
 
 > **Alerts**
 > - Prime yield moves in the last 7 days (Knight Frank Prime Yield Guide, Nov 2026): UK Industrial & Logistics +12.5bp; Prime Distribution Warehouses +12.5bp; South East Industrial +12.5bp; Greater London Industrial +12.5bp; Prime Multi-let Industrial (Rest of UK) +12.5bp; London West End Offices +12.5bp; London City Offices +12.5bp; Manchester Offices +12.5bp; Regional UK Offices +12.5bp.
@@ -243,6 +243,9 @@ BARJANE has applied for a 420,000 sq ft logistics scheme at Ansty, Coventry, nex
 
 </details>
 
+
+## 10. North West Industrial & Logistics News
+
 **6. Bolton pursues legal challenge into national planning changes**
 
 
@@ -291,14 +294,53 @@ BNP Paribas has applied to subdivide B&Q's 137,000 sq ft Kay Street store in Bol
 
 </details>
 
+**9. Mansell collapsed with debts of £4.2m**
 
-## 10. North West Industrial & Logistics News
 
-No significant new North West industrial stories were found for this period.
+`PLANNING / DEVELOPMENT` · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/mansell-collapsed-with-debts-of-4-2m/), published 2026-11-11</small>
+
+
+An administrator's report from RSM shows Oldham-based off-site construction specialist Mansell Building Solutions collapsed with debts of £4.2m, including £1.3m owed to NatWest. It entered administration in August after 36 years, citing the cost of relocating its headquarters to Oldham, Covid's impact on revenues and planning delays. Creditors include steel-framing supplier Voestalpine Metsec (£550,000).
+
+
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** Debts £4.2m; £1.3m owed to NatWest; Voestalpine Metsec £550,000; CCF £220,000
+- **Relevance:** Supply-chain fragility in North West construction; contractor insolvency risk for developers.
+
+</details>
+
+**10. Meanwhile use put forward ahead of £250m Crompton Place regen**
+
+
+`PLANNING / DEVELOPMENT` · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/meanwhile-use-put-forward-ahead-of-250m-crompton-place-regen/), published 2026-11-11</small>
+
+
+Bolton Council plans street-food markets, a big screen and an urban garden on the Victoria Square frontage of the former Crompton Place shopping centre once it is demolished, as MEPC (part of Federated Hermes) leads a £250m regeneration. CBRE and Chapman Taylor designed the meanwhile-use strategy to keep the area active during redevelopment.
+
+
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** £250m regeneration; MEPC/Federated Hermes; meanwhile use by CBRE and Chapman Taylor
+- **Relevance:** Institutional-backed town-centre regeneration in Greater Manchester; retail space being repurposed.
+
+</details>
+
+
+**All Place North West headlines since the last briefing** <small>(Wed 11 Nov 06:00 onwards; stories summarised above are not repeated; industrial items first)</small>
+
+| Published | Headline | |
+|---|---|---|
+| Wed 15:14 | [Manchester to splash £4.5m on Holt Town land assembly](https://www.placenorthwest.co.uk/manchester-to-splash-4-5m-on-holt-town-land-assembly/) |  |
+| Wed 13:57 | [Trio of major Manchester projects to go back under the microscope](https://www.placenorthwest.co.uk/trio-of-major-manchester-projects-to-go-back-under-the-microscope/) |  |
+| Wed 11:49 | [Taylor Wimpey plans 275 homes in Wirral](https://www.placenorthwest.co.uk/taylor-wimpey-plans-275-homes-in-wirral/) |  |
+| Wed 11:32 | [Powers to tackle plague of vacant shops approved in Westmorland](https://www.placenorthwest.co.uk/powers-to-tackle-plague-of-vacant-shops-approved-in-westmorland/) |  |
+| Wed 11:14 | [Rapleys acquires Northmill Associates](https://www.placenorthwest.co.uk/rapleys-acquires-northmill-associates/) |  |
+| Wed 08:20 | [Merebridge takes over 194-flat Liverpool project from Ascot](https://www.placenorthwest.co.uk/merebridge-takes-over-194-flat-liverpool-scheme-from-ascot/) |  |
 
 **North West outlook**
 
-There was no significant new North West industrial transaction in the past 24 hours. Regionally, the news is about planning process. Bolton is challenging national rules that make officers the default decision-makers; if upheld, those rules should speed routine consents. Larger B2/B8 schemes on Green Belt edges could benefit from the grey-belt precedent set at the M42. B&Q's planned subdivision of its 137,000 sq ft Bolton store shows large retail boxes being recycled. Pricing: the Manchester prime industrial benchmark (5.25%, Q4 2025) is still stale; about 5.50% remains the working assumption (not verified). Equity-led buyers will favour reversionary multi-let estates.
+There was no significant new North West industrial transaction in the past 24 hours. Regionally, the news is about planning process. Bolton is challenging national rules that make officers the default decision-makers; if upheld, those rules should speed routine consents. Larger B2/B8 schemes on Green Belt edges could benefit from the grey-belt precedent set at the M42. B&Q's planned subdivision of its 137,000 sq ft Bolton store shows large retail boxes being recycled. The collapse of Oldham contractor Mansell (£4.2m debts) is a reminder to check contractor covenants on development deals. Pricing: the Manchester prime industrial benchmark (5.25%, Q4 2025) is still stale; about 5.50% remains the working assumption (not verified). Equity-led buyers will favour reversionary multi-let estates.
 
 ## 11. UK Office and Property Investment News
 

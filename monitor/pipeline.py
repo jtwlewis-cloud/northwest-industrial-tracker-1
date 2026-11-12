@@ -10,7 +10,7 @@ from .config import (BOE_MPC_DATES, MANUAL_OBSERVATIONS_CSV, PROPERTY_SPREADS, P
                      REPORTS_DIR, SERIES, TIMEZONE)
 from .metrics import movement, trend_label
 from .models import Observation
-from .sources import boe, equities, fred, investegate, ons, treasury
+from .sources import boe, equities, fred, investegate, ons, placenorthwest, treasury
 from .store import Store, load_manual
 
 log = logging.getLogger("monitor")
@@ -37,6 +37,7 @@ def collect_shares(px_store: Store, report_date: date, run_id: str, offline: boo
         ann = investegate.fetch_and_store(tidms, report_date.isoformat())
         failures += ann.errors
         meta.update(ann.meta)
+        failures += placenorthwest.fetch_and_store(report_date).errors
     for ob in equities.load_manual_prices():
         if ob.obs_date <= report_date:
             px_store.upsert(ob, run_id)
@@ -150,6 +151,9 @@ def build_context(store: Store, report_date: date, failures: list[str], meta: di
         "stories": stories,
         "news_sections": news.by_section(stories),
         "news_problems": news_problems,
+        "pnw_headlines": placenorthwest.headlines_since(
+            report_date, {r["url"].rstrip("/") for r in news.load()}),
+        "pnw_window_start": placenorthwest.window_start(report_date),
         "nw_deals": [s for s in stories if s.label == "NORTH WEST INDUSTRIAL" and s.nw_transaction == "yes"],
         "yield_alerts": [r for r in prop_rows if r.latest and r.move_bp and
                          (report_date - (r.latest.publication_date or r.latest.evidence_date)).days <= 7],

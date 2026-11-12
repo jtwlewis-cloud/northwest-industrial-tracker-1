@@ -20,7 +20,7 @@ from .config import DATA_DIR
 
 NEWS_CSV = DATA_DIR / "news_log.csv"
 FIELDS = ["story_id", "first_reported", "pub_date", "label", "rank", "headline", "source", "url", "summary",
-          "key_figures", "relevance", "why_matters", "status", "follow_up_of", "nw_transaction", "size_sqft"]
+          "key_figures", "relevance", "why_matters", "status", "follow_up_of", "nw_transaction", "size_sqft", "region"]
 LABELS = ["NORTH WEST INDUSTRIAL", "UK INDUSTRIAL", "PROPERTY INVESTMENT", "OFFICES",
           "PLANNING / DEVELOPMENT", "FINANCE / CAPITAL MARKETS"]
 SECTIONS = {
@@ -90,5 +90,13 @@ def for_date(report_date: date) -> tuple[list[Story], list[str]]:
     return stories, problems
 
 
+def is_north_west(s: Story) -> bool:
+    return s.label == "NORTH WEST INDUSTRIAL" or (s.row.get("region") or "").upper() == "NW"
+
+
 def by_section(stories: list[Story]) -> dict[str, list[Story]]:
-    return {k: [s for s in stories if s.label in labels] for k, labels in SECTIONS.items()}
+    """North West stories (any label) go to the North West section; the rest by label."""
+    out = {"north_west": [s for s in stories if is_north_west(s)]}
+    for k in ("industrial", "offices_investment"):
+        out[k] = [s for s in stories if s.label in SECTIONS[k] and not is_north_west(s)]
+    return out
