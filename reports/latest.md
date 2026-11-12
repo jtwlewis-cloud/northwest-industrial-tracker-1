@@ -1,9 +1,9 @@
 # DAILY FINANCIAL & PROPERTY INVESTMENT BRIEFING
 
-**Date:** 11 November 2026<br>
-**Reporting time:** 08:00 UK time
+**Date:** 12 November 2026<br>
+**Reporting time:** 06:30 UK time
 
-<small>Generated 2026-11-11 22:27 UTC · run `20261111T222718Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
+<small>Generated 2026-11-12 06:30 UTC · run `20261112T063045Z` · commentary: analyst note. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
 
 > **Alerts**
 > - Prime yield moves in the last 7 days (Knight Frank Prime Yield Guide, Nov 2026): UK Industrial & Logistics +12.5bp; Prime Distribution Warehouses +12.5bp; South East Industrial +12.5bp; Greater London Industrial +12.5bp; Prime Multi-let Industrial (Rest of UK) +12.5bp; London West End Offices +12.5bp; London City Offices +12.5bp; Manchester Offices +12.5bp; Regional UK Offices +12.5bp.
@@ -11,11 +11,11 @@
 
 ## 1. Executive Summary
 
-1. **US inflation surprised higher; yields jumped.** October CPI rose 0.4% m/m (core 0.3%), above consensus. The US 2Y rose 17bp to 4.73% and the 10Y 10bp to 4.98% as December Fed-hike bets rose ([CNBC](https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html)).
-2. **Gilts followed.** The UK 10Y was quoted at 5.21% (+7bp; market quote, as BoE data was unavailable). The prime industrial yield cushion over gilts narrowed to about +29bp from +34bp on 6 November.
-3. **Prime yields unchanged since 6 Nov.** Knight Frank's November guide stands: prime distribution 5.50%+ NIY, multi-let estates 5.25–5.50%, regional offices 7.00%+. No newer evidence was found.
-4. **Big-box demand holds; North West supply stays thin.** SSS signed 175,356 sq ft at Burton (about 1.75m sq ft taken in 2026). Peel Ports is building 131,730 sq ft in Liverpool, and Aviva's 400,000 sq ft Manchester scheme is back in planning.
-5. **SEGRO trades on Prologis deal terms.** The share offer is worth about 895p per SEGRO share, 0.8% below June NTA of 902p. UK share prices are not verified because no licensed London price feed is configured yet.
+1. **Development viability is the story of the day.** Berkeley and Birmingham City Council have scrapped the £2.2bn Ladywood regeneration, citing construction and regulatory costs. It is a clear signal that cost inflation is breaking long-dated appraisals ([Property Week](https://www.propertyweek.com/news/birminghams-2-2bn-ladywood-regeneration-plans-canned-over-viability-pressures)).
+2. **Grey-belt logistics precedent.** Richborough won outline consent on appeal for up to 700,000 sq ft at M42 J9. It says this is the first major industrial appeal win on grey-belt land since the revised NPPF (4 Nov; not previously reported).
+3. **Gilts steady on official data.** The BoE 10Y par yield was 5.14% and the 5Y 4.78% on 9 November. Market quotes for 11 November disagree (5.19% vs 5.23%), so they are not used. US Treasury markets were shut on 11 November for Veterans Day. UK Q3 GDP is out at 07:00 today (consensus +0.7% q/q).
+4. **Yield gap holds at about +36bp.** Prime distribution (5.50%+ NIY, Knight Frank, carried forward) less the 10Y gilt. Small-lot regional evidence: Custodian bought an £11m industrial and retail portfolio at a 6.7% NIY.
+5. **SEGRO trades above the offer's share value.** SEGRO's 9 November close of 922.6p compares with a look-through of about 895p for the Prologis share offer (Prologis 11 Nov, FX 6 Nov, so the dates differ). The 1,031.7p partial cash alternative is capped. No new company announcements today.
 
 ## 2. Government Bond Yields — UK and US
 
@@ -33,7 +33,7 @@
 **10Y less 5Y:** UK +35.7bp (09 Nov 2026) · US +17bp (10 Nov 2026)<br>
 <small>Changes in basis points. † = comparison crosses sources or instruments (indicative).</small>
 
-![Government bond yields](2026/11/charts/bonds-2026-11-11.png)
+![Government bond yields](2026/11/charts/bonds-2026-11-12.png)
 
 ## 3. Interest Rates — Bank Rate, SONIA and Fed
 
@@ -47,12 +47,13 @@
 **Next MPC decision:** 17 Dec 2026
 
 **Confirmed:**
-- Bank Rate 4.00% (since 5 Nov); next MPC decision 17 December.
-- Fed range 3.75–4.00%; press reports say markets expect a December Fed hike.
+- Bank Rate 4.00%; SONIA 3.98% (9 Nov); next MPC decision 17 December.
+- Fed range 3.75–4.00%.
+- Today's UK GDP and next week's UK labour market (17 Nov) and CPI (18 Nov) data are the next tests for MPC expectations.
 
 **Not verified:** market-implied pricing for the December MPC.
 
-**Interpretation:** rising US short rates usually lift sterling swaps. The last verified 5Y swap was 4.58% (4 Nov), and fixed-rate debt still costs more than prime industrial yields (negative leverage).
+**Interpretation:** a strong GDP print alongside 3.5% CPI would support a further rise. A weak print would ease pressure on 2–5 year swaps, the base for property debt.
 
 ## 4. Inflation — UK and US
 
@@ -75,7 +76,7 @@
 | South East Industrial ‡ | 5.25–5.50% | Not stated | 5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | Greater London Industrial | 5.25% | Not stated | 5.00–5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | Prime Multi-let Industrial (Rest of UK) ‡ | 5.25–5.50% | Not stated | 5.25% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
-| North West Industrial ‡ | 5.25% | NIY | — | — | Q4 2025 ⚠ carried forward (315d) | [Knight Frank LOGIC: North West 2025 Review](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/logic/2025-review-nw-industrial.pdf) |
+| North West Industrial ‡ | 5.25% | NIY | — | — | Q4 2025 ⚠ carried forward (316d) | [Knight Frank LOGIC: North West 2025 Review](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/logic/2025-review-nw-industrial.pdf) |
 | UK Logistics (average of 71 submarkets) ‡ | 5.74% | NIY | 5.59% | +15bp | Q3 2026 | [Cushman & Wakefield UK Industrial MarketBeat](https://www.cushmanwakefield.com/en/united-kingdom/insights/uk-marketbeat/industrial-marketbeat) |
 | London West End Offices | 4.00% | Not stated | 3.75–4.00% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
 | London City Offices | 5.50% | Not stated | 5.25–5.50% | +12.5bp | Nov 2026 | [Knight Frank Prime Yield Guide](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf) |
@@ -96,44 +97,44 @@
 
 <small>A simple yield gap (property yield midpoint less 10Y gilt) — not a full measure of risk or relative value.</small>
 
-![Property yield spreads](2026/11/charts/spreads-2026-11-11.png)
+![Property yield spreads](2026/11/charts/spreads-2026-11-12.png)
 
 **Market commentary** <small>(confirmed data points are listed in the appendix)</small>
 
-Hotter US inflation drove a front-end-led sell-off: the US 2-year rose 17bp and the 10-year returned to almost 5%. Gilts followed, with the 10-year quoted at 5.21% and the 30-year at 5.63%. Official Bank of England curve data was unavailable, so UK figures after 5 November are market quotes.
+On official data the gilt market has been stable since the Bank of England's hike. The 10-year par yield is 5.14%, 26bp lower over 30 days, and the 5-year is 4.78%. Market quotes for 11 November conflicted, so they are excluded. US Treasuries did not trade on 11 November.
 
-UK policy is unchanged at 4.00%. However, with UK CPI at 3.5% and the next print due on 18 November, further tightening looks more plausible, though December pricing is not verified.
+The property news is about cost and viability rather than yields. Berkeley's withdrawal from Ladywood is a residential scheme, but the arithmetic carries over to commercial development. Construction and regulatory costs have risen faster than values, and higher-for-longer rates raise finance costs and exit yields. For industrial, Knight Frank's prime distribution yield of 5.50%+ is 25bp higher than in the summer, and more if measured from early 2025, while build costs have not fallen.
 
-No new valuation evidence has appeared since Knight Frank's 6 November guide, so prime yields are carried forward. On a simple yield-gap basis, prime industrial offers about 29bp over gilts. A move back towards 5.4% in the 10-year, the early-October level, would erase that gap and make further outward yield shifts likely in December's agent updates.
+There are two partial offsets. Planning: Richborough's grey-belt appeal win at the M42 suggests the revised NPPF can unlock logistics land. If repeated, that improves land supply and lowers land-promotion risk. Demand: pre-lets such as DHL's conditional 420,000 sq ft at Ansty show occupiers will commit early, which makes large schemes fundable.
 
-Interpretation: bond markets point to continued mild pressure on prime capital values. Returns will depend on rental growth and income, not on yields coming in. Occupier evidence this week, including SSS's 175,000 sq ft letting and long leases at Erith, suggests demand for modern space remains intact. Financing is the swing factor: private lenders are still writing large loans, but at costs above prime yields, which keeps buyer pools narrower and favours equity-rich investors.
+Interpretation: bond markets are not adding new pressure this week, but they are not easing appraisal maths either. Expect developers to prioritise pre-let and forward-funded schemes, and investors to price smaller regional lots at 6.5–7% NIY, as in Custodian's portfolio.
 
 ## 7. Listed Industrial & Logistics Property Share Prices
 
 | Company | Price | Daily | 5-Day | 1-Month | YTD | Mkt cap | Div. yield | Close | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| SEGRO (SGRO.L) | Not verified | — | — | — | — | Not verified | — | — | — |
-| Tritax Big Box REIT (BBOX.L) | Not verified | — | — | — | — | Not verified | — | — | — |
+| SEGRO (SGRO.L) | 922.6p | — | — | — | — | Not verified | 3.4% | 09 Nov | [StockInvest.us (single dated source)](https://stockinvest.us/stock-price/SGRO.L) *(secondary)* |
+| Tritax Big Box REIT (BBOX.L) | 145.4p | — | — | — | — | Not verified | 5.5% | 27 Oct ⚠ stale | [Kalkine Media (dated 27 Oct 2026; single source)](https://kalkinemedia.com/uk/stocks/retail/what-tritax-big-box-reit-lsebbox-says-about-the-current-retail-stocks-story) *(secondary)* |
 | LondonMetric Property (LMP.L) | 188.2p | +0.2% | — | — | — | Not verified | 6.7% | 09 Nov | [StockInvest.us; corroborated by AJ Bell last trade 188.2p](https://stockinvest.us/stock-price/LMP.L) *(secondary)* |
 | British Land (BLND.L) | Not verified | — | — | — | — | Not verified | — | — | — |
-| Landsec (LAND.L) | Not verified | — | — | — | — | Not verified | — | — | — |
+| Landsec (LAND.L) | 659.0p | — | — | — | — | Not verified | — | 27 Oct ⚠ stale | [Kalkine Media (dated 27 Oct 2026; single source)](https://kalkinemedia.com/uk/stocks/industrial/land-securities-lseland-leads-a-fresh-market-look-at-industrial-stocks) *(secondary)* |
 | Derwent London (DLN.L) | Not verified | — | — | — | — | Not verified | — | — | — |
 | Great Portland Estates (GPE.L) | Not verified | — | — | — | — | Not verified | — | — | — |
-| Prologis (PLD) | $130.10 | -0.3% | +0.8% | +0.5% | +1.9% | Not verified | — | 10 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/pld/historical) |
+| Prologis (PLD) | $130.03 | -0.1% | -1.0% | -1.8% | +1.9% | Not verified | — | 11 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/pld/historical) |
 
 *International logistics comparators*
 
 | Company | Price | Daily | 5-Day | 1-Month | YTD | Mkt cap | Div. yield | Close | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| EastGroup Properties (EGP) | $198.58 | -0.3% | -0.8% | +1.3% | +11.5% | Not verified | — | 10 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/egp/historical) |
-| First Industrial Realty Trust (FR) | $54.96 | +0.1% | +0.1% | -7.5% | -4.0% | Not verified | — | 10 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/fr/historical) |
-| Rexford Industrial Realty (REXR) | $37.95 | -1.9% | -0.9% | +3.3% | -2.0% | Not verified | — | 10 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/rexr/historical) |
+| EastGroup Properties (EGP) | $197.94 | -0.3% | -1.5% | +0.2% | +11.1% | Not verified | — | 11 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/egp/historical) |
+| First Industrial Realty Trust (FR) | $55.26 | +0.6% | -0.5% | -8.0% | -3.5% | Not verified | — | 11 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/fr/historical) |
+| Rexford Industrial Realty (REXR) | $37.83 | -0.3% | -3.6% | +0.8% | -2.3% | Not verified | — | 11 Nov | [Nasdaq (official close)](https://www.nasdaq.com/market-activity/stocks/rexr/historical) |
 | WDP (Warehouses De Pauw) (WDP.BR) | Not verified | — | — | — | — | Not verified | — | — | — |
 | CTP (CTPNV.AS) | Not verified | — | — | — | — | Not verified | — | — | — |
 
-<small>Latest completed trading session before 08:00 UK; end-of-day data, not real-time. London prices are in pence (GBX); US in USD; Euronext in EUR. Changes are share-price returns only, excluding dividends (not total shareholder return). ⚑ = daily move of 3% or more. Market caps from Nasdaq are as at retrieval. Dividend yield = latest annualised dividend from company reports ÷ price, where on file. "Not verified" = no licensed price feed returned data and no cited close is on file.</small>
+<small>Latest completed trading session before the 06:30 UK briefing; end-of-day data, not real-time. London prices are in pence (GBX); US in USD; Euronext in EUR. Changes are share-price returns only, excluding dividends (not total shareholder return). ⚑ = daily move of 3% or more. Market caps from Nasdaq are as at retrieval. Dividend yield = latest annualised dividend from company reports ÷ price, where on file. "Not verified" = no licensed price feed returned data and no cited close is on file.</small>
 
-**SEGRO — Prologis offer look-through:** 0.0920 × Prologis close $130.10 (10 Nov) ÷ $1.3371/£ (06 Nov, FRED) = **895.2p** per SEGRO share in Prologis stock; SEGRO's own price not verified. Partial cash alternative: 1031.7p (capped). <small>The FX rate lags by several days, so this is indicative only.</small>
+**SEGRO — Prologis offer look-through:** 0.0920 × Prologis close $130.03 (11 Nov) ÷ $1.3371/£ (06 Nov, FRED) = **894.7p** per SEGRO share in Prologis stock, vs SEGRO close 922.6p (-3.0% offer spread). Partial cash alternative: 1031.7p (capped). <small>The FX rate lags by several days, so this is indicative only.</small>
 
 **Corporate actions on the watchlist**
 
@@ -155,7 +156,7 @@ Interpretation: bond markets point to continued mild pressure on prime capital v
 | Development pipeline | £90m potential rent | 507MW secured power | No direct development | 
 | Dividend (annualised) | 31.1p | 8.0p | 12.6p | 
 | Report basis | [H1 2026 (30 Jun)](https://www.segro.com/media/xlibxjqh/press-release-full-version-final.pdf) | [H1 2026 (30 Jun)](https://www.investegate.co.uk/announcement/rns/tritax-big-box-reit--bbox/half-year-report/9707045) | [FY 2026 (31 Mar)](https://www.investegate.co.uk/announcement/rns/londonmetric-property--lmp/full-year-results-for-the-year-ended-31-march-2026/9578979) | 
-| Premium / (discount) to EPRA NTA | Not verified | Not verified | -6.2% <small>(price 09 Nov)</small> | 
+| Premium / (discount) to EPRA NTA | +2.3% <small>(price 09 Nov)</small> | -21.8% <small>(price 27 Oct)</small> | -6.2% <small>(price 09 Nov)</small> | 
 
 
 <small>Metrics are from each company's latest report (row "Report basis"; some metrics come from later trading updates — full detail in `data/reit_fundamentals.csv`). Share-price dates are shown separately.</small>
@@ -172,207 +173,175 @@ Interpretation: bond markets point to continued mild pressure on prime capital v
 </details>
 
 **Verified:**
-- SEGRO: NTA 902p, LTV 31%, cost of debt 2.8% (June 2026).
-- Tritax: NTA 185.9p, LTV 32.9%, cost of debt 3.6% (June 2026).
-- LondonMetric: NTA 200.6p, LTV 36.7%, cost of debt 4.0% (March 2026). Its October update reported occupancy of 97.4% and WAULT over 16 years.
-- US comparators year to date: EastGroup +11.5%, Prologis +1.9%, First Industrial −4.0%, Rexford −2.0%. Drivers not analysed.
+- No new SEGRO, Tritax or LondonMetric announcements since yesterday.
+- Latest cited closes: SEGRO 922.6p (9 Nov), 2.3% above June NTA of 902p; LondonMetric 188.2p (9 Nov), 6.2% below March NTA. Tritax's latest cited close is 145.4p (27 Oct, stale), 21.8% below June NTA.
+- Prologis closed at $130.03 on 11 November (−0.1%).
 
 **Interpretation:**
-- SEGRO now tracks Prologis's share price and sterling, not UK property yields.
-- LondonMetric has the highest leverage and cost of debt, so it is the most rate-sensitive of the three. Mostly hedged debt delays the impact until refinancing.
-- Gilts, property yields and listed prices tend to move together, but this does not show that one causes the other.
+- SEGRO trading above the share-offer look-through could reflect the 1,031.7p cash alternative, dividends due before completion, or simply the mismatched price dates. Treat the gap as indicative.
+- Tritax's apparent discount uses a stale price and should be refreshed before drawing conclusions.
+- Correlation between gilts and listed REIT prices does not establish cause.
 
-**Next:** LondonMetric half-year results, 24 November: first NTA after the Picton acquisition.
+**Next:** LondonMetric half-year results on 24 November.
 
 ## 9. Top UK Industrial & Logistics Property News
 
-**1. Ecommerce business SSS almost triples footprint at Indurent Park Burton**
+**1. Birmingham's £2.2bn Ladywood regeneration plans axed over viability pressures**
 
 
-`UK INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[Property Week](https://www.propertyweek.com/news/e-commerce-business-almost-triples-footprint-at-indurent-park-burton), published 2026-11-10</small>
+`PLANNING / DEVELOPMENT` · **new** · <small>[Property Week](https://www.propertyweek.com/news/birminghams-2-2bn-ladywood-regeneration-plans-canned-over-viability-pressures), published 2026-11-11</small>
 
 
-Super Smart Service (SSS) has signed a 15-year lease on the 175,356 sq ft Unit B173 at Indurent Park Burton, West Midlands, nearly tripling its presence on the park. The unit is EPC A+ and targeting BREEAM Excellent. Indurent says SSS has taken around 1.75m sq ft of UK space this year.
+Berkeley Group and Birmingham City Council have terminated the development agreement for the £2.2bn Ladywood Estate regeneration, a 148-acre, 20-year scheme for more than 10,000 homes. They cite increased construction and regulatory costs and a more challenged housing market and economy as putting significant pressure on viability.
 
 
-**Why this matters:** One occupier taking about 1.75m sq ft in a year is a material share of UK big-box demand. It supports the case for new-build Grade A space on M6/M1 corridors, which the North West competes for, even as investment yields soften.
+**Why this matters:** When a developer of Berkeley's scale walks away on viability, it shows that build costs and rates are breaking long-dated appraisals. The same pressures apply to speculative industrial schemes: exit yields are drifting out while costs stay high, so more projects will need pre-lets or forward funding to proceed.
 
 
 <details markdown="1"><summary>Key figures and relevance</summary>
 
-- **Key figures:** 175,356 sq ft; 15-year lease; c.1.75m sq ft taken by SSS in 2026; rent not disclosed
-- **Relevance:** Big-box take-up by e-commerce on new-build, A-rated stock at a Midlands logistics hub.
+- **Key figures:** £2.2bn; 148 acres; 10,000+ homes; c.20% affordable; 20-year programme
+- **Relevance:** Viability failure on a flagship scheme; cost inflation is breaking development appraisals.
 
 </details>
 
-**6. L&G and Verdion get green light for £30m Greenwich logistics hub**
+**2. Richborough Commercial secures major appeal win on M42 corridor scheme**
 
 
-`PLANNING / DEVELOPMENT` · 20,000+ sq ft · **new** · <small>[Property Week](https://www.propertyweek.com/markets/industrial-logistics/lg-and-verdion-get-green-light-for-30m-greenwich-log), published 2026-11-11</small>
+`UK INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[Property Week](https://www.propertyweek.com/news/richborough-commercial-secures-major-appeal-win-on-m42-corridor), published 2026-11-04</small>
 
 
-Legal & General's Industrial Property Investment Fund and Verdion have won consent for LiteHub Greenwich, a £30m multi-let scheme of 78,986 sq ft in six units of 5,555–16,000 sq ft on a 2.6-acre brownfield site in West Thamesmead. Completion is targeted for Q4 2027, aiming for BREEAM Excellent and EPC A+.
+Richborough Commercial has won outline consent at appeal for up to 700,000 sq ft of B2/B8 floorspace near M42 Junction 9 in North Warwickshire, after appealing against non-determination of a June 2024 application. Richborough says it is the first appeal allowing a major industrial and logistics scheme on grey-belt land since the revised NPPF in August. (Published before the last briefing but not previously reported.)
+
+
+**Why this matters:** A first grey-belt appeal win for logistics could unlock land supply around constrained cores, including Green Belt-heavy Greater Manchester and Cheshire. That raises land-value expectations for promoters but should, over time, ease the supply shortage that has supported North West rents.
 
 
 <details markdown="1"><summary>Key figures and relevance</summary>
 
-- **Key figures:** 78,986 sq ft; 6 units 5,555–16,000 sq ft; £30m; 2.6 acres; ready Q4 2027
-- **Relevance:** Institutional capital continuing to back speculative urban multi-let development.
+- **Key figures:** Up to 700,000 sq ft B2/B8; M42 J9; outline consent on appeal; grey-belt land
+- **Relevance:** Planning precedent for logistics on grey-belt land.
 
 </details>
 
-**7. Padrock secures 71,530 sq ft letting of south-east London warehouse**
+**3. BARJANE submits plans for 420,000 sq ft DHL warehouse**
 
 
-`UK INDUSTRIAL` · 20,000+ sq ft · **new** · <small>[Property Week](https://www.propertyweek.com/news/padrock-secures-71530-sq-ft-letting-of-south-east-london-unit), published 2026-11-09</small>
+`UK INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[Property Week](https://www.propertyweek.com/news/barjane-submits-plans-for-420000-sq-ft-dhl-warehouse), published 2026-11-04</small>
 
 
-Padrock has let Erith Logistics Hub, a 71,530 sq ft single-unit development in south-east London, to tabletop manufacturer Nevilles on a 15-year lease. Nevilles will move from its existing Erith premises in April and use the unit as its headquarters and global distribution centre. Padrock described the market as challenging.
+BARJANE has applied for a 420,000 sq ft logistics scheme at Ansty, Coventry, next to Frasers Group's approved 3.3m sq ft headquarters. DHL Supply Chain has agreed to occupy the BREEAM Outstanding, EPC A warehouse if planning permission is granted, giving the scheme a conditional pre-let at the M6/M69 junction. (Published before the last briefing but not previously reported.)
+
+
+**Why this matters:** Big-box demand is turning into pre-let development rather than speculative space. This is the route North West schemes above 300,000 sq ft are likely to need while exit yields sit at 5.50%+.
 
 
 <details markdown="1"><summary>Key figures and relevance</summary>
 
-- **Key figures:** 71,530 sq ft; 15-year lease; occupation April 2027; rent not disclosed
-- **Relevance:** Long-lease letting of speculative London mid-box space; occupier relocating locally.
+- **Key figures:** 420,000 sq ft; conditional pre-let to DHL Supply Chain; Ansty, Coventry; BREEAM Outstanding target
+- **Relevance:** Large-format 3PL demand being met by pre-let development rather than existing stock.
+
+</details>
+
+**6. Bolton pursues legal challenge into national planning changes**
+
+
+`PLANNING / DEVELOPMENT` · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/bolton-pursues-legal-challenge-into-national-planning-changes/), published 2026-11-11</small>
+
+
+Bolton Council has complied 'under protest' with the National Scheme of Delegation, which makes planning officers the default decision-makers for most applications. It voted to cost a judicial review and to write to all English planning authorities seeking a coordinated legal challenge against the government.
+
+
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** Applies to most planning applications; judicial review being costed
+- **Relevance:** Planning-process uncertainty in Greater Manchester; delegation should speed routine industrial consents if upheld.
+
+</details>
+
+**7. £2bn Manchester-Sheffield tunnel gets funding boost**
+
+
+`PLANNING / DEVELOPMENT` · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/2bn-manchester-sheffield-tunnel-gets-funding-boost/), published 2026-11-11</small>
+
+
+Future Works Infrastructure's Trans-Pennine Connect, a proposed 14-mile tolled dual carriageway with a tunnel between Manchester and Sheffield, has received £500,000 from the UK Dynamism Fund for feasibility work. The scheme, estimated at £2bn, would be funded by tolls and private or local-authority investors rather than central government.
+
+
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** £500,000 feasibility funding; 14-mile route; c.£2bn estimated cost
+- **Relevance:** Long-term trans-Pennine connectivity for logistics east of Greater Manchester; early-stage only.
+
+</details>
+
+**8. B&Q to cut 63,000 sq ft in Bolton as it looks to right-size**
+
+
+`PLANNING / DEVELOPMENT` · **▲ 100,000+ sq ft** · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/bq-to-cut-63000-sq-ft-in-bolton-as-it-looks-to-right-size/), published 2026-11-11</small>
+
+
+BNP Paribas has applied to subdivide B&Q's 137,000 sq ft Kay Street store in Bolton into three units, cutting B&Q's space by 63,000 sq ft. Aldi would take a new 20,000 sq ft store, relocating from Higher Bridge Street, using space currently occupied by B&Q's Trade Point facility.
+
+
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** 137,000 sq ft store; B&Q to give up 63,000 sq ft; 20,000 sq ft Aldi
+- **Relevance:** Retail-warehouse right-sizing in Greater Manchester; large-box space being recycled to discount food.
 
 </details>
 
 
 ## 10. North West Industrial & Logistics News
 
-**2. Glencar progresses construction of bulk storage development for Peel Ports Group**
-
-
-`NORTH WEST INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[TheBusinessDesk.com](https://www.thebusinessdesk.com/northwest/news/2182661-glencar-progresses-construction-of-bulk-storage-develop), published 2026-11-11</small>
-
-
-Contractor Glencar is building two bulk storage warehouses, Alexandra Warehouses 6 and 7, at Alexandra Dock, Liverpool, for Peel Ports Group. They will provide 131,730 sq ft of internal storage within a wider 249,529 sq ft development including infrastructure and access works, with about 60,000 tonnes of dry-bulk capacity.
-
-
-**Why this matters:** It is new North West supply above 100,000 sq ft at a time when the region is short of Grade A space. Port-centric storage can relieve inland demand on the M62/M6 corridors, but it is operational space for Peel's own use, not lettable investment stock.
-
-
-<details markdown="1"><summary>Key figures and relevance</summary>
-
-- **Key figures:** 131,730 sq ft storage; 249,529 sq ft wider development; c.60,000 tonnes capacity
-- **Relevance:** Port-centric supply adds to constrained Merseyside warehouse stock; owner-occupier development rather than investment stock.
-
-</details>
-
-**3. Aviva tables revised plans for 400,000 sq ft Manchester industrial**
-
-
-`NORTH WEST INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/aviva-tables-revised-plans-for-400000-sq-ft-manchester-industrial/), published 2026-11-02</small>
-
-
-Aviva has submitted revised plans for 400,000 sq ft of industrial space in five units on the former Ferranti factory at Styal Road and Simonsway, near Manchester Airport. A 2023 scheme was refused over Green Belt encroachment and airport safety concerns; the new design has been changed following consultation earlier this year. (Earlier coverage, included in this first news edition.)
-
-
-**Why this matters:** If approved, this would be one of the largest institutional industrial schemes in Greater Manchester, adding supply to the tight M56 airport sub-market. Its progress will test planning risk for industrial schemes near Green Belt and airport safeguarding zones.
-
-
-<details markdown="1"><summary>Key figures and relevance</summary>
-
-- **Key figures:** 400,000 sq ft across 5 units; site near Manchester Airport; 2023 application refused
-- **Relevance:** Potential large-scale institutional-backed supply in the South Manchester / M56 market.
-
-</details>
-
-**5. Langtree hands over final £25m phase at Hollinwood Junction**
-
-
-`NORTH WEST INDUSTRIAL` · **▲ 100,000+ sq ft** · **new** · <small>[Place North West](https://www.placenorthwest.co.uk/langtree-hands-over-final-25m-phase-at-hollinwood-junction/), published 2026-11-03</small>
-
-
-Russell WBHO has completed 192,000 sq ft of industrial space at Hollinwood Junction, Oldham (M60), forward-funded by Indurent and delivered by Langtree with Oldham Council. The £25m final phase comprises 13 units from about 5,000 sq ft to 42,000 sq ft. (Earlier coverage, included in this first news edition.)
-
-
-<details markdown="1"><summary>Key figures and relevance</summary>
-
-- **Key figures:** 192,000 sq ft; 13 units, 5,000–42,000 sq ft; £25m phase; forward-funded by Indurent
-- **Relevance:** New multi-let supply in Greater Manchester; forward funding shows institutional appetite for small/mid-box.
-
-</details>
-
+No significant new North West industrial stories were found for this period.
 
 **North West outlook**
 
-There is still no published 2026 North West prime yield. Knight Frank's 5.25% NIY for Manchester (Q4 2025) is carried forward, but sits below the national 5.50%+, so about 5.50% is the realistic working assumption (not verified). Supply remains the region's defining feature: the main new space is port-centric (Peel Ports, Liverpool) or still in planning (Aviva, 400,000 sq ft near Manchester Airport). Hollinwood's 192,000 sq ft completion adds multi-let stock in Oldham. Expect continued rental resilience for Grade A units, and selective, equity-led investment demand. Development viability depends on pre-lets or forward funding while exit yields drift out and build costs stay high, so speculative starts are likely to remain limited in 2027.
+There was no significant new North West industrial transaction in the past 24 hours. Regionally, the news is about planning process. Bolton is challenging national rules that make officers the default decision-makers; if upheld, those rules should speed routine consents. Larger B2/B8 schemes on Green Belt edges could benefit from the grey-belt precedent set at the M42. B&Q's planned subdivision of its 137,000 sq ft Bolton store shows large retail boxes being recycled. Pricing: the Manchester prime industrial benchmark (5.25%, Q4 2025) is still stale; about 5.50% remains the working assumption (not verified). Equity-led buyers will favour reversionary multi-let estates.
 
 ## 11. UK Office and Property Investment News
 
-**4. SevenCitiesLdn wins £163m loan against Victoria Street office**
+**4. Custodian REIT acquires £11m portfolio from syndicated investment vehicles**
 
 
-`FINANCE / CAPITAL MARKETS` · **▲ 100,000+ sq ft** · **new** · <small>[Property Week](https://www.propertyweek.com/news/sevencities-wins-163-loan-against-victoria-street-office), published 2026-11-10</small>
+`PROPERTY INVESTMENT` · **new** · <small>[Property Week](https://www.propertyweek.com/news/custodian-reit-acquires-11m-portfolio-from-syndicated-investment-vehicles), published 2026-11-09</small>
 
 
-SevenCitiesLdn has secured a £163m senior whole loan from Patron Capital to support its £211m acquisition and repositioning of 123 Victoria Street, a fully let 244,000 sq ft office bought from Landsec. The facility comprises a £148m acquisition tranche and £15m for refurbishment, at 70% loan-to-cost and 59% loan-to-projected value.
+Custodian Property Income REIT has bought eight fully let retail and industrial properties, mainly in the East Midlands, for £11m from syndicates managed by Lincoln Property Syndicates. The £800,000 rent reflects a 6.7% net initial yield and 7.2% reversionary yield, funded largely by issuing 10.6m new shares plus £400,000 cash. (Published before the last briefing but not previously reported.)
 
 
 <details markdown="1"><summary>Key figures and relevance</summary>
 
-- **Key figures:** £163m loan; £211m purchase; 244,000 sq ft; 70% LTC; 59% LTV (projected)
-- **Relevance:** Evidence that large-ticket office debt is available, from private credit at relatively high leverage.
+- **Key figures:** £11m; 8 assets; NIY 6.7%; reversionary yield 7.2%; WAULT 6 yrs; avg lot £1.4m
+- **Relevance:** Pricing evidence for small-lot regional industrial/retail: c.6.7% NIY.
 
 </details>
 
-**8. London leads European investment despite slow recovery, PwC and ULI find**
+**5. Criterion snaps up New London House for 500-room hotel conversion**
 
 
-`PROPERTY INVESTMENT` · **new** · <small>[Property Week](https://www.propertyweek.com/news/london-leads-european-investment-despite-slow-recovery-pwc-and-uli-find), published 2026-11-10</small>
+`OFFICES` · 20,000+ sq ft · **new** · <small>[Property Week](https://www.propertyweek.com/news/criterion-snaps-up-new-london-house-for-500-room-hotel-conversion), published 2026-11-10</small>
 
 
-PwC and ULI's Emerging Trends in Real Estate Europe survey of 1,498 professionals keeps London top of the city rankings, but expects recovery to be slower and uneven. Only 45% expect higher profitability in 2027 (50% last year). Construction costs (58%) and interest rates (55%) are the leading concerns for 2027.
-
-
-<details markdown="1"><summary>Key figures and relevance</summary>
-
-- **Key figures:** 1,498 respondents; 45% expect profit growth in 2027 (50% prior); construction costs cited by 58%; interest rates by 55%
-- **Relevance:** Sentiment indicator: investor confidence softening as rates and build costs bite.
-
-</details>
-
-**9. Seneca acquires Lawnswood Business Park in Leeds**
-
-
-`PROPERTY INVESTMENT` · **▲ 100,000+ sq ft** · **new** · <small>[Property Week](https://www.propertyweek.com/news/seneca-acquires-lawnswood-business-park), published 2026-11-11</small>
-
-
-Seneca Property has bought the 150,000 sq ft Lawnswood Business Park, north Leeds, for an undisclosed sum; it was marketed at a £20m guide. The vendor, Hillview Real Estate, paid £26.5m in 2018. The park is 81% let to 17 tenants and will be refurbished into smaller fitted suites.
+Criterion Capital's Zedwell Hotels has bought New London House, an 89,722 sq ft office on Fenchurch Street in the City, from Whitbread for an undisclosed sum, and plans to convert it into a 509-room hotel. Zedwell says it targets structurally sound, well-located buildings where conversion unlocks value. (Published before the last briefing but not previously reported.)
 
 
 <details markdown="1"><summary>Key figures and relevance</summary>
 
-- **Key figures:** 150,000 sq ft; guide £20m vs £26.5m paid in 2018; 81% occupied; 17 tenants
-- **Relevance:** Regional out-of-town office pricing evidence: c.25% below 2018 price on guide basis.
-
-</details>
-
-**10. Office owner-occupancy reaches decade high, says Carter Jonas**
-
-
-`OFFICES` · **new** · <small>[Property Week](https://www.propertyweek.com/markets/offices/office-owner-occupancy-reaches-decade-high-says-carter-jonas), published 2026-11-11</small>
-
-
-Carter Jonas research shows owner-occupiers took 13.4% of UK office sales by transaction count in 2025, a decade high. Outside London the share rose to 17.8% (2024 to September 2026) from 13.4% (2018–23); in London from 8.5% to 10.6%. It attributes the shift to lower capital values alongside rising rents.
-
-
-<details markdown="1"><summary>Key figures and relevance</summary>
-
-- **Key figures:** 13.4% (2025); regions 17.8% vs 13.4%; London 10.6% vs 8.5%
-- **Relevance:** Repriced regional offices are attracting owner-occupier buyers, adding liquidity below institutional lot sizes.
+- **Key figures:** 89,722 sq ft office; 509-room hotel conversion; price undisclosed
+- **Relevance:** Continued removal of secondary City office stock via change of use.
 
 </details>
 
 
 ## 12. What This Means for the North West Industrial Market
 
-1. **Pricing and yields.** *Verified:* national prime distribution 5.50%+; North West benchmark 5.25% (Q4 2025). *Interpretation:* appraise North West prime at around 5.50%, and allow 25bp of outward sensitivity while gilts stay above 5.2%.
-2. **Rents and demand.** *Verified:* 175k sq ft letting at Burton, and the region's Grade A supply is tight. *Interpretation:* market good modern units on the M62, M6 and M56 with confidence. Prefer longer leases with fixed or indexed uplifts to rent-free incentives.
-3. **Viability and supply.** *Verified:* 192k sq ft completed at Hollinwood with forward funding; Aviva's 400k sq ft scheme is still in planning. *Interpretation:* in appraisals, stress-test exit yields at +25 to 50bp. The largest schemes need pre-lets or forward funding to start.
-4. **Debt and funding.** *Verified:* 5Y swap 4.58% (4 Nov); Patron lent at 70% loan-to-cost on a London office. *Interpretation:* debt is available but costs more than prime yields. Leveraged buyers will target reversionary or value-add stock.
-5. **Appetite.** *Verified:* L&G's industrial fund and Indurent are still funding urban and multi-let schemes. *Interpretation:* the deepest buyer pool is for £10–50m multi-let estates; expect competitive bids for well-let North West lots.
+1. **Pricing and yields.** *Verified:* national prime 5.50%+ NIY; small-lot regional evidence 6.7% NIY (Custodian). *Interpretation:* in investment advice, separate prime (about 5.50%) from secondary multi-let (6.5–7%). Use the gap to position value-add stock for buyers.
+2. **Rents and demand.** *Verified:* DHL is committing to 420k sq ft through a conditional pre-let. *Interpretation:* occupiers with large requirements will commit early, so market North West land and design-and-build options to 3PLs now rather than waiting for speculative completions.
+3. **Viability and supply.** *Verified:* Ladywood was axed over costs, and grey belt won on appeal at the M42. *Interpretation:* in appraisals, stress-test build costs at +5–10% and exit yields at +25bp. Grey-belt sites near the M6, M56 and M62 may become viable planning plays, so review land options.
+4. **Debt and funding.** *Verified:* 10Y gilt 5.14%; 5Y swap 4.58% (4 Nov, stale). *Interpretation:* debt remains more expensive than prime yields. Forward funding from institutions such as Indurent and L&G is the more realistic route for North West speculative schemes than bank development debt.
+5. **Appetite.** *Verified:* Custodian is using its shares to buy small regional lots, and Prologis is absorbing SEGRO. *Interpretation:* listed and institutional buyers are selective but active. Well-let North West multi-let lots of £1–10m should find REIT and private buyers at 6.5%+ NIY.
 
 ## 13. Upcoming Economic and Property Market Events
 
@@ -403,6 +372,7 @@ Carter Jonas research shows owner-occupiers took 13.4% of UK office sales by tra
 - All automated sources responded.
 - UK 2-Year gilt: latest observation (05 Nov 2026) is stale.
 - 5Y SONIA swap rate: latest observation (04 Nov 2026) is stale.
+- USD per GBP: latest observation (06 Nov 2026) is stale.
 - Discrepancy — UK 10-Year gilt, 2026-10-06: 5.34% (Bank of England Database (IADB)) vs 5.42% ([Knight Frank Prime Yield Guide (Macrobond/ICAP)](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/10.-kf-final-october-2026-prime-yield-guide.pdf)), +8.3bp; often a different instrument.
 - Discrepancy — UK 10-Year gilt, 2026-11-06: 5.12% (Bank of England Database (IADB)) vs 5.16% ([Trading Economics](https://tradingeconomics.com/united-kingdom/government-bond-yield)), +4.2bp; often a different instrument.
 
@@ -427,12 +397,12 @@ Carter Jonas research shows owner-occupiers took 13.4% of UK office sales by tra
 
 **Analyst sources**
 
-- CNBC, [CPI inflation report: October 2026](https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html) and [10-year Treasury yield races back to 5%](https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html).
-- Trading Economics, [UK 10Y](https://tradingeconomics.com/united-kingdom/government-bond-yield) and [UK 30Y](https://tradingeconomics.com/united-kingdom/30-year-bond-yield) gilt quotes (10 Nov).
+- Property Week: [Ladywood axed](https://www.propertyweek.com/news/birminghams-2-2bn-ladywood-regeneration-plans-canned-over-viability-pressures), [Richborough M42 appeal](https://www.propertyweek.com/news/richborough-commercial-secures-major-appeal-win-on-m42-corridor), [BARJANE/DHL](https://www.propertyweek.com/news/barjane-submits-plans-for-420000-sq-ft-dhl-warehouse), [Custodian](https://www.propertyweek.com/news/custodian-reit-acquires-11m-portfolio-from-syndicated-investment-vehicles).
+- Place North West: [Bolton planning challenge](https://www.placenorthwest.co.uk/bolton-pursues-legal-challenge-into-national-planning-changes/), [B&Q Bolton](https://www.placenorthwest.co.uk/bq-to-cut-63000-sq-ft-in-bolton-as-it-looks-to-right-size/).
+- FXStreet, [UK GDP Q3 preview](https://www.fxstreet.com/news/uk-gdp-is-set-to-show-that-the-economy-continued-growing-in-q3-202611120300) (consensus 0.7% q/q).
+- Trading Economics and Streamline Feed: conflicting 11 Nov UK 10Y quotes (5.23% vs 5.19%), not used.
 - Knight Frank, [Prime Yield Guide November 2026](https://www.knightfrank.co.uk/site-assets/research/report-pdfs/yield-guide/prime-yield-guide-nov-2026.pdf).
-- Company results: [SEGRO H1 2026](https://www.segro.com/media/xlibxjqh/press-release-full-version-final.pdf), [Tritax H1 2026](https://www.investegate.co.uk/announcement/rns/tritax-big-box-reit--bbox/half-year-report/9707045), [LondonMetric FY 2026](https://www.investegate.co.uk/announcement/rns/londonmetric-property--lmp/full-year-results-for-the-year-ended-31-march-2026/9578979) and [trading update](https://www.investegate.co.uk/announcement/rns/londonmetric-property--lmp/trading-update/9828217).
-- SEGRO offer terms: [Slaughter and May](https://www.slaughterandmay.com/recent-work/advising-segro-on-the-recommended-share-offer-by-prologis/).
-- News sources are linked in each story.
+- Share prices: StockInvest.us, AJ Bell and Kalkine, as cited in the share table (secondary).
 
 </details>
 

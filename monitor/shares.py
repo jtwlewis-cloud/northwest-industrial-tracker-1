@@ -36,6 +36,7 @@ class ShareRow:
     div_yield: float | None = None
     div_basis: str = ""
     alert: bool = False
+    stale: bool = False
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -80,7 +81,9 @@ def share_rows(store, report_date: date, market_caps: dict, fundamentals: dict) 
         if hist:
             r.latest = hist[-1]
             r.prev = hist[-2] if len(hist) > 1 else None
-            r.d1 = pct(r.latest.value, r.prev.value) if r.prev else None
+            # a "daily" change needs the previous session, not an older cited close
+            r.d1 = pct(r.latest.value, r.prev.value) if r.prev and (r.latest.obs_date - r.prev.obs_date).days <= 5 else None
+            r.stale = (report_date - r.latest.obs_date).days > 5
             r.d5 = pct(r.latest.value, hist[-6].value) if len(hist) >= 6 else None
             m = _before(hist[:-1], r.latest.obs_date - timedelta(days=30))
             r.m1 = pct(r.latest.value, m.value) if m and (r.latest.obs_date - m.obs_date).days <= 37 else None

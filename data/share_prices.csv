@@ -1,4 +1,5 @@
 series_id,obs_date,value,source,source_url,source_type,publication_date,retrieved_at,notes
+PX:BBOX.L,2026-10-27,145.4,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/retail/what-tritax-big-box-reit-lsebbox-says-about-the-current-retail-stocks-story,secondary,,2026-11-12,Pence (GBX); via web search snippet
 PX:EGP,2025-12-01,180.54,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:EGP,2025-12-02,179.45,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:EGP,2025-12-03,179.24,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
@@ -237,6 +238,7 @@ PX:EGP,2026-11-05,193.86,Nasdaq (official close),https://www.nasdaq.com/market-a
 PX:EGP,2026-11-06,193.81,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:EGP,2026-11-09,199.26,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:EGP,2026-11-10,198.58,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
+PX:EGP,2026-11-11,197.94,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/egp/historical,official,,2026-11-12T06:26:59+00:00,"End-of-day close, USD"
 PX:FR,2025-12-01,57.02,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2025-12-02,56.41,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2025-12-03,55.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
@@ -475,6 +477,9 @@ PX:FR,2026-11-05,53.92,Nasdaq (official close),https://www.nasdaq.com/market-act
 PX:FR,2026-11-06,53.76,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2026-11-09,54.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:FR,2026-11-10,54.96,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
+PX:FR,2026-11-11,55.26,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/fr/historical,official,,2026-11-12T06:26:59+00:00,"End-of-day close, USD"
+PX:LAND.L,2026-10-27,659,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/industrial/land-securities-lseland-leads-a-fresh-market-look-at-industrial-stocks,secondary,,2026-11-12,Pence (GBX); via web search snippet
+PX:LMP.L,2026-10-27,183.5,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/industrial/land-securities-lseland-leads-a-fresh-market-look-at-industrial-stocks,secondary,,2026-11-12,Pence (GBX); via web search snippet
 PX:LMP.L,2026-11-06,187.9,AJ Bell (previous close shown on 9 Nov quote),https://www.ajbell.co.uk/market-research/LSE:LMP,secondary,,2026-11-11,Pence (GBX); via web search snippet
 PX:LMP.L,2026-11-09,188.2,StockInvest.us; corroborated by AJ Bell last trade 188.2p,https://stockinvest.us/stock-price/LMP.L,secondary,,2026-11-11,Pence (GBX); two sources agree; via web search snippets
 PX:PLD,2025-12-01,128.93,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
@@ -715,6 +720,7 @@ PX:PLD,2026-11-05,128.55,Nasdaq (official close),https://www.nasdaq.com/market-a
 PX:PLD,2026-11-06,126.96,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:PLD,2026-11-09,130.55,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:PLD,2026-11-10,130.1,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
+PX:PLD,2026-11-11,130.03,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/pld/historical,official,,2026-11-12T06:26:59+00:00,"End-of-day close, USD"
 PX:REXR,2025-12-01,41.46,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:REXR,2025-12-02,41.24,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:REXR,2025-12-03,41.64,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
@@ -953,3 +959,6 @@ PX:REXR,2026-11-05,38.15,Nasdaq (official close),https://www.nasdaq.com/market-a
 PX:REXR,2026-11-06,37.8,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:REXR,2026-11-09,38.7,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
 PX:REXR,2026-11-10,37.95,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-11T22:14:49+00:00,"End-of-day close, USD"
+PX:REXR,2026-11-11,37.83,Nasdaq (official close),https://www.nasdaq.com/market-activity/stocks/rexr/historical,official,,2026-11-12T06:26:59+00:00,"End-of-day close, USD"
+PX:SGRO.L,2026-10-27,909.8,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/infrastructure-and-real-estate/why-is-segro-lsesgro-anchoring-londons-property-debate,secondary,,2026-11-12,Pence (GBX); via web search snippet
+PX:SGRO.L,2026-11-09,922.6,StockInvest.us (single dated source),https://stockinvest.us/stock-price/SGRO.L,secondary,,2026-11-12,Pence (GBX); via web search snippet; no second source found

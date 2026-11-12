@@ -1,3 +1,8 @@
 ticker,date,close,source,source_url,retrieved_at,notes
 LMP.L,2026-11-06,187.90,AJ Bell (previous close shown on 9 Nov quote),https://www.ajbell.co.uk/market-research/LSE:LMP,2026-11-11,Pence (GBX); via web search snippet
 LMP.L,2026-11-09,188.20,StockInvest.us; corroborated by AJ Bell last trade 188.2p,https://stockinvest.us/stock-price/LMP.L,2026-11-11,Pence (GBX); two sources agree; via web search snippets
+SGRO.L,2026-11-09,922.60,StockInvest.us (single dated source),https://stockinvest.us/stock-price/SGRO.L,2026-11-12,Pence (GBX); via web search snippet; no second source found
+SGRO.L,2026-10-27,909.80,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/infrastructure-and-real-estate/why-is-segro-lsesgro-anchoring-londons-property-debate,2026-11-12,Pence (GBX); via web search snippet
+BBOX.L,2026-10-27,145.40,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/retail/what-tritax-big-box-reit-lsebbox-says-about-the-current-retail-stocks-story,2026-11-12,Pence (GBX); via web search snippet
+LMP.L,2026-10-27,183.50,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/industrial/land-securities-lseland-leads-a-fresh-market-look-at-industrial-stocks,2026-11-12,Pence (GBX); via web search snippet
+LAND.L,2026-10-27,659.00,Kalkine Media (dated 27 Oct 2026; single source),https://kalkinemedia.com/uk/stocks/industrial/land-securities-lseland-leads-a-fresh-market-look-at-industrial-stocks,2026-11-12,Pence (GBX); via web search snippet
