@@ -1,0 +1,304 @@
+{% macro src(o) %}{% if o %}{{ link(o.source, o.source_url) }}{% if o.source_type != 'official' %} *({{ o.source_type }})*{% endif %}{% else %}—{% endif %}{% endmacro %}
+{% macro bondrow(sid) %}{% set m = moves[sid] %}| {{ series[sid].label }} | {% if m.latest %}{{ m.latest.value | pct }}{% if m.stale %} ⚠ stale{% endif %}{% else %}{{ NV }}{% endif %} | {{ m.d1 | bps }}{% if '1d' in m.mixed_sources %}†{% endif %} | {{ m.d7 | bps }}{% if '7d' in m.mixed_sources %}†{% endif %} | {{ m.d30 | bps }}{% if '30d' in m.mixed_sources %}†{% endif %} | {{ m.latest.obs_date | d if m.latest else '—' }} | {{ src(m.latest) }} |{% endmacro %}
+{% macro chg(v, flag=False) %}{% if v is none %}—{% else %}{{ '%+.1f' % v }}%{% if flag and v|abs >= 3 %} ⚑{% endif %}{% endif %}{% endmacro %}
+{% macro sharerow(r) %}| {{ r.w.name }} ({{ r.w.ticker }}) | {{ r.price_str() }} | {{ chg(r.d1, True) }} | {{ chg(r.d5) }} | {{ chg(r.m1) }} | {{ chg(r.ytd) }} | {{ fmt_cap(r.market_cap) }} | {% if r.div_yield is not none %}{{ '%.1f' % r.div_yield }}%{% else %}—{% endif %} | {{ r.latest.obs_date | d('%d %b') if r.latest else '—' }}{% if r.stale %} ⚠ stale{% endif %} | {{ src(r.latest) }} |{% endmacro %}
+{% macro story(s) %}
+**{{ s.rank }}. {{ s.headline }}**{{ '\n\n' }}
+`{{ s.label }}`{% if s.sqft >= 100000 %} · **▲ 100,000+ sq ft**{% elif s.sqft >= 20000 %} · 20,000+ sq ft{% endif %} · {% if s.status == 'follow-up' %}*follow-up*{% else %}**new**{% endif %} · <small>{{ link(s.source, s.url) }}, published {{ s.pub_date }}</small>{{ '\n\n' }}
+{{ s.summary }}{{ '\n\n' }}
+{% if s.why_matters %}
+**Why this matters:** {{ s.why_matters }}{{ '\n\n' }}
+{% endif %}
+<details markdown="1"><summary>Key figures and relevance</summary>
+
+- **Key figures:** {{ s.key_figures or 'Not disclosed' }}
+- **Relevance:** {{ s.relevance }}
+
+</details>
+{% endmacro %}
+# DAILY FINANCIAL & PROPERTY INVESTMENT BRIEFING
+
+**Date:** {{ report_date | d('%d %B %Y') }}<br>
+**Reporting time:** 06:30 UK time
+
+<small>Generated {{ generated_at.strftime('%Y-%m-%d %H:%M UTC') }} · run `{{ run_id }}` · commentary: {{ notes_source }}. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
+
+{% if share_alerts or yield_alerts or nw_deals or corporate_actions %}
+> **Alerts**
+{% for r in share_alerts %}
+> - ⚑ {{ r.w.name }} moved {{ '%+.1f' % r.d1 }}% on {{ r.latest.obs_date | d }}.
+{% endfor %}
+{% if yield_alerts %}
+> - Prime yield moves in the last 7 days ({{ yield_alerts[0].latest.provider }}, {{ yield_alerts[0].latest.period }}): {% for r in yield_alerts %}{{ r.label }} {{ r.move_bp | bps }}{% if not loop.last %}; {% endif %}{% endfor %}.
+{% endif %}
+{% for s in nw_deals %}
+> - North West deal: {{ s.headline }}{% if s.sqft %} ({{ '{:,}'.format(s.sqft) }} sq ft){% endif %}.
+{% endfor %}
+{% for r in corporate_actions if r.w.group == 'primary' %}
+> - Corporate action — {{ r.w.name }}: {{ r.w.corporate_action }}
+{% endfor %}
+{% endif %}
+
+## 1. Executive Summary
+
+{% if notes.get('Executive Summary') %}
+{{ notes['Executive Summary'] }}
+{% else %}
+{% for c in confirmed[:5] %}
+{{ loop.index }}. {{ c }}
+{% endfor %}
+{% endif %}
+
+## 2. Government Bond Yields — UK and US
+
+| Market | Latest Yield | Daily | 7-Day | 30-Day | Observed | Source |
+|---|---|---|---|---|---|---|
+{% for sid in ['UK_GILT_5Y','UK_GILT_10Y','US_UST_5Y','US_UST_10Y'] %}
+{{ bondrow(sid) }}
+{% endfor %}
+{% for sid in ['UK_GILT_2Y','UK_GILT_30Y','US_UST_2Y','US_UST_30Y'] %}
+{{ bondrow(sid) }}
+{% endfor %}
+
+**10Y less 5Y:** UK {% if curve_uk[0] is not none %}{{ curve_uk[0] | bps }} ({{ curve_uk[1] | d }}){% else %}{{ NV }}{% endif %} · US {% if curve_us[0] is not none %}{{ curve_us[0] | bps }} ({{ curve_us[1] | d }}){% else %}{{ NV }}{% endif %}<br>
+<small>Changes in basis points. † = comparison crosses sources or instruments (indicative).</small>
+
+{% if bond_chart_rel %}
+![Government bond yields]({{ bond_chart_rel }})
+
+{% endif %}
+## 3. Interest Rates — Bank Rate, SONIA and Fed
+
+| Indicator | Latest | Previous | Date | Change | Source |
+|---|---|---|---|---|---|
+{% set br = moves['BOE_BANK_RATE'] %}
+| BoE Bank Rate | {{ br.latest.value | pct if br.latest else NV }} | {{ br.previous.value | pct if br.previous else '—' }} | {% if br.effective %}effective {{ br.effective | d }}{% elif br.latest %}as at {{ br.latest.obs_date | d }}{% endif %} | {% if br.d1 %}{{ br.d1 | bps }}{% else %}—{% endif %} | {{ src(br.latest) }} |
+{% set so = moves['SONIA'] %}
+| SONIA (overnight fixing) | {{ so.latest.value | pct(4) if so.latest else NV }} | {{ so.previous.value | pct(4) if so.previous else '—' }} | {{ so.latest.obs_date | d if so.latest else '' }} | {{ so.d1 | bps }} | {{ src(so.latest) }} |
+{% set sw = moves['UK_SONIA_SWAP_5Y'] %}
+| 5Y SONIA swap (finance-cost reference) | {{ sw.latest.value | pct if sw.latest else NV }}{% if sw.stale %} ⚠ stale{% endif %} | {{ sw.previous.value | pct if sw.previous else '—' }} | {{ sw.latest.obs_date | d if sw.latest else '' }} | {% if sw.latest and sw.previous %}{{ ((sw.latest.value - sw.previous.value) * 100) | bps }}{% else %}—{% endif %} | {{ src(sw.latest) }} |
+{% set fl, fu = moves['FED_TARGET_LOWER'], moves['FED_TARGET_UPPER'] %}
+| Fed funds target range | {% if fl.latest and fu.latest %}{{ '%.2f' % fl.latest.value }}–{{ '%.2f' % fu.latest.value }}%{% else %}{{ NV }}{% endif %} | {% if fl.previous and fu.previous %}{{ '%.2f' % fl.previous.value }}–{{ '%.2f' % fu.previous.value }}%{% else %}—{% endif %} | {% if fu.effective %}effective {{ fu.effective | d }}{% elif fu.latest %}as at {{ fu.latest.obs_date | d }}{% endif %} | {% if fu.d1 %}{{ fu.d1 | bps }}{% else %}—{% endif %} | {{ src(fu.latest) }} |
+
+**Next MPC decision:** {{ next_mpc | d if next_mpc else NV }}
+
+{{ notes.get('Interest Rate Outlook') or 'Market-implied expectations for the next MPC decision: Not verified.' }}
+
+## 4. Inflation — UK and US
+
+| Indicator | Latest | Previous | Period | Trend | Source |
+|---|---|---|---|---|---|
+{% for sid in ['UK_CPI_YOY','UK_CPIH_YOY','UK_CORE_CPI_YOY','US_CPI_YOY','US_CORE_CPI_YOY'] %}
+{% set m = moves[sid] %}
+| {{ series[sid].label }} | {{ m.latest.value | pct(1) if m.latest else NV }} | {{ m.previous.value | pct(1) if m.previous else '—' }} | {% if m.latest %}{{ m.latest.obs_date | d('%b %Y') }}{% if m.latest.publication_date %} (pub. {{ m.latest.publication_date | d('%d %b') }}){% endif %}{% endif %} | {{ inflation_trend[sid] }} | {{ src(m.latest) }} |
+{% endfor %}
+
+{% set nr = ons_meta.get('UK_CPI_YOY', {}).get('next_release') %}
+**Next ONS inflation release:** {{ nr or 'see Section 13' }}
+
+## 5. Prime UK Industrial and Office Investment Yields
+
+| Sector | Latest | Basis | Previous | Move | Evidence | Source |
+|---|---|---|---|---|---|---|
+{% for r in property_rows %}
+{% if r.latest %}
+| {{ r.label }}{% if r.latest.substitution_note %} ‡{% endif %} | {{ r.latest.display }} | {{ r.latest.basis }} | {{ r.previous.display if r.previous else '—' }} | {% if r.previous %}{{ r.move_bp | bps }}{% else %}—{% endif %} | {{ r.latest.period }}{% if r.age_days is not none and r.age_days > 45 %} ⚠ carried forward ({{ r.age_days }}d){% endif %} | {{ link(r.latest.provider, r.latest.source_url) }} |
+{% else %}
+| {{ r.label }} | {{ NV }} | — | — | — | — | No published evidence on file |
+{% endif %}
+{% endfor %}
+
+<small>Published prime yields, carried forward until new evidence appears — not daily valuations. ‡ = substitution; see appendix.</small>
+
+## 6. Property Yield Spreads Versus UK Gilts
+
+| Spread | Property yield | UK 10Y gilt | Latest spread | At evidence date | Previous comparable | Change (property / gilt) | Driver |
+|---|---|---|---|---|---|---|---|
+{% for s in spreads %}
+| {{ s.label }} | {% if s.prop %}{{ s.prop.display }} ({{ s.prop.basis }}, {{ s.prop.period }}){% else %}{{ NV }}{% endif %} | {% if s.gilt %}{{ s.gilt.value | pct }} ({{ s.gilt.obs_date | d('%d %b') }}){% else %}{{ NV }}{% endif %} | {{ s.spread_bp | bps }} | {% if s.spread_at_evidence_bp is not none %}{{ s.spread_at_evidence_bp | bps }}{% else %}{{ NV }}{% endif %} | {% if s.prev_spread_bp is not none %}{{ s.prev_spread_bp | bps }} ({{ s.prev_prop.period }}){% else %}{{ NV }}{% endif %} | {{ s.change_bp | bps }}{% if s.change_bp is not none %} ({{ s.property_contrib_bp | bps }} / {{ s.gilt_contrib_bp | bps }}){% endif %} | {{ s.driver }} |
+{% endfor %}
+
+<small>A simple yield gap (property yield midpoint less 10Y gilt) — not a full measure of risk or relative value.</small>
+
+{% if spread_chart_rel %}
+![Property yield spreads]({{ spread_chart_rel }})
+
+{% endif %}
+**Market commentary** <small>(confirmed data points are listed in the appendix)</small>
+
+{{ notes.get('Market Commentary', '') }}
+
+## 7. Listed Industrial & Logistics Property Share Prices
+
+| Company | Price | Daily | 5-Day | 1-Month | YTD | Mkt cap | Div. yield | Close | Source |
+|---|---|---|---|---|---|---|---|---|---|
+{% for r in share_primary %}
+{{ sharerow(r) }}
+{% endfor %}
+
+*International logistics comparators*
+
+| Company | Price | Daily | 5-Day | 1-Month | YTD | Mkt cap | Div. yield | Close | Source |
+|---|---|---|---|---|---|---|---|---|---|
+{% for r in share_secondary %}
+{{ sharerow(r) }}
+{% endfor %}
+
+<small>Latest completed trading session before the 06:30 UK briefing; end-of-day data, not real-time. London prices are in pence (GBX); US in USD; Euronext in EUR. Changes are share-price returns only, excluding dividends (not total shareholder return). ⚑ = daily move of 3% or more. Market caps from Nasdaq are as at retrieval. Dividend yield = latest annualised dividend from company reports ÷ price, where on file. "Not verified" = no licensed price feed returned data and no cited close is on file.</small>
+
+{% if look_through %}
+**SEGRO — Prologis offer look-through:** 0.0920 × Prologis close ${{ '%.2f' % look_through.pld.value }} ({{ look_through.pld.obs_date | d('%d %b') }}) ÷ ${{ '%.4f' % look_through.fx.value }}/£ ({{ look_through.fx.obs_date | d('%d %b') }}, FRED) = **{{ '%.1f' % look_through.value_p }}p** per SEGRO share in Prologis stock{% if look_through.get('sgro') %}, vs SEGRO close {{ '%.1f' % look_through.sgro.value }}p ({{ '%+.1f' % look_through.spread_pct }}% offer spread){% else %}; SEGRO's own price not verified{% endif %}. Partial cash alternative: {{ look_through.cash_p }}p (capped). <small>The FX rate lags by several days, so this is indicative only.</small>
+
+{% endif %}
+{% for r in corporate_actions %}
+{% if loop.first %}**Corporate actions on the watchlist**
+
+{% endif %}
+- **{{ r.w.name }}** — {{ r.w.status }}. {{ r.w.corporate_action }}{% if r.w.corporate_action_url %} ([source]({{ r.w.corporate_action_url }})){% endif %}
+
+{% endfor %}
+
+## 8. REIT Valuation and Performance Commentary
+
+{% if valuation %}
+| Metric | {% for v in valuation %}{{ v.name }} | {% endfor %}{{ '\n' }}|---|{% for v in valuation %}---|{% endfor %}{{ '\n' }}
+{%- for key, label in metric_labels -%}
+| {{ label }} | {% for v in valuation %}{% set m = v.metrics.get(key) %}{% if m %}{{ m.value }}{{ m.unit if m.unit not in ('text','') else '' }}{% else %}—{% endif %} | {% endfor %}{{ '\n' }}
+{%- endfor -%}
+| Report basis | {% for v in valuation %}{% set m = v.metrics.get('EPRA_NTA_PS') %}{% if m %}{{ link(m.period, m.source_url) }}{% else %}—{% endif %} | {% endfor %}{{ '\n' }}| Premium / (discount) to EPRA NTA | {% for v in valuation %}{% if v.premium_to_nta is not none %}{{ '%+.1f' % v.premium_to_nta }}% <small>(price {{ v.price.obs_date | d('%d %b') }})</small>{% else %}Not verified{% endif %} | {% endfor %}{{ '\n' }}
+
+<small>Metrics are from each company's latest report (row "Report basis"; some metrics come from later trading updates — full detail in `data/reit_fundamentals.csv`). Share-price dates are shown separately.</small>
+{% endif %}
+
+{% if announcements %}
+<details markdown="1"><summary>Company announcements (last 14 days, routine filings excluded)</summary>
+
+| Date | Company | Announcement | Type |
+|---|---|---|---|
+{% for a in announcements[:12] %}
+| {{ a.datetime[:10] }} | {{ a.tidm }} | {{ link(a.headline, a.url) }} | {{ a.category }} |
+{% endfor %}
+
+</details>
+{% else %}
+No new company announcements in the last 14 days (routine filings excluded).
+{% endif %}
+
+{{ notes.get('REIT Valuation and Performance Commentary', '') }}
+
+## 9. Top UK Industrial & Logistics Property News
+
+{% for s in news_sections.industrial %}
+{{ story(s) }}
+{% else %}
+No significant new UK industrial and logistics stories were found for this period.
+{% endfor %}
+
+## 10. North West Industrial & Logistics News
+
+{% for s in news_sections.north_west %}
+{{ story(s) }}
+{% else %}
+No North West stories were selected for full summary in this period.
+{% endfor %}
+
+**All Place North West headlines since the last briefing** <small>({{ pnw_window_start.strftime('%a %d %b %H:%M') }} onwards; stories summarised above are not repeated; industrial items first)</small>
+
+{% if pnw_headlines %}
+| Published | Headline | |
+|---|---|---|
+{% for h in pnw_headlines %}
+| {{ h.dt.strftime('%a %H:%M') }} | {{ link(h.title, h.link) }} | {% if h.industrial %}industrial{% endif %} |
+{% endfor %}
+{% else %}
+No further Place North West headlines were published in this window.
+{% endif %}
+
+{% if notes.get('North West Industrial & Logistics Outlook') %}
+**North West outlook**
+
+{{ notes['North West Industrial & Logistics Outlook'] }}
+{% endif %}
+
+## 11. UK Office and Property Investment News
+
+{% for s in news_sections.offices_investment %}
+{{ story(s) }}
+{% else %}
+No significant new office or capital-markets stories were found for this period.
+{% endfor %}
+
+## 12. What This Means for the North West Industrial Market
+
+{{ notes.get('What This Means for the North West Industrial Market') or 'No analyst assessment was supplied for this date.' }}
+
+## 13. Upcoming Economic and Property Market Events
+
+{% if events %}
+| Date | Event |
+|---|---|
+{% for e in events %}
+| {{ e.date | d('%a %d %b') }} | {{ link(e.event, e.source_url) }} |
+{% endfor %}
+{% else %}
+No scheduled events on file for the next seven days.
+{% endif %}
+
+---
+
+## Appendix — Data quality, definitions and sources
+
+<details markdown="1"><summary>Expand: data quality, definitions and full sources</summary>
+
+**Confirmed data points used in the commentary**
+
+{% for c in confirmed %}
+- {{ c }}
+{% endfor %}
+
+**Retrieval failures and data gaps**
+
+{% if failures %}
+{% for f in failures %}
+- ⚠ {{ f }}
+{% endfor %}
+{% else %}
+- All automated sources responded.
+{% endif %}
+{% for sid, m in moves.items() if m.latest is none %}
+- {{ series[sid].label }}: no verified observation — "Not verified".
+{% endfor %}
+{% for sid, m in moves.items() if m.stale %}
+- {{ series[sid].label }}: latest observation ({{ m.latest.obs_date | d }}) is stale.
+{% endfor %}
+{% for p in news_problems %}
+- News: {{ p }}
+{% endfor %}
+{% for x in discrepancies %}
+- Discrepancy — {{ x.label }}, {{ x.obs_date }}: {{ '%.2f' % x.kept }}% ({{ x.kept_source }}) vs {{ '%.2f' % x.other }}% ({{ link(x.other_source, x.other_url) }}), {{ x.diff_bp | bps }}; often a different instrument.
+{% endfor %}
+
+**Property yield substitutions (‡)**
+
+{% for r in property_rows if r.latest and r.latest.substitution_note %}
+- **{{ r.label }}:** {{ r.latest.substitution_note }}
+{% endfor %}
+
+**Definitions**
+
+- UK gilts from the Bank of England database are fitted nominal par yields; market quotes (e.g. Trading Economics) are benchmark-gilt yields and are labelled secondary. US yields are Treasury constant-maturity par yields.
+- Net initial yield (NIY) = net income ÷ gross price including purchaser's costs. Equivalent yield = IRR assuming rent reverts to market at review/expiry. The two are not interchangeable.
+- SONIA is the overnight fixing — not term SONIA or SONIA swaps.
+- Inflation trend compares the last three monthly readings (±0.15pp threshold). US annual rates are calculated from the BLS NSA index via FRED.
+- Share-price changes exclude dividends. 5-day = five trading sessions; 1-month = last close on or before 30 days earlier; YTD = versus the last close of the previous year.
+- Correlation between gilts, property yields and listed property prices does not establish causation.
+
+{% if notes.get('Analyst Sources') %}
+**Analyst sources**
+
+{{ notes['Analyst Sources'] }}
+{% endif %}
+
+</details>
+
+<small>Prepared from public sources for professional information; not investment advice. History: `data/observations.csv`, `data/share_prices.csv`, `data/news_log.csv`, `data/announcements.csv`; audit trail: `data/audit_log.csv`.</small>

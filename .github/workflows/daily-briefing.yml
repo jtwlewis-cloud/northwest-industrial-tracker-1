@@ -1,0 +1,75 @@
+name: Daily financial & property briefing
+
+# GitHub cron runs in UTC only. Two triggers cover 08:00 Europe/London in both
+# GMT (07:52 UTC) and BST (06:52 UTC); `python -m monitor gate` keeps just the
+# one that falls at or after 07:45 London time. GitHub can delay scheduled runs
+# at busy times, so the briefing normally appears between 08:00 and 08:30.
+on:
+  schedule:
+    - cron: "52 6 * * 1-5"
+    - cron: "52 7 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Report date YYYY-MM-DD (blank = today, London)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-briefing
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest -q
+
+      - name: Schedule gate
+        id: gate
+        if: github.event_name == 'schedule'
+        run: |
+          if python -m monitor gate; then echo "go=true" >> "$GITHUB_OUTPUT"; else echo "go=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Build briefing
+        if: github.event_name != 'schedule' || steps.gate.outputs.go == 'true'
+        run: |
+          if [ -n "${{ github.event.inputs.report_date }}" ]; then
+            python -m monitor run --date "${{ github.event.inputs.report_date }}" 2> failures.txt
+          else
+            python -m monitor run 2> failures.txt
+          fi
+          cat failures.txt
+          if grep -q "DATA FAILURE" failures.txt; then
+            echo "::warning title=Data retrieval failures::$(grep 'DATA FAILURE' failures.txt | tr '\n' ' ')"
+          fi
+
+      - name: Commit briefing and data
+        if: github.event_name != 'schedule' || steps.gate.outputs.go == 'true'
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add reports data
+          git diff --cached --quiet || git commit -m "Daily briefing $(TZ=Europe/London date +%F)"
+          git push
+
+      - name: Upload briefing artefact
+        if: github.event_name != 'schedule' || steps.gate.outputs.go == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing
+          path: reports/
+          retention-days: 30
