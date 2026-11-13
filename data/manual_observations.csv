@@ -13,3 +13,4 @@ UK_GILT_10Y,2026-11-04,5.15,Knight Frank Prime Yield Guide (Macrobond/ICAP),http
 UK_GILT_10Y,2026-11-09,5.14,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-11,Implied from TE statement that 10 Nov (5.21%) was +0.07pp on the previous session; benchmark 10Y gilt market quote
 UK_GILT_10Y,2026-11-10,5.21,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-11,Benchmark 10Y gilt market quote; BoE IADB unavailable on 11 Nov run
 UK_GILT_30Y,2026-11-10,5.63,Trading Economics,https://tradingeconomics.com/united-kingdom/30-year-bond-yield,secondary,,2026-11-11,Benchmark 30Y gilt market quote; TE shows +0.05pp on the day
+UK_GILT_30Y,2026-11-12,5.71,Trading Economics,https://tradingeconomics.com/united-kingdom/30-year-bond-yield,secondary,,2026-11-13,Benchmark 30Y gilt market quote; TE shows +0.07pp on the day

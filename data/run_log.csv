@@ -24,3 +24,6 @@ run_id,report_date,started_at,finished_at,status,inserted,revised,failures,failu
 20261112T063001Z,2026-11-12,2026-11-12T06:30:01+00:00,2026-11-12T06:30:02+00:00,ok (offline),0,0,0,
 20261112T063045Z,2026-11-12,2026-11-12T06:30:45+00:00,2026-11-12T06:30:45+00:00,ok (offline),0,0,0,
 20261112T073128Z,2026-11-12,2026-11-12T07:31:28+00:00,2026-11-12T07:31:29+00:00,ok (offline),0,0,0,
+20261113T062711Z,2026-11-13,2026-11-13T06:27:11+00:00,2026-11-13T06:28:22+00:00,partial,9,6,3,"US_CPI_YOY: base month for Oct 2026 missing in FRED; 12m rate not verified | US_CORE_CPI_YOY: base month for Oct 2026 missing in FRED; 12m rate not verified | No licensed price feed configured for London/Euronext listings (SGRO.L, BBOX.L, LMP.L, BLND.L, LAND.L, DLN.L, GPE.L, WDP.BR, CTPNV.AS); only cited closes in data/manual_prices.csv are used"
+20261113T062947Z,2026-11-13,2026-11-13T06:29:47+00:00,2026-11-13T06:29:48+00:00,ok (offline),1,0,0,
+20261113T063030Z,2026-11-13,2026-11-13T06:30:30+00:00,2026-11-13T06:30:31+00:00,ok (offline),0,0,0,

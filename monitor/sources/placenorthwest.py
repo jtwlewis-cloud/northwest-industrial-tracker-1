@@ -29,8 +29,8 @@ FEEDS = {
     "regeneration": "https://www.placenorthwest.co.uk/sector/regeneration/feed/",
 }
 LONDON = ZoneInfo("Europe/London")
-INDUSTRIAL_WORDS = re.compile(r"industrial|warehouse|logistic|shed|distribution|sq ft|trafford park|port|"
-                              r"manufactur|depot|storage|IOS|enterprise zone", re.I)
+INDUSTRIAL_WORDS = re.compile(r"industrial|warehouse|logistic|\bsheds?\b|distribution|trafford park|\bports?\b|"
+                              r"manufactur|depot|storage|\bIOS\b|enterprise zone", re.I)
 
 
 def _text(item: str, tag: str) -> str:
