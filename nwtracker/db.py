@@ -65,6 +65,16 @@ def unpack(v):
     return json.loads(v)
 
 
+def stable_key(url: str) -> str | None:
+    """Agent listing ID that survives a change of title/slug in the URL
+    (e.g. taylorweaver.co.uk/property/details/5664/<slug>)."""
+    import re
+    from urllib.parse import urlparse
+    p = urlparse(url or "")
+    ids = [s for s in p.path.split("/") if re.fullmatch(r"\d{3,}", s)]
+    return f"{p.netloc.replace('www.', '')}#{ids[0]}" if ids else None
+
+
 def fingerprint(rec: dict) -> str:
     key = {k: (sorted(rec.get(k) or []) if k == "agents" else rec.get(k)) for k in TRACKED}
     return hashlib.sha1(json.dumps(key, sort_keys=True, default=str).encode()).hexdigest()
@@ -116,6 +126,11 @@ class HistoryDB:
         used: set[str] = set()
         row = self.conn.execute("SELECT property_id FROM properties ORDER BY property_id DESC LIMIT 1").fetchone()
         seq = int(row[0].split("-")[1]) if row else 0
+        by_key: dict[str, str] = {}
+        for u, pid in self.conn.execute("SELECT url, property_id FROM listing_map"):
+            k = stable_key(u)
+            if k:
+                by_key[k] = pid
         # deterministic order: records with the most URLs claim previous IDs first
         for rec in sorted(records, key=lambda r: (-len(r["listing_urls"]), r["listing_urls"][0])):
             prev = []
@@ -123,6 +138,8 @@ class HistoryDB:
                 r0 = self.conn.execute("SELECT property_id FROM listing_map WHERE url=?", (u,)).fetchone()
                 if r0 and r0[0] not in prev:
                     prev.append(r0[0])
+                elif not r0 and stable_key(u) in by_key and by_key[stable_key(u)] not in prev:
+                    prev.append(by_key[stable_key(u)])  # same agent listing ID, renamed URL
             pid = next((p for p in sorted(prev) if p not in used), None)
             if pid is None:
                 seq += 1
@@ -259,11 +276,28 @@ def _table_exists(conn, t):
     return conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (t,)).fetchone() is not None
 
 
+DELTA_KEYS = {"listings": "url", "property_snapshots": "property_id"}
+
+
+def _canon(v) -> str:
+    return json.dumps(v, sort_keys=True, default=str, separators=(",", ":"))
+
+
 def export_history(conn, folder: Path, run_ids=None) -> None:
+    """Write one gzip file per run. Listing and snapshot data identical to the
+    previous run's is stored as a reference to that run, so a day with few
+    changes adds only ~100 KB."""
     folder.mkdir(parents=True, exist_ok=True)
     ids = run_ids or [r[0] for r in conn.execute("SELECT run_id FROM runs WHERE finished_at IS NOT NULL")]
     for rid in ids:
         payload = {t: _rows(conn, t, "WHERE run_id=?", (rid,)) for t in RUN_TABLES}
+        prev = conn.execute("SELECT MAX(run_id) FROM runs WHERE run_id < ? AND finished_at IS NOT NULL", (rid,)).fetchone()[0]
+        if prev:
+            for t, key in DELTA_KEYS.items():
+                before = {d[key]: _canon(d.get("data")) for d in _rows(conn, t, "WHERE run_id=?", (prev,))}
+                for d in payload[t]:
+                    if before.get(d[key]) == _canon(d.get("data")):
+                        d["data"] = {"__ref__": prev}
         with gzip.open(folder / f"run-{rid:04d}.json.gz", "wt", encoding="utf-8") as f:
             json.dump(payload, f, default=str, separators=(",", ":"))
     state = {t: _rows(conn, t) for t in STATE_TABLES if _table_exists(conn, t)}
@@ -283,6 +317,12 @@ def import_history(db_path: Path, folder: Path) -> int:
 
     def insert(table, rows):
         for d in rows:
+            data = d.get("data")
+            if isinstance(data, dict) and set(data) == {"__ref__"} and table in DELTA_KEYS:
+                key = DELTA_KEYS[table]
+                row = db.conn.execute(f"SELECT data FROM {table} WHERE run_id=? AND {key}=?",
+                                      (data["__ref__"], d[key])).fetchone()
+                d["data"] = unpack(row[0]) if row else {}
             for (t, c) in PACKED:
                 if t == table and c in d:
                     d[c] = pack(d[c])

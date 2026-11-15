@@ -6,3 +6,6 @@ data/*.log
 logs/
 data/*.sqlite
 data/*.sqlite-journal
+
+# per-run workbooks are rebuildable: python -m nwtracker --rebuild N
+output/history/

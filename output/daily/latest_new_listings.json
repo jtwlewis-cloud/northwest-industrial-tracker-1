@@ -1,0 +1,552 @@
+{
+ "sweep_date": "2026-11-15",
+ "sweep_time": "09:34",
+ "compared_with": "2026-11-09 09:33",
+ "run_id": 6,
+ "baseline_run_id": 5,
+ "new_count": 14,
+ "new_sqft": 136725.0,
+ "returned_count": 0,
+ "removed_count": 10,
+ "removed_sqft": 219745.0,
+ "new_existing_sqft": 136725.0,
+ "new_pipeline_sqft": 0,
+ "new": [
+  {
+   "property_id": "NW-01039",
+   "name": "Blackrod Interchange",
+   "postcode": "BL6 5JE",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Horwich / Middlebrook (M61)",
+   "max_sqft": 42000.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Terms on Application",
+   "agents": [
+    "Knight Frank"
+   ],
+   "url": "https://www.knightfrank.co.uk/properties/commercial/to-let/blackrod-interchange-station-road-blackrod-industrial-estate-blackrod-bolton-greater-manchester-bl6/mcc012579478"
+  },
+  {
+   "property_id": "NW-01029",
+   "name": "Rockwell House",
+   "postcode": "CW1 6YT",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 28509.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/rockwell-house-crewe-gates-industrial-estate-crewe-cheshire-cw1-6yt/"
+  },
+  {
+   "property_id": "NW-01033",
+   "name": "Units 8 & 9 Premier Park",
+   "postcode": "CW7 3PR",
+   "town": "Winsford",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 15202.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a38.75 psf",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/units-8-9-premier-park-road-one-winsford-cw7-3pr/"
+  },
+  {
+   "property_id": "NW-01026",
+   "name": "Unit 7 & 8, Tatton Court, Warrington, WA1 4RR",
+   "postcode": "WA1 4RR",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington Central",
+   "max_sqft": 10975.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "",
+   "terms": "",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-7-8-tatton-court-warrington-wa1-4rr/"
+  },
+  {
+   "property_id": "NW-01032",
+   "name": "Unit 7 Bumpers Lane",
+   "postcode": "CH1 4LT",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 8149.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a375,000 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-sealand-trading-estate-chester-cheshire-ch1-4lt/"
+  },
+  {
+   "property_id": "NW-01043",
+   "name": "Unit 1, Grosvenor Business Park, Horsfield Way, Bredbury, Stockport, SK6 2SU",
+   "postcode": "SK6 2SU",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Stockport",
+   "max_sqft": 6901.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a310.00 psf",
+   "agents": [
+    "Williams Sillitoe"
+   ],
+   "url": "https://www.willsill.co.uk/property/unit-1-grosvenor-business-park-horsfield-way-bredbury-stockport-sk6-2su/"
+  },
+  {
+   "property_id": "NW-01034",
+   "name": "Unit 23, Hardie Court",
+   "postcode": "L24 1YL",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 5805.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold / Freehold",
+   "terms": "\u00a346,500 per annum",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/unit-23-hardie-court-speke-l24/11887/"
+  },
+  {
+   "property_id": "NW-01027",
+   "name": "Unit 7, Tatton Court, Warrington, WA1 4RR",
+   "postcode": "WA1 4RR",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington Central",
+   "max_sqft": 5388.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-78-tatton-court-warrington-wa1-4rr/"
+  },
+  {
+   "property_id": "NW-01031",
+   "name": "Unit 6",
+   "postcode": "CW11 3HL",
+   "town": "Sandbach",
+   "county": "Cheshire",
+   "submarket": "Sandbach",
+   "max_sqft": 4970.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-6-millbuck-way-sandbach-cheshire-cw11-3hl/"
+  },
+  {
+   "property_id": "NW-01036",
+   "name": "Unit 12 Vesty Business Park, Vesty Road, Bootle, Merseyside",
+   "postcode": "L30 1NY",
+   "town": "Bootle",
+   "county": "Merseyside",
+   "submarket": "Netherton / Aintree",
+   "max_sqft": 4337.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-12-vesty-business-park-vesty-road-bootle-merseyside/"
+  },
+  {
+   "property_id": "NW-01037",
+   "name": "Units D10, Taylor Business Park, Warrington, Cheshire",
+   "postcode": "WA3 6BH",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
+   "max_sqft": 2768.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/units-d10-taylor-business-park-warrington-cheshire/"
+  },
+  {
+   "property_id": "NW-01038",
+   "name": "Units D4 & D5, Taylor Business Park, Warrington, Cheshire",
+   "postcode": "WA3 6BH",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
+   "max_sqft": 1351.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/units-d4-d5-taylor-business-park-warrington-cheshire/"
+  },
+  {
+   "property_id": "NW-01030",
+   "name": "Unit 16 New Russia Hall",
+   "postcode": "CH3 9AH",
+   "town": "Tattenhall",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 370.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-16-new-russia-hall-bolesworth-gatesheath-chester-road-tattenhall-chester-cheshire-ch3-9ah/"
+  },
+  {
+   "property_id": "NW-01035",
+   "name": "Knowsley Park, M57, Knowsley, Merseyside",
+   "postcode": "L34 8HA",
+   "town": "Knowsley",
+   "county": "Merseyside",
+   "submarket": "Knowsley / Prescot",
+   "max_sqft": null,
+   "size_band": "Size Not Disclosed",
+   "availability": "Proposed / Design and Build",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/knowsley-park-m57-knowsley-merseyside/"
+  }
+ ],
+ "returned": [],
+ "removed": [
+  {
+   "property_id": "NW-00764",
+   "name": "Knowsley Park",
+   "postcode": "L34 8HA",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Knowsley / Prescot",
+   "max_sqft": 157500.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Design & Build",
+   "tenure": "Leasehold / Freehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l224559"
+  },
+  {
+   "property_id": "NW-00725",
+   "name": "Unit 1, Stonebridge Business Park",
+   "postcode": "L11 0EL",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Gillmoss / Croxteth",
+   "max_sqft": 20166.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a3125,250 per annum",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/unit-1-stonebridge-business-park-liverpool-l11/8222/"
+  },
+  {
+   "property_id": "NW-00905",
+   "name": "Number 55",
+   "postcode": "PR1 4BH",
+   "town": "Brockholes View",
+   "county": "Lancashire",
+   "submarket": "Preston",
+   "max_sqft": 11605.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a372,500 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/5934/number-55-brockholes-view-preston-pr1-4bh-industrial"
+  },
+  {
+   "property_id": "NW-00566",
+   "name": "Unit 7, Haydock Industrial Estate, Haydock, Merseyside",
+   "postcode": "WA11 9UY",
+   "town": "Haydock",
+   "county": "Merseyside",
+   "submarket": "Haydock / St Helens (M6 J23)",
+   "max_sqft": 8913.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-7-haydock-industrial-estate-haydock-merseyside/"
+  },
+  {
+   "property_id": "NW-00564",
+   "name": "Unit 6 The Leopold Centre, Smethurst Lane, Wigan, Greater Manchester",
+   "postcode": "WN5 8EG",
+   "town": "Wigan",
+   "county": "Greater Manchester",
+   "submarket": "Wigan West / Orrell",
+   "max_sqft": 8625.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-6-the-leopold-centre-smethurst-lane-wigan-greater-manchester/"
+  },
+  {
+   "property_id": "NW-00241",
+   "name": "The Croft - Unit 3D Phase 2",
+   "postcode": "CH62 3PN",
+   "town": "Wirral International Business Park",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 3959.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/the-croft-unit-3d-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
+  },
+  {
+   "property_id": "NW-00907",
+   "name": "Albion Street",
+   "postcode": "",
+   "town": "Accrington",
+   "county": "Lancashire",
+   "submarket": "Hyndburn / Accrington",
+   "max_sqft": 3298.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a324,500 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/5940/albion-street-accrington-lancashire-industrial"
+  },
+  {
+   "property_id": "NW-00918",
+   "name": "Unit 1",
+   "postcode": "PR6 0BU",
+   "town": "Mill Bank",
+   "county": "Lancashire",
+   "submarket": "Chorley",
+   "max_sqft": 2493.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a335,000 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/5975/unit-1-mill-bank-canal-side-chorley-lancashire-pr6-0bu-industrial"
+  },
+  {
+   "property_id": "NW-00257",
+   "name": "Unit 18 Third Avenue",
+   "postcode": "CW1 6XU",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 2166.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a319,000 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-18-third-avenue-crewe-gates-industrial-estate-crewe-cheshire-cw1-6xu/"
+  },
+  {
+   "property_id": "NW-00722",
+   "name": "Parliament Business Centre, Unit 9",
+   "postcode": "L8 7BL",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Liverpool",
+   "max_sqft": 1020.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a31,275 per month",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/parliament-business-centre-unit-9-liverpool-l8/11224/"
+  }
+ ],
+ "new_joint_agents": [
+  {
+   "property_id": "NW-00261",
+   "name": "Unit 2, Jensen Court",
+   "postcode": "WA7 1SQ",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 3895.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a336,029 pa",
+   "agents": [
+    "Indurent (landlord)",
+    "Legat Owen"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/jensen-court/unit-2/",
+   "added_agents": [
+    "Legat Owen"
+   ]
+  },
+  {
+   "property_id": "NW-00371",
+   "name": "14 Tatton Court, Warrington, Cheshire",
+   "postcode": "WA1 4RR",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington Central",
+   "max_sqft": 6500.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate",
+    "BC Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/14-tatton-court-warrington-cheshire/",
+   "added_agents": [
+    "BC Real Estate"
+   ]
+  },
+  {
+   "property_id": "NW-00676",
+   "name": "711 Cavendish Avenue, Birchwood Park, Warrington, WA3 6DE",
+   "postcode": "WA3 6DE",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
+   "max_sqft": 14429.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "Williams Sillitoe",
+    "B8 Real Estate"
+   ],
+   "url": "https://www.willsill.co.uk/property/711-cavendish-avenue-birchwood-park-warrington-wa3-6de/",
+   "added_agents": [
+    "B8 Real Estate"
+   ]
+  }
+ ],
+ "by_county": {
+  "Cheshire": 9,
+  "Merseyside": 3,
+  "Greater Manchester": 2
+ },
+ "by_agent": {
+  "BC Real Estate": 2,
+  "Legat Owen": 5,
+  "LM6": 1,
+  "B8 Real Estate": 4,
+  "Knight Frank": 1,
+  "Williams Sillitoe": 1
+ },
+ "newly_covered_sources": [],
+ "sources_not_ok": [
+  {
+   "agent": "CBRE",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)"
+  },
+  {
+   "agent": "Cushman & Wakefield",
+   "status": "Failed",
+   "message": "0 NW industrial listings from 4 scanned; 5 page errors"
+  },
+  {
+   "agent": "Colliers",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
+  }
+ ],
+ "total_available": 930,
+ "total_available_sqft": 43369481.51
+}

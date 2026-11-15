@@ -68,6 +68,8 @@ def analyse(db: HistoryDB, cur: dict, base: dict) -> dict:
                         c.execute("SELECT property_id, data FROM property_snapshots WHERE run_id=?", (rid,))}
     now, before = snap(cur["run_id"]), snap(base["run_id"])
     base_urls = {r[0] for r in c.execute("SELECT url FROM listings WHERE run_id=?", (base["run_id"],))}
+    from .db import stable_key
+    base_urls |= {k for k in (stable_key(u) for u in list(base_urls)) if k}
     url_agent = {r[0]: r[1] for r in c.execute("SELECT url, agent FROM listings WHERE run_id=?", (cur["run_id"],))}
     covered = {r[0] for r in c.execute("SELECT agent FROM agent_runs WHERE run_id=? AND status IN ('Success','Partial')",
                                        (base["run_id"],))}
@@ -88,9 +90,10 @@ def analyse(db: HistoryDB, cur: dict, base: dict) -> dict:
             if added_market:
                 new_joint.append({**rec, "added_agents": added_market})
             continue
-        if any(u in base_urls for u in urls):
+        if any(u in base_urls or stable_key(u) in base_urls for u in urls):
             continue  # same advertisement, only the record ID changed (merge)
-        fresh_from_covered = [u for u in urls if url_agent.get(u) in covered and u not in base_urls]
+        fresh_from_covered = [u for u in urls if url_agent.get(u) in covered and u not in base_urls
+                              and stable_key(u) not in base_urls]
         if not fresh_from_covered:
             newly_covered.append(rec)
         elif ever.get(pid) is not None and ever[pid] <= base["run_id"]:
@@ -100,8 +103,9 @@ def analyse(db: HistoryDB, cur: dict, base: dict) -> dict:
 
     removed = []
     url_now = {u for rec in now.values() for u in rec.get("listing_urls", [])}
+    url_now |= {k for k in (stable_key(u) for u in list(url_now)) if k}
     for pid, rec in before.items():
-        if pid in now or any(u in url_now for u in rec.get("listing_urls", [])):
+        if pid in now or any(u in url_now or stable_key(u) in url_now for u in rec.get("listing_urls", [])):
             continue
         if not set(rec.get("agents", [])) & covered_now:
             continue  # its agents could not be checked this week

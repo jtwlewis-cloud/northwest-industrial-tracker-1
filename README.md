@@ -10,9 +10,10 @@ filterable Excel availability schedule with a market supply analysis.
 | File | What it is |
 |---|---|
 | `output/North West Industrial & Logistics Availability.xlsx` | Latest schedule (19 worksheets) |
-| `output/history/… <date> run<N>.xlsx` | Dated copy of every run |
+| `output/history/… <date> run<N>.xlsx` | Dated copy of each run's workbook (not committed; regenerate with `--rebuild N`) |
 | `output/Latest Run Report.md` | Coverage, totals, duplicates, missing information, limitations |
-| `data/history/` | Persistent history: one compressed export per run + current state (the SQLite database is rebuilt from these) |
+| `data/history/` | Persistent history: one compressed, incremental export per run + current state (the SQLite database is rebuilt from these) |
+| `output/daily/` | Daily new-listings digest (Markdown + JSON) |
 | `output/weekly/` | Weekly new-stock reports (Excel + summary) |
 
 ---
@@ -121,9 +122,22 @@ Produces `output/weekly/NW New Industrial Stock - week ending <date>.xlsx` (+ a 
 A property counts as new to market only if an agent already being searched at the comparison run has a new
 advertisement for it.
 
+## Daily new-listings digest
+
+```bash
+python -m nwtracker.daily               # latest sweep vs the sweep about a day earlier
+python -m nwtracker.daily --days 3      # Mondays: everything since Friday's sweep
+```
+
+Writes `output/daily/Latest New Listings.md` (a ready-to-paste briefing section: new instructions with links,
+removals, new joint agents, sources not checked) and `output/daily/latest_new_listings.json`, plus dated copies.
+The daily financial & property briefing reads this file.
+
 ## Scheduling
 
-The full search and the weekly report run automatically every Sunday morning as a scheduled Claude Code task
+The full search runs automatically every morning at about 05:00 UK time (before the 06:30 briefing) and the
+daily digest is produced; on Sundays the weekly report and full workbook are also committed. This runs as a
+scheduled Claude Code task
 (fresh cloud session in the `northwest-industrial-tracker` environment), which commits the new workbook, weekly
 report and history export to the repository. To run it yourself on a server instead, use cron, e.g.:
 
@@ -178,7 +192,7 @@ county/size band and by submarket, changes since the previous run and a supply h
 ## Database (`data/nw_industrial.sqlite`)
 
 The SQLite file is a working copy and is not committed. Each run is exported to `data/history/run-NNNN.json.gz`
-(about 0.6 MB) plus `data/history/state.json.gz`; on a fresh checkout the database is rebuilt from these
+(incremental: data unchanged since the previous run is stored as a reference, ~150–450 KB per run) plus `data/history/state.json.gz`; on a fresh checkout the database is rebuilt from these
 automatically. Long descriptions are not stored (the specification summary and all extracted fields are).
 
 

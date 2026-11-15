@@ -100,3 +100,19 @@ def test_history_export_import_round_trip(tmp_path):
     snap = unpack(fresh.conn.execute("SELECT data FROM property_snapshots").fetchone()[0])
     assert snap["property_name"] == "A" and "description" not in snap
     assert fresh.conn.execute("SELECT property_id FROM listing_map WHERE url='u1'").fetchone()[0] == a["property_id"]
+
+
+def test_renamed_listing_url_keeps_property_id(tmp_path):
+    from nwtracker.db import stable_key
+    assert stable_key("https://www.taylorweaver.co.uk/property/details/5664/unit-21-x") == "taylorweaver.co.uk#5664"
+    assert stable_key("https://dtre.com/search/properties/152195-vertex") is None
+    db = HistoryDB(tmp_path / "h.sqlite")
+    r1 = db.start_run(False)
+    a = rec(["https://www.taylorweaver.co.uk/property/details/5664/unit-21-three-point"], "Unit 21", 2900)
+    db.assign_ids([a]); db.record(r1, [a], set()); db.finish_run(r1, "w", "d")
+    r2 = db.start_run(False)
+    b = rec(["https://www.taylorweaver.co.uk/property/details/5664/unit-20-three-point"], "Unit 20", 2900)
+    db.assign_ids([b])
+    assert b["property_id"] == a["property_id"]
+    types = {c["change_type"] for c in db.record(r2, [b], set())}
+    assert "New" not in types and "Removed" not in types
