@@ -23,8 +23,9 @@
 
 <small>Generated {{ generated_at.strftime('%Y-%m-%d %H:%M UTC') }} · run `{{ run_id }}` · commentary: {{ notes_source }}. Each figure shows its own observation date. Definitions, data-quality notes and full sources are in the appendix.</small>
 
-{% if share_alerts or yield_alerts or nw_deals or corporate_actions %}
+{% if true %}
 > **Alerts**
+> - New listings: {{ listing_summary }}
 {% for r in share_alerts %}
 > - ⚑ {{ r.w.name }} moved {{ '%+.1f' % r.d1 }}% on {{ r.latest.obs_date | d }}.
 {% endfor %}
@@ -94,7 +95,7 @@
 {% endfor %}
 
 {% set nr = ons_meta.get('UK_CPI_YOY', {}).get('next_release') %}
-**Next ONS inflation release:** {{ nr or 'see Section 13' }}
+**Next ONS inflation release:** {{ nr or 'see Section 14' }}
 
 ## 5. Prime UK Industrial and Office Investment Yields
 
@@ -220,7 +221,18 @@ No further Place North West headlines were published in this window.
 {{ notes['North West Industrial & Logistics Outlook'] }}
 {% endif %}
 
-## 11. UK Office and Property Investment News
+## 11. New North West Industrial Listings
+
+{% if listings.ok %}
+<small>Agents' listings sweep of {{ listings.sweep_label }} (source: tracker branch `claude/magical-ride-4nijqh`, `output/daily/Latest New Listings.md`).</small>
+
+{{ listings.body }}
+{% else %}
+**Today's listings sweep did not complete.**{% if listings.sweep_label %} <small>Latest available sweep: {{ listings.sweep_label }}.</small>{% endif %}
+
+{% endif %}
+
+## 12. UK Office and Property Investment News
 
 {% for s in news_sections.offices_investment %}
 {{ story(s) }}
@@ -228,11 +240,11 @@ No further Place North West headlines were published in this window.
 No significant new office or capital-markets stories were found for this period.
 {% endfor %}
 
-## 12. What This Means for the North West Industrial Market
+## 13. What This Means for the North West Industrial Market
 
 {{ notes.get('What This Means for the North West Industrial Market') or 'No analyst assessment was supplied for this date.' }}
 
-## 13. Upcoming Economic and Property Market Events
+## 14. Upcoming Economic and Property Market Events
 
 {% if events %}
 | Date | Event |

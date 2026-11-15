@@ -94,3 +94,24 @@ def test_north_west_stories_route_by_region():
     sec = news.by_section([s1, s2, s3])
     assert [s.headline for s in sec["north_west"]] == ["Bolton plan", "Shed"]
     assert [s.headline for s in sec["industrial"]] == ["Ladywood"]
+
+
+def test_listings_digest_date_check():
+    from monitor import listings
+    text = """## New North West industrial listings – sweep 2026-11-15 09:34 UTC
+Compared with the sweep of 2026-11-09 09:33 UTC.
+
+- **New to market:** 3 properties, 50,000 sq ft (existing 50,000 / pipeline 0)
+
+| Property | Location | sq ft | Status | Agents |
+|---|---|---:|---|---|
+| [Big Shed](https://x/a) | Bolton | 42,000 | Available | KF |
+| [Small Unit](https://x/b) | Crewe | 8,000 | Available | LO |
+| [Plot](https://x/c) | Knowsley | size n/d | Proposed | B8 |
+"""
+    d = listings.parse(text, date(2026, 11, 15))
+    assert d.ok and d.new_count == 3 and d.largest["name"] == "Big Shed" and d.largest["sqft"] == 42000
+    assert "[Big Shed](https://x/a)" in d.body and not d.body.startswith("## ")
+    assert "3 new North West industrial listings" in listings.summary_line(d)
+    stale = listings.parse(text, date(2026, 11, 16))
+    assert not stale.ok and listings.summary_line(stale) == "Today's listings sweep did not complete."

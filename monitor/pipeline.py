@@ -5,7 +5,7 @@ import logging
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from . import charts, commentary, events, news, property as prop, shares
+from . import charts, commentary, events, listings, news, property as prop, shares
 from .config import (BOE_MPC_DATES, MANUAL_OBSERVATIONS_CSV, PROPERTY_SPREADS, PROPERTY_TABLE_C,
                      REPORTS_DIR, SERIES, TIMEZONE)
 from .metrics import movement, trend_label
@@ -90,7 +90,7 @@ def derive_spreads(store: Store, register, report_date: date, run_id: str) -> di
 
 
 def build_context(store: Store, report_date: date, failures: list[str], meta: dict, run_id: str,
-                  px_store: Store | None = None) -> dict:
+                  px_store: Store | None = None, offline: bool = False) -> dict:
     moves = {sid: movement(sid, store.history(sid, report_date), report_date) for sid in SERIES}
     register = prop.load()
     gilt_hist = store.history("UK_GILT_10Y", report_date)
@@ -154,10 +154,12 @@ def build_context(store: Store, report_date: date, failures: list[str], meta: di
         "pnw_headlines": placenorthwest.headlines_since(
             report_date, {r["url"].rstrip("/") for r in news.load()}),
         "pnw_window_start": placenorthwest.window_start(report_date),
+        "listings": listings.load(report_date, fetch=not offline),
         "nw_deals": [s for s in stories if s.label == "NORTH WEST INDUSTRIAL" and s.nw_transaction == "yes"],
         "yield_alerts": [r for r in prop_rows if r.latest and r.move_bp and
                          (report_date - (r.latest.publication_date or r.latest.evidence_date)).days <= 7],
     })
+    ctx["listing_summary"] = listings.summary_line(ctx["listings"])
     ctx["confirmed"] = commentary.confirmed_developments(ctx)
     notes = commentary.load_notes(report_date)
     ctx["notes"] = notes or {}
@@ -179,7 +181,9 @@ def run(report_date: date | None = None, offline: bool = False) -> dict:
     f2, m2 = collect_shares(px_store, report_date, run_id, offline)
     failures += f2
     meta.update(m2)
-    ctx = build_context(store, report_date, failures, meta, run_id, px_store)
+    ctx = build_context(store, report_date, failures, meta, run_id, px_store, offline)
+    if ctx["listings"].error:
+        failures.append(f"New listings digest: {ctx['listings'].error}")
 
     out_dir = REPORTS_DIR / f"{report_date:%Y}" / f"{report_date:%m}"
     chart_dir = out_dir / "charts"
