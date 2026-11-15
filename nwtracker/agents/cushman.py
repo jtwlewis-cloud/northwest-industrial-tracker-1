@@ -24,7 +24,23 @@ class Cushman(AgentScraper):
 
     def discover(self):
         self.result.search_urls = [SEARCH_PAGE]
-        props = self.f.get(API, headers={"Referer": SEARCH_PAGE, "X-Requested-With": "XMLHttpRequest"}).json().get("properties", [])
+        r = self.f.get(API, headers={"Referer": SEARCH_PAGE, "X-Requested-With": "XMLHttpRequest"})
+        try:
+            props = r.json().get("properties", [])
+        except ValueError:
+            # the site's own search is returning an error page – re-check last run's listings directly
+            if not self.known_urls:
+                raise RuntimeError("cushwakeproperty.co.uk search returned an error page (site fault) and no "
+                                   "previously known listings to re-check")
+            self.result.errors.append("Search endpoint returned the site's error page (site fault); re-checked "
+                                      f"{len(self.known_urls)} listings found last run instead – new C&W listings "
+                                      "cannot be discovered until the site's search works again")
+            out = []
+            for u in self.known_urls:
+                l = self.stub(u)
+                l.raw["recheck_only"] = True
+                out.append(l)
+            return out
         out = []
         for p in props:
             addr = p.get("Address") or ""
@@ -50,11 +66,30 @@ class Cushman(AgentScraper):
         return out
 
     def enrich(self, l):
-        soup = self.soup(l.url)
+        resp = self.f.get(l.url)
+        if "/error/" in resp.url:
+            raise RuntimeError("cushwakeproperty.co.uk returned its error page (site fault)")
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(resp.text, "lxml")
         text = cut_related(self.main_text(soup, "body"))
         start = text.find("| Property type:")
         end = text.find("| Important notice")
         l.description = text[max(0, start): end if end > 0 else None]
+        if l.raw.get("recheck_only"):
+            if "Property type:" not in text:
+                l.excluded_reason = "Listing page no longer available (withdrawn, let or sold)"
+                return
+            h1 = soup.find("h1")
+            m = re.search(r"\|\s*([^|]+?)\s*\|\s*Property type:", text)
+            head = text[:text.find("| Property type:")].split("|")
+            parts = [x.strip() for x in head if x.strip()]
+            if len(parts) >= 2:
+                l.title, l.address = parts[-2], ", ".join(parts[-2:])
+                l.postcode = ex.find_postcode(parts[-1])
+            m = re.search(r"Property type:\s*\|\s*([^|]+)", text)
+            l.property_type = m.group(1).strip() if m else "Industrial"
+            m = re.search(r"\|\s*(To Let|For Sale|For Sale and To Let)\s*\|", text)
+            l.marketing_status = m.group(1) if m else "To Let"
         m = re.search(r"Size:\s*\|\s*([^|]+)", text)
         if m:
             a, b = ex.parse_size_range(m.group(1))

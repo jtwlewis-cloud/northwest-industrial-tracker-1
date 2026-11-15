@@ -63,6 +63,7 @@ class AgentScraper:
         self.read_brochures = read_brochures
         self.log = log or logging.getLogger(f"agent.{self.name}")
         self.result = AgentResult(self.name, self.website, method=self.method)
+        self.known_urls: list[str] = []   # listings found by this agent last run (fallback re-check)
 
     # -------------------------------------------------------------- helpers
     def soup(self, url: str, **kw) -> BeautifulSoup:
@@ -299,7 +300,8 @@ class AgentScraper:
             for l in cands:
                 try:
                     self.enrich(l)
-                    self.finalise(l)
+                    if not l.excluded_reason:
+                        self.finalise(l)
                 except (AccessBlocked, RobotsDisallowed):
                     raise
                 except Exception as e:
@@ -320,6 +322,8 @@ class AgentScraper:
             for l in r.included:
                 l.raw.setdefault("verified", date.today().isoformat())
             r.status = "Partial" if r.errors else "Success"
+            if cands and not r.included and detail_errors >= len(cands):
+                r.status = "Failed"  # every listing page failed: treat as not checked, not as removals
             r.message = (f"{len(r.included)} NW industrial listings from {r.listings_scanned} scanned"
                          + (f"; {len(r.errors)} page errors" if r.errors else ""))
         except AccessBlocked as e:

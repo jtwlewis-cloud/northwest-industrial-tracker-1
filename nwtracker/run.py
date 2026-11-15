@@ -186,7 +186,17 @@ def main(argv=None) -> int:
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=len(keys)) as pool:
-        futs = {pool.submit(AGENTS[k](fetcher, geo, not args.no_brochures).run): k for k in keys}
+        prev_id = db.previous_run_id(run_id)
+        known: dict[str, list[str]] = {}
+        if prev_id:
+            for a_name, url in db.conn.execute("SELECT agent, url FROM listings WHERE run_id=? AND included=1", (prev_id,)):
+                known.setdefault(a_name, []).append(url)
+        scrapers = []
+        for k in keys:
+            sc = AGENTS[k](fetcher, geo, not args.no_brochures)
+            sc.known_urls = known.get(sc.name, [])
+            scrapers.append(sc)
+        futs = {pool.submit(sc.run): sc.name for sc in scrapers}
         for fut in cf.as_completed(futs):
             r = fut.result()
             log.info("%-26s %-8s %s (%.0fs)", r.agent, r.status, r.message, r.duration_s)

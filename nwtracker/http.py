@@ -97,6 +97,7 @@ class Fetcher:
         self._glock = threading.Lock()
         self.request_count = 0
         self._dead_hosts: set[str] = set()
+        self._ok_hosts: set[str] = set()
 
     @property
     def session(self) -> requests.Session:
@@ -161,8 +162,13 @@ class Fetcher:
                 r = self.session.request(method, url, **kw)
                 self.request_count += 1
             except requests.exceptions.ProxyError as e:
-                self._dead_hosts.add(host)
-                raise AccessBlocked(f"{host} refused by the network proxy (host not allowed): {e}") from e
+                if host not in self._ok_hosts:
+                    # never reachable in this run: the host is not on the network allow-list
+                    self._dead_hosts.add(host)
+                    raise AccessBlocked(f"{host} refused by the network proxy (host not allowed): {e}") from e
+                err = e  # worked earlier in this run: treat as a transient refusal and retry
+                time.sleep(5 * (attempt + 1))
+                continue
             except requests.RequestException as e:
                 err = e
                 time.sleep(2 ** attempt)
@@ -177,6 +183,7 @@ class Fetcher:
             if r.status_code == 403:
                 raise AccessBlocked(f"{host} refused access (HTTP 403) for {url}")
             r.raise_for_status()
+            self._ok_hosts.add(host)
             return r
         raise err or RuntimeError(f"request failed: {url}")
 

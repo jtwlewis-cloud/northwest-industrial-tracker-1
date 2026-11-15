@@ -31,41 +31,58 @@ class KnightFrank(AgentScraper):
             browser = p.chromium.launch()
             try:
                 page = browser.new_page(user_agent=config.USER_AGENT)
-                got = []
-                page.on("response", lambda r: got.append(r) if "/properties/search" in r.url else None)
+                got: list[dict] = []
+
+                def on_response(r):
+                    # read the body immediately – it is discarded once the page moves on
+                    if "/properties/search" in r.url:
+                        try:
+                            got.append(r.json())
+                        except Exception as e:  # noqa: BLE001
+                            self.log.debug("unreadable search response: %s", e)
+
+                page.on("response", on_response)
                 for kind in ("to-let", "for-sale"):
                     url0 = SEARCH.format(kind=kind)
                     self.f.check_robots(url0)
                     self.result.search_urls.append(url0)
                     got.clear()
                     page.goto(url0, wait_until="networkidle", timeout=90_000)
-                    page.wait_for_timeout(1000)
+                    page.wait_for_timeout(1500)
                     if not got:
                         raise RuntimeError(f"search data not received for {url0}")
-                    seen_offsets = set()
+                    seen_offsets: set = set()
+                    total = 0
                     for _ in range(200):
-                        for resp in list(got):
-                            d = resp.json()
+                        for d in list(got):
                             if d.get("Offset") in seen_offsets:
                                 continue
                             seen_offsets.add(d.get("Offset"))
                             rows += [(kind, x) for x in d.get("Properties") or []]
-                            total = d.get("Total") or 0
+                            total = d.get("Total") or total
                         got.clear()
-                        if max(seen_offsets) + 48 >= total:
+                        if not seen_offsets or max(seen_offsets) + 48 >= total:
                             break
                         btn = page.locator('[data-selenium-id="propertySearch-pager-nextClick"]').first
                         if btn.count() == 0 or btn.get_attribute("data-disabled") == "true":
                             break
-                        btn.scroll_into_view_if_needed()
-                        btn.click()
-                        page.wait_for_load_state("networkidle")
-                        page.wait_for_timeout(int(max(self.f.delay, 1.0) * 1000))
-                        if not got:  # page change served from cache – try once more
-                            page.wait_for_timeout(2000)
-                            if not got:
-                                self.log.warning("no data after paging at offset %s", max(seen_offsets))
+                        before = max(seen_offsets)
+                        for attempt in range(2):
+                            btn.scroll_into_view_if_needed()
+                            btn.click()
+                            page.wait_for_load_state("networkidle")
+                            arrived = False
+                            for _ in range(20):  # wait up to ~10 s for the next page's data
+                                if any((d.get("Offset") or 0) > before for d in got):
+                                    arrived = True
+                                    break
+                                page.wait_for_timeout(500)
+                            if arrived:
+                                page.wait_for_timeout(int(self.f.delay * 1000))
                                 break
+                        else:
+                            self.result.errors.append(f"Knight Frank paging stopped at offset {before} of {total}")
+                            break
             finally:
                 browser.close()
         return rows
