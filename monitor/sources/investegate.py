@@ -18,13 +18,13 @@ from ..models import FetchResult
 ANNOUNCEMENTS_CSV = DATA_DIR / "announcements.csv"
 FIELDS = ["tidm", "datetime", "source", "headline", "url", "category", "first_seen"]
 URL = "https://www.investegate.co.uk/company/{t}"
-NOISE = re.compile(r"Form ?8|Transaction in Own|Holding\(s\)|Holdings? in Company|Voting Rights|PDMR|"
+NOISE = re.compile(r"Form ?8|8\.[35] EPT|Transaction in Own|Holding\(s\)|Holdings? in Company|Voting Rights|PDMR|"
                    r"Block ?listing|Director/PDMR|Disclosure Table|Rule 2\.9|Form8", re.I)
 CATEGORIES = [
     ("Results", r"result|interim|half[- ]year|annual report|full[- ]year"),
     ("Trading update", r"trading update|trading statement|business update"),
     ("M&A / corporate action", r"offer|scheme|acquisition|merger|disposal|combination|cancellation|admission|"
-                               r"general meeting|circular|court"),
+                               r"general meeting|circular|court|sells|\bsale\b"),
     ("Capital / debt", r"equity issue|placing|retail offer|bond|notes|refinanc|debt|facility"),
     ("Dividend", r"dividend"),
     ("Asset / leasing", r"pre-let|letting|logistics facility|development|sq ft|warehouse"),

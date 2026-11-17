@@ -17,3 +17,6 @@ UK_GILT_30Y,2026-11-12,5.71,Trading Economics,https://tradingeconomics.com/unite
 UK_GILT_10Y,2026-11-13,5.34,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-16,Benchmark 10Y quote (+0.06pp on day); another outlet citing TE gave 5.3188% - c.2bp discrepancy
 UK_GILT_2Y,2026-11-13,5.005,LSEG data via MarketScreener (Reuters-style report),https://www.marketscreener.com/news/u-k-gilt-yields-accelerate-on-rate-hike-expectations-ce785ed9dc8df620,secondary,2026-11-13,2026-11-16,Highest since Oct 2023; Trading Economics showed 4.98% - c.2.5bp discrepancy
 UK_GILT_30Y,2026-11-13,5.82,Trading Economics,https://tradingeconomics.com/united-kingdom/30-year-bond-yield,secondary,,2026-11-16,Another outlet cited 5.75% - discrepancy of 7bp
+UK_GILT_10Y,2026-11-16,5.37,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-17,Benchmark 10Y quote (+0.03pp on day)
+UK_GILT_2Y,2026-11-16,5.04,Trading Economics; Reuters-sourced report says back above 5%,https://www.tradingandinvestmentnews.co.uk/gilt-yields-spike-rate-bets/,secondary,2026-11-16,2026-11-17,TE also lists 4.99% in another table - discrepancy noted
+UK_GILT_30Y,2026-11-16,5.79,Trading Economics,https://tradingeconomics.com/united-kingdom/30-year-bond-yield,secondary,,2026-11-17,Described as steady at 5.79%
