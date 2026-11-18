@@ -1,256 +1,1846 @@
 {
- "sweep_date": "2026-11-15",
- "sweep_time": "09:34",
- "compared_with": "2026-11-09 09:33",
- "run_id": 6,
- "baseline_run_id": 5,
- "new_count": 14,
- "new_sqft": 136725.0,
- "returned_count": 0,
- "removed_count": 10,
- "removed_sqft": 219745.0,
- "new_existing_sqft": 136725.0,
- "new_pipeline_sqft": 0,
+ "sweep_date": "2026-11-18",
+ "sweep_time": "05:08",
+ "compared_with": "2026-11-15 09:34",
+ "run_id": 8,
+ "baseline_run_id": 6,
+ "new_count": 5,
+ "new_sqft": 58840.0,
+ "returned_count": 1,
+ "removed_count": 96,
+ "removed_sqft": 5686553.51,
+ "new_existing_sqft": 56476.0,
+ "new_pipeline_sqft": 16990.0,
  "new": [
   {
-   "property_id": "NW-01039",
-   "name": "Blackrod Interchange",
-   "postcode": "BL6 5JE",
-   "town": "",
-   "county": "Greater Manchester",
-   "submarket": "Horwich / Middlebrook (M61)",
-   "max_sqft": 42000.0,
+   "property_id": "NW-01053",
+   "name": "Unit 41 Road One",
+   "postcode": "CW7 3QB",
+   "town": "Winsford",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 33585.0,
    "size_band": "25,000\u201350,000 sq ft",
    "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
+   "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "Terms on Application",
+   "terms": "",
    "agents": [
-    "Knight Frank"
+    "Legat Owen"
    ],
-   "url": "https://www.knightfrank.co.uk/properties/commercial/to-let/blackrod-interchange-station-road-blackrod-industrial-estate-blackrod-bolton-greater-manchester-bl6/mcc012579478"
+   "url": "https://legatowen.co.uk/property/unit-41-road-one-a533-winsford-industrial-estate-winsford-cheshire-cw7-3qb/"
   },
   {
-   "property_id": "NW-01029",
-   "name": "Rockwell House",
-   "postcode": "CW1 6YT",
-   "town": "Crewe",
+   "property_id": "NW-01050",
+   "name": "Tameside Court, Fifth Avenue, Dukinfield, SK16 4PW",
+   "postcode": "SK16 4PW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 16714.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "CPP (Commercial Property Partners)"
+   ],
+   "url": "https://www.commercialpropertypartners.co.uk/properties/tameside-court-fifth-avenue-dukinfield-sk16-4pw"
+  },
+  {
+   "property_id": "NW-01052",
+   "name": "Unit 8, Rupert Park, London Road South, Poynton, SK12 1PQ",
+   "postcode": "SK12 1PQ",
+   "town": "",
    "county": "Cheshire",
-   "submarket": "Crewe",
-   "max_sqft": 28509.0,
-   "size_band": "25,000\u201350,000 sq ft",
+   "submarket": "Cheshire East",
+   "max_sqft": 6383.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "84,930 pa",
+   "agents": [
+    "Williams Sillitoe"
+   ],
+   "url": "https://www.willsill.co.uk/property/unit-8-rupert-park-london-road-south-poynton-sk12-1pq/"
+  },
+  {
+   "property_id": "NW-01044",
+   "name": "Unit 24 Webber Estate, Webber Rd",
+   "postcode": "L33 7SQ",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Knowsley Industrial Park",
+   "max_sqft": 1882.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a321,000 per annum",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/unit-24-webber-estate-webber-rd-liverpool-l33/11605/"
+  },
+  {
+   "property_id": "NW-01051",
+   "name": "Suite 6E, Knowsley Moorgate Point",
+   "postcode": "L33 7XW",
+   "town": "Liverpool",
+   "county": "Merseyside",
+   "submarket": "Knowsley Industrial Park",
+   "max_sqft": 276.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a32,900 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/knowsley-moorgate-point/suite-6e/"
+  }
+ ],
+ "returned": [
+  {
+   "property_id": "NW-00648",
+   "name": "Units 6-8 Brookfield Business Park, Muir Road, Liverpool, L9 7AR",
+   "postcode": "L9 7AR",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Aintree",
+   "max_sqft": 14626.0,
+   "size_band": "10,000\u201325,000 sq ft",
    "availability": "Availability Unconfirmed",
    "build": "Existing",
    "tenure": "Leasehold",
    "terms": "On application",
    "agents": [
-    "Legat Owen"
+    "CPP (Commercial Property Partners)"
    ],
-   "url": "https://legatowen.co.uk/property/rockwell-house-crewe-gates-industrial-estate-crewe-cheshire-cw1-6yt/"
+   "url": "https://www.commercialpropertypartners.co.uk/properties/units-6-8-brookfield-business-park-muir-road-liverpool-l9-7ar"
+  }
+ ],
+ "removed": [
+  {
+   "property_id": "NW-00811",
+   "name": "X-Dock 549",
+   "postcode": "WA8 8WQ",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Widnes",
+   "max_sqft": 549400.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l96623"
   },
   {
-   "property_id": "NW-01033",
-   "name": "Units 8 & 9 Premier Park",
-   "postcode": "CW7 3PR",
-   "town": "Winsford",
+   "property_id": "NW-00797",
+   "name": "Burnley 543",
+   "postcode": "BB12 7BF",
+   "town": "",
+   "county": "Lancashire",
+   "submarket": "Burnley / Padiham",
+   "max_sqft": 543269.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l384661"
+  },
+  {
+   "property_id": "NW-00759",
+   "name": "Atlantic Park, Liverpool, L30 4AB",
+   "postcode": "L30 4AB",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Netherton / Aintree",
+   "max_sqft": 388000.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l193396"
+  },
+  {
+   "property_id": "NW-00772",
+   "name": "Atlantic Park, Liverpool, L30 4AB",
+   "postcode": "L30 4AB",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Netherton / Aintree",
+   "max_sqft": 351389.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l278152"
+  },
+  {
+   "property_id": "NW-00808",
+   "name": "Voltage Park",
+   "postcode": "M31 4BR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford",
+   "max_sqft": 284000.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l63677"
+  },
+  {
+   "property_id": "NW-00804",
+   "name": "Bolton 280",
+   "postcode": "BL5 3XU",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Westhoughton / Bolton West (M61)",
+   "max_sqft": 280619.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Under Construction",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l389768"
+  },
+  {
+   "property_id": "NW-00776",
+   "name": "Widnes 258",
+   "postcode": "WA8 0RN",
+   "town": "",
    "county": "Cheshire",
-   "submarket": "Winsford",
-   "max_sqft": 15202.0,
+   "submarket": "Widnes",
+   "max_sqft": 257500.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l303263"
+  },
+  {
+   "property_id": "NW-00758",
+   "name": "Units 1 & 2  Royce Trading Estate, Ashburton Road West, Trafford Park, Manchester, M17 1RY",
+   "postcode": "M17 1RY",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 215708.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l193378"
+  },
+  {
+   "property_id": "NW-00810",
+   "name": "Symmetry Park",
+   "postcode": "WN3 6XB",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Wigan South (M6 J25)",
+   "max_sqft": 190000.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Design & Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l84703"
+  },
+  {
+   "property_id": "NW-00752",
+   "name": "Sambro International",
+   "postcode": "BL9 9UE",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Bury",
+   "max_sqft": 184422.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l150433"
+  },
+  {
+   "property_id": "NW-00807",
+   "name": "Avro Business Park",
+   "postcode": "SK10 4NG",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Macclesfield",
+   "max_sqft": 170048.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l56032"
+  },
+  {
+   "property_id": "NW-00749",
+   "name": "Air 66 & Air 84",
+   "postcode": "L24 1YH",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 152286.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l113979"
+  },
+  {
+   "property_id": "NW-00809",
+   "name": "Symmetry Park",
+   "postcode": "CW10 0JB",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Middlewich",
+   "max_sqft": 149000.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Design & Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l84697"
+  },
+  {
+   "property_id": "NW-00750",
+   "name": "Trafford 150, Longbridge Road, Manchester, M17 1SN",
+   "postcode": "M17 1SN",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 148240.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l13094"
+  },
+  {
+   "property_id": "NW-00473",
+   "name": "PLP Astley, Astley Business Park, Wigan, Greater Manchester",
+   "postcode": "M28 1FJ",
+   "town": "Wigan",
+   "county": "Greater Manchester",
+   "submarket": "Worsley / Walkden",
+   "max_sqft": 145548.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "\u00a3120m",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/plp-astley-astley-business-park-wigan-greater-manchester/"
+  },
+  {
+   "property_id": "NW-00770",
+   "name": "Knowsley 120, Acornfield Road, Knowsley Industrial Park, Liverpool, L33 7UF",
+   "postcode": "L33 7UF",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Knowsley Industrial Park",
+   "max_sqft": 119941.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l276065"
+  },
+  {
+   "property_id": "NW-00792",
+   "name": "Stainburn Road, Openshaw, M11 2QA",
+   "postcode": "M11 2QA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "East Manchester",
+   "max_sqft": 101316.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l353530"
+  },
+  {
+   "property_id": "NW-00777",
+   "name": "Unit 336",
+   "postcode": "PR5 8AP",
+   "town": "",
+   "county": "Lancashire",
+   "submarket": "South Ribble (Bamber Bridge / Walton Summit)",
+   "max_sqft": 85757.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l318439"
+  },
+  {
+   "property_id": "NW-00780",
+   "name": "Unit E7A",
+   "postcode": "L24 9GQ",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 77000.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l328429"
+  },
+  {
+   "property_id": "NW-00757",
+   "name": "Neon",
+   "postcode": "L36 8HL",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Huyton",
+   "max_sqft": 74000.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l192196"
+  },
+  {
+   "property_id": "NW-00773",
+   "name": "Kings Park, Trafford Park, Manchester, M17 1QA",
+   "postcode": "M17 1QA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 63060.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l278340"
+  },
+  {
+   "property_id": "NW-00708",
+   "name": "Crumpsall Lane",
+   "postcode": "M9 8GQ",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Manchester",
+   "max_sqft": 62867.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l272774"
+  },
+  {
+   "property_id": "NW-00782",
+   "name": "Trade City Sharston",
+   "postcode": "M22 4RA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Wythenshawe / Manchester Airport",
+   "max_sqft": 62662.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l330872"
+  },
+  {
+   "property_id": "NW-00794",
+   "name": "Trafford Gate",
+   "postcode": "M41 7FN",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park / Urmston",
+   "max_sqft": 58211.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l375007"
+  },
+  {
+   "property_id": "NW-00160",
+   "name": "Widnes54, Gorsey Point",
+   "postcode": "WA8 0RN",
+   "town": "Widnes",
+   "county": "Cheshire",
+   "submarket": "Widnes",
+   "max_sqft": 54456.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/180443-widnes54-gorsey-point-widnes"
+  },
+  {
+   "property_id": "NW-00779",
+   "name": "Unit E6",
+   "postcode": "L24 9GQ",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 53738.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l328422"
+  },
+  {
+   "property_id": "NW-00789",
+   "name": "Unit 62",
+   "postcode": "M24 2RW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 52065.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l332213"
+  },
+  {
+   "property_id": "NW-00753",
+   "name": "Foundry Point",
+   "postcode": "WA8 8TZ",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Widnes",
+   "max_sqft": 49606.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l151519"
+  },
+  {
+   "property_id": "NW-00796",
+   "name": "14 Calver Road, Winwick Quay, Warrington, WA2 8UD",
+   "postcode": "WA2 8UD",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington North (M62 J9)",
+   "max_sqft": 44246.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a311.00",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l384602"
+  },
+  {
+   "property_id": "NW-00761",
+   "name": "Mill Lane Industrial Estate, Stanney Mill Road, Chester, CH2 4HX",
+   "postcode": "CH2 4HX",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 37300.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l212287"
+  },
+  {
+   "property_id": "NW-00806",
+   "name": "Unit 5B",
+   "postcode": "SK16 4RE",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 32613.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l399097"
+  },
+  {
+   "property_id": "NW-00970",
+   "name": "Unit 5, Indurent Park Hollinwood",
+   "postcode": "OL8 3QL",
+   "town": "Oldham",
+   "county": "Greater Manchester",
+   "submarket": "Oldham",
+   "max_sqft": 32450.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/indurent-park-hollinwood/unit-5/"
+  },
+  {
+   "property_id": "NW-00768",
+   "name": "Velocity (Unit A)",
+   "postcode": "L24 1YH",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 31500.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l235609"
+  },
+  {
+   "property_id": "NW-00812",
+   "name": "Albert Road, Bollington, Macclesfield, SK10 5HS",
+   "postcode": "SK10 5HS",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Macclesfield",
+   "max_sqft": 28732.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "\u00a31.77 psf",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458s212934"
+  },
+  {
+   "property_id": "NW-00611",
+   "name": "Velocity (Units A1 - A6), Stirling Road, Speke, Merseyside",
+   "postcode": "L24 1YH",
+   "town": "Speke",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 28657.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold, Freehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/velocity-units-a1-a6-stirling-road-speke-merseyside/"
+  },
+  {
+   "property_id": "NW-00769",
+   "name": "Jensen Court",
+   "postcode": "WA7 1SQ",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 26456.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l25832"
+  },
+  {
+   "property_id": "NW-00791",
+   "name": "Unit 1, 2 & 3 Millbrook Industrial Estate",
+   "postcode": "M23 9WT",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Wythenshawe / Manchester Airport",
+   "max_sqft": 26221.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l352586"
+  },
+  {
+   "property_id": "NW-00580",
+   "name": "Unit A18",
+   "postcode": "L24 9GQ",
+   "town": "Speke",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 26152.51,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills",
+    "B8 Real Estate"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l328301"
+  },
+  {
+   "property_id": "NW-00793",
+   "name": "B10-12",
+   "postcode": "BL4 0LR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Bolton",
+   "max_sqft": 25107.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l353704"
+  },
+  {
+   "property_id": "NW-00760",
+   "name": "Unit 2, Prince Mead Place, Kings Park, Manchester, M17 1PN",
+   "postcode": "M17 1PN",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 23992.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l199953"
+  },
+  {
+   "property_id": "NW-00795",
+   "name": "Unit 12-15 Stakehill Industrial Estate, Middleton, M24 2FL",
+   "postcode": "M24 2FL",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 23480.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l378950"
+  },
+  {
+   "property_id": "NW-00763",
+   "name": "Units 4 & 5 Clayton Road Industrial Estate",
+   "postcode": "WA3 6NH",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
+   "max_sqft": 23005.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a38.50 - \u00a310.00",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l216264"
+  },
+  {
+   "property_id": "NW-00754",
+   "name": "Unit 1",
+   "postcode": "SK6 2SP",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Stockport",
+   "max_sqft": 20653.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l152788"
+  },
+  {
+   "property_id": "NW-00744",
+   "name": "Unit 17-18 Wingates Industrial Estate, Barrs Fold Road, Bolton, BL5 3XP",
+   "postcode": "BL5 3XP",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Westhoughton / Bolton West (M61)",
+   "max_sqft": 20235.0,
    "size_band": "10,000\u201325,000 sq ft",
    "availability": "Availability Unconfirmed",
    "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "\u00a38.75 psf",
+   "terms": "\u00a310.00",
    "agents": [
-    "Legat Owen"
+    "Savills"
    ],
-   "url": "https://legatowen.co.uk/property/units-8-9-premier-park-road-one-winsford-cw7-3pr/"
+   "url": "https://search.savills.com/property-detail/gb0393l337782"
   },
   {
-   "property_id": "NW-01026",
-   "name": "Unit 7 & 8, Tatton Court, Warrington, WA1 4RR",
-   "postcode": "WA1 4RR",
+   "property_id": "NW-00815",
+   "name": "Unit 4, 10, 11 and 15, Shepley Industrial Estate North, Manchester, M34 5DR",
+   "postcode": "M34 5DR",
    "town": "",
-   "county": "Cheshire",
-   "submarket": "Warrington Central",
-   "max_sqft": 10975.0,
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 19816.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0977l348352"
+  },
+  {
+   "property_id": "NW-00745",
+   "name": "Unit D1&D2 Nasmyth Business Centre, Eccles, M30 0SN",
+   "postcode": "M30 0SN",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 16128.0,
    "size_band": "10,000\u201325,000 sq ft",
    "availability": "Availability Unconfirmed",
    "build": "Existing \u2013 Refurbished",
-   "tenure": "",
-   "terms": "",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
    "agents": [
-    "BC Real Estate"
+    "Savills"
    ],
-   "url": "https://bcrealestate.co.uk/property/unit-7-8-tatton-court-warrington-wa1-4rr/"
+   "url": "https://search.savills.com/property-detail/gb0393l346368"
   },
   {
-   "property_id": "NW-01032",
-   "name": "Unit 7 Bumpers Lane",
-   "postcode": "CH1 4LT",
-   "town": "Chester",
+   "property_id": "NW-00679",
+   "name": "Delta Point Leestone Road, Sharston Industrial Estate, Sharston, M22 4SA",
+   "postcode": "M22 4SA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Wythenshawe / Manchester Airport",
+   "max_sqft": 15082.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a313.50 psf",
+   "agents": [
+    "Williams Sillitoe"
+   ],
+   "url": "https://www.willsill.co.uk/property/delta-point-leestone-road-sharston-industrial-estate-sharston-m22-4sa/"
+  },
+  {
+   "property_id": "NW-00814",
+   "name": "Grimshaw Lane, Middleton, Manchester, M24 2AA",
+   "postcode": "M24 2AA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 14683.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "\u00a343,875 pa",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458s338349"
+  },
+  {
+   "property_id": "NW-00781",
+   "name": "Unit E8",
+   "postcode": "L24 9GQ",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 11915.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l328445"
+  },
+  {
+   "property_id": "NW-00632",
+   "name": "Manchester Road, Ashton-Under-Lyne, Greater Manchester, OL7 0DA",
+   "postcode": "OL7 0DA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 10746.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "On application",
+   "agents": [
+    "CPP (Commercial Property Partners)"
+   ],
+   "url": "https://www.commercialpropertypartners.co.uk/properties/manchester-road-ashton-under-lyne-greater-manchester"
+  },
+  {
+   "property_id": "NW-00755",
+   "name": "Unit 9 & 19",
+   "postcode": "WA1 4SF",
+   "town": "",
    "county": "Cheshire",
-   "submarket": "Cheshire West and Chester",
-   "max_sqft": 8149.0,
+   "submarket": "Warrington Central",
+   "max_sqft": 10534.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l185726"
+  },
+  {
+   "property_id": "NW-00816",
+   "name": "Bell Lane, Bury, BL9 6DL",
+   "postcode": "BL9 6DL",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Bury",
+   "max_sqft": 10534.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "\u00a350,000 pa",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0977s347567"
+  },
+  {
+   "property_id": "NW-00748",
+   "name": "Unit 7 Port Road, Port Road Business Park, Carlisle, CA2 7AF",
+   "postcode": "CA2 7AF",
+   "town": "",
+   "county": "Cumbria",
+   "submarket": "Carlisle",
+   "max_sqft": 9743.0,
    "size_band": "Under 10,000 sq ft",
    "availability": "Availability Unconfirmed",
    "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "\u00a375,000 pa",
+   "terms": "\u00a363,350",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0399l332754"
+  },
+  {
+   "property_id": "NW-00751",
+   "name": "Unit A1 / A6 - A9",
+   "postcode": "M30 0QR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 9609.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l140204"
+  },
+  {
+   "property_id": "NW-00742",
+   "name": "Unit D5",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 9472.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l213957"
+  },
+  {
+   "property_id": "NW-00746",
+   "name": "D1 Nasmyth Business Centre, Eccles, M30 OSN",
+   "postcode": "",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 9277.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l377831"
+  },
+  {
+   "property_id": "NW-00740",
+   "name": "Unit D2",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 9234.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l213951"
+  },
+  {
+   "property_id": "NW-00741",
+   "name": "Unit D3",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 8794.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l213952"
+  },
+  {
+   "property_id": "NW-00743",
+   "name": "Unit 3",
+   "postcode": "WA1 4RZ",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington Central",
+   "max_sqft": 8542.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l337019"
+  },
+  {
+   "property_id": "NW-00767",
+   "name": "Unit 6",
+   "postcode": "M45 8FJ",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Bury",
+   "max_sqft": 8072.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l232697"
+  },
+  {
+   "property_id": "NW-00803",
+   "name": "Unit 4 Melford Court, Warrington, WA1 4RZ",
+   "postcode": "WA1 4RZ",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington Central",
+   "max_sqft": 7794.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l389095"
+  },
+  {
+   "property_id": "NW-00607",
+   "name": "Units 8 & 10 Grisedale Road, Old Hall Industrial Estate, Bromborough, Merseyside",
+   "postcode": "CH62 3QD",
+   "town": "Bromborough",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 6932.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/units-8-10-grisedale-road-old-hall-industrial-estate-wirral-merseyside/"
+  },
+  {
+   "property_id": "NW-00766",
+   "name": "Unit 8, Gemini Trade Park, Warrington, WA5 7YF",
+   "postcode": "WA5 7YF",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 6526.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a311.00",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l226756"
+  },
+  {
+   "property_id": "NW-00775",
+   "name": "4B Eagle Park Drive, Warrington, WA2 8JA",
+   "postcode": "WA2 8JA",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington North (M62 J9)",
+   "max_sqft": 6370.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a312.50",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l295037"
+  },
+  {
+   "property_id": "NW-00774",
+   "name": "Unit 6 Millbrook Industrial Estate",
+   "postcode": "M23 9WT",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Wythenshawe / Manchester Airport",
+   "max_sqft": 5995.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l279310"
+  },
+  {
+   "property_id": "NW-00765",
+   "name": "Unit 7",
+   "postcode": "M24 2RW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 5942.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a311.00",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l226204"
+  },
+  {
+   "property_id": "NW-00729",
+   "name": "Unit 31, Junction One Business Park",
+   "postcode": "CH41 7ED",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Birkenhead",
+   "max_sqft": 5900.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a344,500 per annum",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/unit-31-junction-one-business-park-birkenhead-ch41/11798/"
+  },
+  {
+   "property_id": "NW-00242",
+   "name": "The Croft - Unit 4A Phase 2",
+   "postcode": "CH62 3PN",
+   "town": "Wirral International Business Park",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 5772.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
    "agents": [
     "Legat Owen"
    ],
-   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-sealand-trading-estate-chester-cheshire-ch1-4lt/"
+   "url": "https://legatowen.co.uk/property/the-croft-unit-4a-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
   },
   {
-   "property_id": "NW-01043",
-   "name": "Unit 1, Grosvenor Business Park, Horsfield Way, Bredbury, Stockport, SK6 2SU",
-   "postcode": "SK6 2SU",
+   "property_id": "NW-00801",
+   "name": "Unit A7-A9 Barton Business Park, Manchester, M30 0QR",
+   "postcode": "M30 0QR",
    "town": "",
    "county": "Greater Manchester",
-   "submarket": "Stockport",
-   "max_sqft": 6901.0,
+   "submarket": "Eccles / Barton",
+   "max_sqft": 5568.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l388655"
+  },
+  {
+   "property_id": "NW-00778",
+   "name": "B2",
+   "postcode": "M28 2NY",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Worsley / Walkden",
+   "max_sqft": 5480.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l327917"
+  },
+  {
+   "property_id": "NW-00790",
+   "name": "Unit 39",
+   "postcode": "M24 2RW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 4938.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l332468"
+  },
+  {
+   "property_id": "NW-00783",
+   "name": "Unit C3",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331703"
+  },
+  {
+   "property_id": "NW-00784",
+   "name": "Unit C5",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331707"
+  },
+  {
+   "property_id": "NW-00785",
+   "name": "Unit C10",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331708"
+  },
+  {
+   "property_id": "NW-00786",
+   "name": "Unit C7",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331711"
+  },
+  {
+   "property_id": "NW-00787",
+   "name": "Unit C12",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331712"
+  },
+  {
+   "property_id": "NW-00788",
+   "name": "Unit C13",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 4390.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l331713"
+  },
+  {
+   "property_id": "NW-00195",
+   "name": "Unit 4, 17 Outram Road",
+   "postcode": "SK16 4XE",
+   "town": "Dukinfield",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 4248.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/370798-unit-4-17-outram-road-dukinfield"
+  },
+  {
+   "property_id": "NW-00762",
+   "name": "Unit 235 - Europa Trade Park",
+   "postcode": "WA5 7TN",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 3955.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l214135"
+  },
+  {
+   "property_id": "NW-00975",
+   "name": "Unit 2, Longwood Estate Trafford Park",
+   "postcode": "M17 1PZ",
+   "town": "Manchester",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 3753.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a336,900 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/longwood-estate-trafford-park/unit-2/"
+  },
+  {
+   "property_id": "NW-00252",
+   "name": "Unit 12B",
+   "postcode": "CH62 3RN",
+   "town": "Wirral International Business Park",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 3732.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills",
+    "Legat Owen"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l350288"
+  },
+  {
+   "property_id": "NW-00284",
+   "name": "Unit 7 Westwood Court",
+   "postcode": "CH64 3UJ",
+   "town": "South Wirral",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 3428.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-7-westwood-court-clayhill-industrial-estate-south-wirral-ch64-3uj/"
+  },
+  {
+   "property_id": "NW-00805",
+   "name": "Unit 224 - Europa Trade Park, Warrington, WA5 7TN",
+   "postcode": "WA5 7TN",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 3144.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l390305"
+  },
+  {
+   "property_id": "NW-00800",
+   "name": "Unit A6 Barton Business Park, Manchester, M30 0QR",
+   "postcode": "M30 0QR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 2854.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l388653"
+  },
+  {
+   "property_id": "NW-00988",
+   "name": "Unit 21, Old Mill Industrial Estate",
+   "postcode": "PR5 6SY",
+   "town": "Preston",
+   "county": "Lancashire",
+   "submarket": "South Ribble (Bamber Bridge / Walton Summit)",
+   "max_sqft": 1620.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "",
+   "terms": "\u00a317,925 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/old-mill-industrial-estate/unit-21/"
+  },
+  {
+   "property_id": "NW-00245",
+   "name": "Unit 1 7A Winsford Way",
+   "postcode": "CH1 4NL",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 1361.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a315,000 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-1-7a-winsford-way-sealand-industrial-estate-chester-cheshire-ch1-4nl/"
+  },
+  {
+   "property_id": "NW-00265",
+   "name": "Unit 3 Wallace Court",
+   "postcode": "CW7 3PD",
+   "town": "Winsford Industrial Estate",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 1308.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a316,200 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-3-wallace-court-road-three-winsford-industrial-estate-winsford-cw7-3pd/"
+  },
+  {
+   "property_id": "NW-01009",
+   "name": "Unit 101, Radway Green Business Park",
+   "postcode": "CW2 5PR",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 1242.0,
    "size_band": "Under 10,000 sq ft",
    "availability": "Available Now",
    "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "\u00a310.00 psf",
+   "terms": "\u00a315,214 pa",
    "agents": [
-    "Williams Sillitoe"
+    "Indurent (landlord)"
    ],
-   "url": "https://www.willsill.co.uk/property/unit-1-grosvenor-business-park-horsfield-way-bredbury-stockport-sk6-2su/"
+   "url": "https://www.indurent.com/industrial-estates/radway-green-business-park/unit-101/"
   },
   {
-   "property_id": "NW-01034",
-   "name": "Unit 23, Hardie Court",
-   "postcode": "L24 1YL",
+   "property_id": "NW-00798",
+   "name": "Unit A1 Barton Business Park, Manchester, M30 0QR",
+   "postcode": "M30 0QR",
    "town": "",
-   "county": "Merseyside",
-   "submarket": "Speke / Halewood",
-   "max_sqft": 5805.0,
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 1217.0,
    "size_band": "Under 10,000 sq ft",
    "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold / Freehold",
-   "terms": "\u00a346,500 per annum",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a316,000",
    "agents": [
-    "LM6"
+    "Savills"
    ],
-   "url": "https://lm6.co.uk/property/unit-23-hardie-court-speke-l24/11887/"
+   "url": "https://search.savills.com/property-detail/gb0458l388614"
   },
   {
-   "property_id": "NW-01027",
-   "name": "Unit 7, Tatton Court, Warrington, WA1 4RR",
-   "postcode": "WA1 4RR",
+   "property_id": "NW-00799",
+   "name": "Unit A12 Barton Business Park, Manchester, M30 0QR",
+   "postcode": "M30 0QR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Eccles / Barton",
+   "max_sqft": 1192.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l388649"
+  },
+  {
+   "property_id": "NW-01012",
+   "name": "Unit 111, Radway Green Business Park",
+   "postcode": "CW2 5PR",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 1008.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a312,348 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/radway-green-business-park/unit-111/"
+  },
+  {
+   "property_id": "NW-01011",
+   "name": "Unit 105, Radway Green Business Park",
+   "postcode": "CW2 5PR",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 991.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a312,140 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/radway-green-business-park/unit-105/"
+  },
+  {
+   "property_id": "NW-01010",
+   "name": "Unit 103, Radway Green Business Park",
+   "postcode": "CW2 5PR",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 855.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a310,474 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/radway-green-business-park/unit-103/"
+  },
+  {
+   "property_id": "NW-00747",
+   "name": "Bower Street",
+   "postcode": "M40 2AF",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "North Manchester",
+   "max_sqft": null,
+   "size_band": "Size Not Disclosed",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "Price on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393s299736"
+  },
+  {
+   "property_id": "NW-00756",
+   "name": "Symmetry Park",
+   "postcode": "CW10 0QJ",
    "town": "",
    "county": "Cheshire",
-   "submarket": "Warrington Central",
-   "max_sqft": 5388.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold",
-   "terms": "",
-   "agents": [
-    "BC Real Estate"
-   ],
-   "url": "https://bcrealestate.co.uk/property/unit-78-tatton-court-warrington-wa1-4rr/"
-  },
-  {
-   "property_id": "NW-01031",
-   "name": "Unit 6",
-   "postcode": "CW11 3HL",
-   "town": "Sandbach",
-   "county": "Cheshire",
-   "submarket": "Sandbach",
-   "max_sqft": 4970.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
+   "submarket": "Middlewich",
+   "max_sqft": null,
+   "size_band": "Size Not Disclosed",
+   "availability": "Available Now",
    "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "",
+   "terms": "Rent on application",
    "agents": [
-    "Legat Owen"
+    "Savills"
    ],
-   "url": "https://legatowen.co.uk/property/unit-6-millbuck-way-sandbach-cheshire-cw11-3hl/"
+   "url": "https://search.savills.com/property-detail/gb0458l189687"
   },
   {
-   "property_id": "NW-01036",
-   "name": "Unit 12 Vesty Business Park, Vesty Road, Bootle, Merseyside",
-   "postcode": "L30 1NY",
-   "town": "Bootle",
-   "county": "Merseyside",
-   "submarket": "Netherton / Aintree",
-   "max_sqft": 4337.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "On application",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/unit-12-vesty-business-park-vesty-road-bootle-merseyside/"
-  },
-  {
-   "property_id": "NW-01037",
-   "name": "Units D10, Taylor Business Park, Warrington, Cheshire",
-   "postcode": "WA3 6BH",
-   "town": "Warrington",
-   "county": "Cheshire",
-   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
-   "max_sqft": 2768.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/units-d10-taylor-business-park-warrington-cheshire/"
-  },
-  {
-   "property_id": "NW-01038",
-   "name": "Units D4 & D5, Taylor Business Park, Warrington, Cheshire",
-   "postcode": "WA3 6BH",
-   "town": "Warrington",
-   "county": "Cheshire",
-   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
-   "max_sqft": 1351.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/units-d4-d5-taylor-business-park-warrington-cheshire/"
-  },
-  {
-   "property_id": "NW-01030",
-   "name": "Unit 16 New Russia Hall",
-   "postcode": "CH3 9AH",
-   "town": "Tattenhall",
-   "county": "Cheshire",
-   "submarket": "Cheshire West and Chester",
-   "max_sqft": 370.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "",
-   "agents": [
-    "Legat Owen"
-   ],
-   "url": "https://legatowen.co.uk/property/unit-16-new-russia-hall-bolesworth-gatesheath-chester-road-tattenhall-chester-cheshire-ch3-9ah/"
-  },
-  {
-   "property_id": "NW-01035",
-   "name": "Knowsley Park, M57, Knowsley, Merseyside",
+   "property_id": "NW-00813",
+   "name": "Knowsley Park",
    "postcode": "L34 8HA",
-   "town": "Knowsley",
+   "town": "",
    "county": "Merseyside",
    "submarket": "Knowsley / Prescot",
    "max_sqft": null,
@@ -258,276 +1848,70 @@
    "availability": "Proposed / Design and Build",
    "build": "Existing",
    "tenure": "Freehold",
-   "terms": "",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/knowsley-park-m57-knowsley-merseyside/"
-  }
- ],
- "returned": [],
- "removed": [
-  {
-   "property_id": "NW-00764",
-   "name": "Knowsley Park",
-   "postcode": "L34 8HA",
-   "town": "",
-   "county": "Merseyside",
-   "submarket": "Knowsley / Prescot",
-   "max_sqft": 157500.0,
-   "size_band": "100,000\u2013250,000 sq ft",
-   "availability": "Proposed / Design and Build",
-   "build": "Design & Build",
-   "tenure": "Leasehold / Freehold",
-   "terms": "Rent on application",
+   "terms": "Price on application",
    "agents": [
     "Savills"
    ],
-   "url": "https://search.savills.com/property-detail/gb0458l224559"
-  },
-  {
-   "property_id": "NW-00725",
-   "name": "Unit 1, Stonebridge Business Park",
-   "postcode": "L11 0EL",
-   "town": "",
-   "county": "Merseyside",
-   "submarket": "Gillmoss / Croxteth",
-   "max_sqft": 20166.0,
-   "size_band": "10,000\u201325,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a3125,250 per annum",
-   "agents": [
-    "LM6"
-   ],
-   "url": "https://lm6.co.uk/property/unit-1-stonebridge-business-park-liverpool-l11/8222/"
-  },
-  {
-   "property_id": "NW-00905",
-   "name": "Number 55",
-   "postcode": "PR1 4BH",
-   "town": "Brockholes View",
-   "county": "Lancashire",
-   "submarket": "Preston",
-   "max_sqft": 11605.0,
-   "size_band": "10,000\u201325,000 sq ft",
-   "availability": "Available Now",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a372,500 Per Annum",
-   "agents": [
-    "Taylor Weaver"
-   ],
-   "url": "https://www.taylorweaver.co.uk/property/details/5934/number-55-brockholes-view-preston-pr1-4bh-industrial"
-  },
-  {
-   "property_id": "NW-00566",
-   "name": "Unit 7, Haydock Industrial Estate, Haydock, Merseyside",
-   "postcode": "WA11 9UY",
-   "town": "Haydock",
-   "county": "Merseyside",
-   "submarket": "Haydock / St Helens (M6 J23)",
-   "max_sqft": 8913.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold",
-   "terms": "On application",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/unit-7-haydock-industrial-estate-haydock-merseyside/"
-  },
-  {
-   "property_id": "NW-00564",
-   "name": "Unit 6 The Leopold Centre, Smethurst Lane, Wigan, Greater Manchester",
-   "postcode": "WN5 8EG",
-   "town": "Wigan",
-   "county": "Greater Manchester",
-   "submarket": "Wigan West / Orrell",
-   "max_sqft": 8625.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Freehold",
-   "terms": "",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/unit-6-the-leopold-centre-smethurst-lane-wigan-greater-manchester/"
-  },
-  {
-   "property_id": "NW-00241",
-   "name": "The Croft - Unit 3D Phase 2",
-   "postcode": "CH62 3PN",
-   "town": "Wirral International Business Park",
-   "county": "Merseyside",
-   "submarket": "Bromborough / Wirral",
-   "max_sqft": 3959.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Available Now",
-   "build": "Existing",
-   "tenure": "Leasehold / Freehold",
-   "terms": "",
-   "agents": [
-    "Legat Owen"
-   ],
-   "url": "https://legatowen.co.uk/property/the-croft-unit-3d-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
-  },
-  {
-   "property_id": "NW-00907",
-   "name": "Albion Street",
-   "postcode": "",
-   "town": "Accrington",
-   "county": "Lancashire",
-   "submarket": "Hyndburn / Accrington",
-   "max_sqft": 3298.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a324,500 Per Annum",
-   "agents": [
-    "Taylor Weaver"
-   ],
-   "url": "https://www.taylorweaver.co.uk/property/details/5940/albion-street-accrington-lancashire-industrial"
-  },
-  {
-   "property_id": "NW-00918",
-   "name": "Unit 1",
-   "postcode": "PR6 0BU",
-   "town": "Mill Bank",
-   "county": "Lancashire",
-   "submarket": "Chorley",
-   "max_sqft": 2493.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Available Now",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold",
-   "terms": "\u00a335,000 Per Annum",
-   "agents": [
-    "Taylor Weaver"
-   ],
-   "url": "https://www.taylorweaver.co.uk/property/details/5975/unit-1-mill-bank-canal-side-chorley-lancashire-pr6-0bu-industrial"
-  },
-  {
-   "property_id": "NW-00257",
-   "name": "Unit 18 Third Avenue",
-   "postcode": "CW1 6XU",
-   "town": "Crewe",
-   "county": "Cheshire",
-   "submarket": "Crewe",
-   "max_sqft": 2166.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a319,000 pa",
-   "agents": [
-    "Legat Owen"
-   ],
-   "url": "https://legatowen.co.uk/property/unit-18-third-avenue-crewe-gates-industrial-estate-crewe-cheshire-cw1-6xu/"
-  },
-  {
-   "property_id": "NW-00722",
-   "name": "Parliament Business Centre, Unit 9",
-   "postcode": "L8 7BL",
-   "town": "",
-   "county": "Merseyside",
-   "submarket": "Liverpool",
-   "max_sqft": 1020.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a31,275 per month",
-   "agents": [
-    "LM6"
-   ],
-   "url": "https://lm6.co.uk/property/parliament-business-centre-unit-9-liverpool-l8/11224/"
+   "url": "https://search.savills.com/property-detail/gb0458s224559"
   }
  ],
  "new_joint_agents": [
   {
-   "property_id": "NW-00261",
-   "name": "Unit 2, Jensen Court",
+   "property_id": "NW-00286",
+   "name": "Unit 8, Jensen Court",
    "postcode": "WA7 1SQ",
    "town": "Runcorn",
    "county": "Cheshire",
    "submarket": "Runcorn",
-   "max_sqft": 3895.0,
+   "max_sqft": 2984.0,
    "size_band": "Under 10,000 sq ft",
-   "availability": "Under Offer",
+   "availability": "Available Now",
    "build": "Existing",
    "tenure": "Leasehold",
-   "terms": "\u00a336,029 pa",
+   "terms": "\u00a328,348 pa",
    "agents": [
     "Indurent (landlord)",
     "Legat Owen"
    ],
-   "url": "https://www.indurent.com/industrial-estates/jensen-court/unit-2/",
+   "url": "https://www.indurent.com/industrial-estates/jensen-court/unit-8/",
    "added_agents": [
     "Legat Owen"
    ]
   },
   {
-   "property_id": "NW-00371",
-   "name": "14 Tatton Court, Warrington, Cheshire",
-   "postcode": "WA1 4RR",
-   "town": "Warrington",
-   "county": "Cheshire",
-   "submarket": "Warrington Central",
-   "max_sqft": 6500.0,
+   "property_id": "NW-00586",
+   "name": "Unit D6, Europa Trading Estate, Kearsley, Greater Manchester",
+   "postcode": "M26 1GG",
+   "town": "Kearsley",
+   "county": "Greater Manchester",
+   "submarket": "Radcliffe / Kearsley",
+   "max_sqft": 7780.0,
    "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
+   "availability": "Available at a Future Date",
    "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold / Freehold",
-   "terms": "",
-   "agents": [
-    "B8 Real Estate",
-    "BC Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/14-tatton-court-warrington-cheshire/",
-   "added_agents": [
-    "BC Real Estate"
-   ]
-  },
-  {
-   "property_id": "NW-00676",
-   "name": "711 Cavendish Avenue, Birchwood Park, Warrington, WA3 6DE",
-   "postcode": "WA3 6DE",
-   "town": "Warrington",
-   "county": "Cheshire",
-   "submarket": "Warrington East / Birchwood (Omega / M62 J11)",
-   "max_sqft": 14429.0,
-   "size_band": "10,000\u201325,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
    "tenure": "Leasehold",
    "terms": "On application",
    "agents": [
-    "Williams Sillitoe",
-    "B8 Real Estate"
+    "B8 Real Estate",
+    "CPP (Commercial Property Partners)"
    ],
-   "url": "https://www.willsill.co.uk/property/711-cavendish-avenue-birchwood-park-warrington-wa3-6de/",
+   "url": "https://www.b8re.com/properties/unit-d6-europa-trading-estate-kearsley-greater-manchester/",
    "added_agents": [
-    "B8 Real Estate"
+    "CPP (Commercial Property Partners)"
    ]
   }
  ],
  "by_county": {
-  "Cheshire": 9,
   "Merseyside": 3,
-  "Greater Manchester": 2
+  "Greater Manchester": 1,
+  "Cheshire": 2
  },
  "by_agent": {
-  "BC Real Estate": 2,
-  "Legat Owen": 5,
   "LM6": 1,
-  "B8 Real Estate": 4,
-  "Knight Frank": 1,
-  "Williams Sillitoe": 1
+  "CPP (Commercial Property Partners)": 2,
+  "Indurent (landlord)": 1,
+  "Williams Sillitoe": 1,
+  "Legat Owen": 1
  },
  "newly_covered_sources": [],
  "sources_not_ok": [
@@ -539,7 +1923,7 @@
   {
    "agent": "Cushman & Wakefield",
    "status": "Failed",
-   "message": "0 NW industrial listings from 4 scanned; 5 page errors"
+   "message": "RuntimeError: cushwakeproperty.co.uk search returned an error page (site fault) and no previously known listings to re-check"
   },
   {
    "agent": "Colliers",
@@ -547,6 +1931,6 @@
    "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
   }
  ],
- "total_available": 930,
- "total_available_sqft": 43369481.51
+ "total_available": 851,
+ "total_available_sqft": 40344639.0
 }
