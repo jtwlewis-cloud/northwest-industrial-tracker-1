@@ -1,0 +1,158 @@
+# North West Industrial & Logistics Availability – Run Report
+
+Run 9 · 2026-11-19
+
+## 1. Website coverage
+
+17 of 19 agent websites were searched successfully.
+
+| Agent | Status | Listings scanned | NW industrial listings kept | Brochures read | Notes |
+|---|---|---:|---:|---:|---|
+| JLL | Success | 559 | 39 | 38 | 39 NW industrial listings from 559 scanned |
+| CBRE | Blocked | 0 | 0 | 0 | Website blocked automated access – not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403) |
+| Cushman & Wakefield | Success | 259 | 4 | 0 | 4 NW industrial listings from 259 scanned |
+| Avison Young | Success | 700 | 46 | 0 | 46 NW industrial listings from 700 scanned |
+| Williams Sillitoe | Success | 43 | 42 | 39 | 42 NW industrial listings from 43 scanned |
+| B8 Real Estate | Success | 354 | 318 | 308 | 318 NW industrial listings from 354 scanned |
+| DTRE | Success | 480 | 110 | 104 | 110 NW industrial listings from 480 scanned |
+| CPP (Commercial Property Partners) | Success | 250 | 53 | 52 | 53 NW industrial listings from 250 scanned |
+| BC Real Estate | Success | 75 | 69 | 60 | 69 NW industrial listings from 75 scanned |
+| Davies Harrison | Success | 27 | 18 | 16 | 18 NW industrial listings from 27 scanned |
+| Legat Owen | Success | 229 | 106 | 0 | 106 NW industrial listings from 229 scanned |
+| Lambert Smith Hampton | Success | 310 | 2 | 0 | 2 NW industrial listings from 310 scanned |
+| Savills | Success | 128 | 123 | 109 | 123 NW industrial listings from 128 scanned |
+| Knight Frank | Success | 735 | 54 | 0 | 54 NW industrial listings from 735 scanned |
+| Colliers | Blocked | 0 | 0 | 0 | Website blocked automated access – not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403) |
+| Taylor Weaver | Success | 139 | 71 | 0 | 71 NW industrial listings from 139 scanned |
+| LM6 | Success | 24 | 23 | 0 | 23 NW industrial listings from 24 scanned |
+| Fisher German | Success | 178 | 19 | 19 | 19 NW industrial listings from 178 scanned |
+| Indurent (landlord) | Partial | 484 | 137 | 0 | 137 NW industrial listings from 484 scanned; 1 page errors |
+
+**Agents that could not be checked:**
+
+- **CBRE** – Website blocked automated access – not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)
+- **Colliers** – Website blocked automated access – not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)
+
+## 2. Property totals
+
+- Agent listings collected (NW industrial, after exclusions): **1,234**
+- Unique properties after de-duplication: **1,006**
+- Advertised available (excluding under offer): **921** properties, **43,167,543 sq ft** (max available area per property, no double counting)
+
+| Availability status | Properties | sq ft |
+|---|---:|---:|
+| Available Now | 222 | 11,196,152 |
+| Available at a Future Date | 76 | 2,249,365 |
+| Under Construction | 39 | 2,284,145 |
+| Proposed / Design and Build | 59 | 9,596,678 |
+| Under Offer | 85 | 1,102,043 |
+| Availability Unconfirmed | 525 | 17,841,203 |
+
+| County | Properties | Available sq ft |
+|---|---:|---:|
+| Greater Manchester | 416 | 15,178,079 |
+| Merseyside | 196 | 8,863,254 |
+| Cheshire | 253 | 12,198,870 |
+| Lancashire | 136 | 6,878,531 |
+| Cumbria | 5 | 48,809 |
+
+## 3. Duplicate records
+
+- Properties marketed by more than one of the 19 agents searched (merged into one row): **163**
+- Listing pairs merged: 268 (of which flagged because sizes differ: 18)
+- Ambiguous pairs left separate and flagged for manual checking: **373**
+- Records excluded from floor-space totals to avoid double counting: 70
+- Records with conflicting information between agents (flagged): 156
+
+Most common joint instructions:
+
+- B8 Real Estate + Savills: 22
+- B8 Real Estate + DTRE: 13
+- B8 Real Estate + Indurent (landlord): 11
+- B8 Real Estate + DTRE + Indurent (landlord): 11
+- B8 Real Estate + JLL: 9
+- B8 Real Estate + CPP (Commercial Property Partners): 8
+- B8 Real Estate + BC Real Estate: 6
+- B8 Real Estate + Knight Frank: 6
+- DTRE + Knight Frank: 5
+- B8 Real Estate + Williams Sillitoe: 4
+
+## 4. Missing information (share of unique properties where not disclosed)
+
+| Field | Not disclosed | % |
+|---|---:|---:|
+| Full postcode | 38 | 4% |
+| Floor area | 30 | 3% |
+| Eaves height | 393 | 39% |
+| Dock-level doors | 856 | 85% |
+| Level-access doors | 695 | 69% |
+| Yard depth | 881 | 88% |
+| Site area | 917 | 91% |
+| Power supply | 520 | 52% |
+| EPC rating | 725 | 72% |
+| BREEAM rating | 849 | 84% |
+| Sprinklers | 982 | 98% |
+| Availability date | 654 | 65% |
+| Rent £psf | 808 | 80% |
+| Freehold price | 883 | 88% |
+| Warehouse area | 905 | 90% |
+| Office area | 911 | 91% |
+| PDF brochure link | 60 | 6% |
+| Agent contacts | 1 | 0% |
+
+## 5. Changes since previous search
+
+- Changed: 51
+- Re-listed: 78
+- New: 3
+- Removed: 4
+- Merged: 4
+
+## 6. Exclusions applied
+
+| Agent | Reason | Listings |
+|---|---|---:|
+| Avison Young | Outside North West coverage | 582 |
+| Avison Young | Not industrial | 70 |
+| Avison Young | Land / open storage only | 2 |
+| B8 Real Estate | Outside North West coverage | 28 |
+| B8 Real Estate | Not industrial | 8 |
+| BC Real Estate | Outside North West coverage | 3 |
+| BC Real Estate | Land / open storage without a building or design-and-build proposal | 3 |
+| CPP (Commercial Property Partners) | Outside North West coverage | 197 |
+| Cushman & Wakefield | Outside North West coverage | 255 |
+| DTRE | Outside North West coverage | 368 |
+| DTRE | Not industrial | 1 |
+| DTRE | Land / open storage without a building or design-and-build proposal | 1 |
+| Davies Harrison | Outside North West coverage | 7 |
+| Davies Harrison | Investment sale without occupier availability | 2 |
+| Fisher German | Outside North West coverage | 159 |
+| Indurent (landlord) | Outside North West coverage | 346 |
+| Indurent (landlord) | Detail page could not be processed | 1 |
+| JLL | Outside North West coverage | 517 |
+| JLL | Not industrial | 3 |
+| Knight Frank | Outside North West coverage | 681 |
+| LM6 | Not industrial | 1 |
+| Lambert Smith Hampton | Outside North West coverage | 258 |
+| Lambert Smith Hampton | Not industrial | 50 |
+| Legat Owen | Outside North West coverage | 117 |
+| Legat Owen | Land / open storage without a building or design-and-build proposal | 6 |
+| Savills | Land / open storage without a building or design-and-build proposal | 5 |
+| Taylor Weaver | Not industrial | 68 |
+| Williams Sillitoe | Investment sale without occupier availability | 1 |
+
+## 7. Known limitations
+
+- CBRE (cbre.co.uk) and Colliers (colliers.com) present a Cloudflare bot challenge to automated clients. It was not bypassed, so their instructions appear only where another searched agent markets the same property jointly.
+- Knight Frank and Fisher German publish UK-wide industrial searches; all pages are read and only North West locations kept. Knight Frank's specification detail is limited to what its search data provides (its property pages are rendered by script).
+- Indurent is a landlord, not an agency: its units are listed under 'Indurent (landlord)' and merged with the letting agents' listings where the same unit is marketed by both. Its brochures (vault.industrials.co.uk) are linked but not read.
+- Novaloca and LoopNet are not searched: their terms of use prohibit commercial re-use/storage (Novaloca, without written permission) or automated access (LoopNet).
+- Cushman & Wakefield is searched on cushwakeproperty.co.uk (its UK agency site); its brochures are hosted on Novaloca's file server and are linked but not read.
+- CPP (Commercial Property Partners) markets property across the North West, Yorkshire and the Midlands; all its industrial and trade-counter listings were checked and only North West locations kept.
+- Brochures hosted on cdn.sharplaunch.com (Avison Young) and AgencyPilot (Legat Owen, LSH, Taylor Weaver, LM6) are linked in the schedule but not read, because those hosts' robots.txt files disallow automated access. Brochures over 20 MB are also skipped.
+- JLL's robots.txt disallows its search pages, so JLL listings are enumerated from its published property sitemap. Multi-unit JLL schemes load their unit-by-unit accommodation table with JavaScript; the scheme-level size range is recorded and the number of availabilities is noted.
+- Davies Harrison listings do not publish postcodes; their location is taken from the address/town name and flagged '(check)'. LSH sometimes publishes only a postcode district.
+- Specifications (eaves, doors, power, EPC, BREEAM, yard depth, rents) are extracted only where explicitly stated on the listing page or the first PDF brochure. Image-only brochures cannot be read. Blank = not disclosed.
+- Availability status is evidence-based: 'Available Now' requires an explicit statement (e.g. 'available now', 'immediate occupation'). Advertised properties with no availability statement are classed 'Availability Unconfirmed'. Online advertisements do not guarantee present-day availability.
+- Duplicate matching is deliberately conservative: different unit numbers are never merged, and uncertain matches are listed in 'Duplicate Review' rather than merged.
+- Size bands use the maximum available area; divisible options are not added together.
