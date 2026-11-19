@@ -98,5 +98,6 @@ def summary_line(dg: ListingsDigest) -> str:
     if dg.new_sqft:
         s += f" ({dg.new_sqft:,} sq ft)"
     if dg.largest:
-        s += f"; largest {dg.largest['name']}, {dg.largest['location']}, {dg.largest['sqft']:,} sq ft"
+        short = dg.largest["name"].split(",")[0].strip()      # table names are truncated addresses
+        s += f"; largest {short}, {dg.largest['location']}, {dg.largest['sqft']:,} sq ft"
     return s + "."
