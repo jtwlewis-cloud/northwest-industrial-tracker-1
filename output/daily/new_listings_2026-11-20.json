@@ -1,0 +1,217 @@
+{
+ "sweep_date": "2026-11-20",
+ "sweep_time": "05:08",
+ "compared_with": "2026-11-19 05:08",
+ "run_id": 10,
+ "baseline_run_id": 9,
+ "new_count": 2,
+ "new_sqft": 34732.0,
+ "returned_count": 2,
+ "removed_count": 3,
+ "removed_sqft": 18134.0,
+ "new_existing_sqft": 38654.0,
+ "new_pipeline_sqft": 280619.0,
+ "new": [
+  {
+   "property_id": "NW-01058",
+   "name": "Units 5 & 6 Premier Park, Acheson Way, Manchester, Greater Manchester",
+   "postcode": "M17 1GA",
+   "town": "Manchester",
+   "county": "Greater Manchester",
+   "submarket": "Trafford Park",
+   "max_sqft": 26583.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/units-5-6-premier-park-acheson-way-manchester-greater-manchester/"
+  },
+  {
+   "property_id": "NW-01057",
+   "name": "Unit 7 Bumpers Lane",
+   "postcode": "CH1 4LT",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 8149.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a375,000 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-former-ats-tyres-sealand-trading-estate-chester-cheshire-ch1-4lt/"
+  }
+ ],
+ "returned": [
+  {
+   "property_id": "NW-00239",
+   "name": "The Croft - Unit 3B Phase 2",
+   "postcode": "CH62 3PN",
+   "town": "Wirral International Business Park",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 3922.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/the-croft-unit-3b-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
+  },
+  {
+   "property_id": "NW-00804",
+   "name": "Bolton 280",
+   "postcode": "BL5 3XU",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Westhoughton / Bolton West (M61)",
+   "max_sqft": 280619.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Under Construction",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l389768"
+  }
+ ],
+ "removed": [
+  {
+   "property_id": "NW-00740",
+   "name": "Unit D2",
+   "postcode": "WA14 5EW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Altrincham / Broadheath",
+   "max_sqft": 9234.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0393l213951"
+  },
+  {
+   "property_id": "NW-01032",
+   "name": "Unit 7 Bumpers Lane",
+   "postcode": "CH1 4LT",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 8149.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a375,000 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-sealand-trading-estate-chester-cheshire-ch1-4lt/"
+  },
+  {
+   "property_id": "NW-00932",
+   "name": "Zone 3 \u2013 Unit 32B, Bradley Hall Trading Estate",
+   "postcode": "WN6 0XQ",
+   "town": "Wigan",
+   "county": "Greater Manchester",
+   "submarket": "Wigan",
+   "max_sqft": 751.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a38,900 pa",
+   "agents": [
+    "Indurent (landlord)"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/bradley-hall-trading-estate/zone-3-unit-32b/"
+  }
+ ],
+ "new_joint_agents": [
+  {
+   "property_id": "NW-00296",
+   "name": "Unit 4 Aston Way, Midpoint 18",
+   "postcode": "CW10 0HS",
+   "town": "Middlewich",
+   "county": "Cheshire",
+   "submarket": "Middlewich",
+   "max_sqft": 20652.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a3187,000 pa",
+   "agents": [
+    "Indurent (landlord)",
+    "Legat Owen"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/midpoint-18/unit-4-aston-way/",
+   "added_agents": [
+    "Legat Owen"
+   ]
+  },
+  {
+   "property_id": "NW-00580",
+   "name": "Unit A18",
+   "postcode": "L24 9GQ",
+   "town": "Speke",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 27425.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills",
+    "B8 Real Estate"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l328301",
+   "added_agents": [
+    "B8 Real Estate"
+   ]
+  }
+ ],
+ "by_county": {
+  "Cheshire": 1,
+  "Greater Manchester": 2,
+  "Merseyside": 1
+ },
+ "by_agent": {
+  "Legat Owen": 2,
+  "B8 Real Estate": 1,
+  "Savills": 1
+ },
+ "newly_covered_sources": [],
+ "sources_not_ok": [
+  {
+   "agent": "CBRE",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)"
+  },
+  {
+   "agent": "Colliers",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
+  }
+ ],
+ "total_available": 922,
+ "total_available_sqft": 43429678.0
+}
