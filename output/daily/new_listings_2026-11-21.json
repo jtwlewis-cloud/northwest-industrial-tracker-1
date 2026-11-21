@@ -1,0 +1,149 @@
+{
+ "sweep_date": "2026-11-21",
+ "sweep_time": "05:08",
+ "compared_with": "2026-11-20 05:08",
+ "run_id": 11,
+ "baseline_run_id": 10,
+ "new_count": 2,
+ "new_sqft": 7959.0,
+ "returned_count": 0,
+ "removed_count": 4,
+ "removed_sqft": 242169.0,
+ "new_existing_sqft": 7959.0,
+ "new_pipeline_sqft": 0,
+ "new": [
+  {
+   "property_id": "NW-01059",
+   "name": "Unit 1, Taylors Row",
+   "postcode": "WA7 5QP",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 6539.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-1-taylors-row-runcorn-cheshire-wa7-5qp/"
+  },
+  {
+   "property_id": "NW-01060",
+   "name": "Unit 5, Macon Way",
+   "postcode": "CW1 6DG",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 1420.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-5-macon-business-park-macon-way-crewe-cheshire-cw1-6dg/"
+  }
+ ],
+ "returned": [],
+ "removed": [
+  {
+   "property_id": "NW-00299",
+   "name": "WG225 Winsford Gateway",
+   "postcode": "CW7 3QF",
+   "town": "Winsford Industrial Estate",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 225067.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Design & Build",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/wg225-winsford-gateway-road-six-winsford-industrial-estate-winsford-cheshire-cw7-3qf/"
+  },
+  {
+   "property_id": "NW-00294",
+   "name": "Units 1 & 2",
+   "postcode": "WA7 5QP",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 8962.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "On application",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/units-1-2-taylors-row-runcorn-wa7-5qp/"
+  },
+  {
+   "property_id": "NW-00868",
+   "name": "Unit 2 Elder Court",
+   "postcode": "BB1 2QS",
+   "town": "Lions Drive",
+   "county": "Lancashire",
+   "submarket": "Blackburn",
+   "max_sqft": 4181.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a337,630 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/400/unit-2-elder-court-lions-drive-blackburn-lancashire,bb1-2qs-industrial"
+  },
+  {
+   "property_id": "NW-00241",
+   "name": "The Croft - Unit 3D Phase 2",
+   "postcode": "CH62 3PN",
+   "town": "Wirral International Business Park",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 3959.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/the-croft-unit-3d-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
+  }
+ ],
+ "new_joint_agents": [],
+ "by_county": {
+  "Cheshire": 2
+ },
+ "by_agent": {
+  "Legat Owen": 2
+ },
+ "newly_covered_sources": [],
+ "sources_not_ok": [
+  {
+   "agent": "CBRE",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)"
+  },
+  {
+   "agent": "Colliers",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
+  }
+ ],
+ "total_available": 922,
+ "total_available_sqft": 43424716.0
+}

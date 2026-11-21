@@ -1,63 +1,118 @@
 {
- "sweep_date": "2026-11-20",
+ "sweep_date": "2026-11-21",
  "sweep_time": "05:08",
- "compared_with": "2026-11-19 05:08",
- "run_id": 10,
- "baseline_run_id": 9,
+ "compared_with": "2026-11-20 05:08",
+ "run_id": 11,
+ "baseline_run_id": 10,
  "new_count": 2,
- "new_sqft": 34732.0,
- "returned_count": 2,
- "removed_count": 3,
- "removed_sqft": 18134.0,
- "new_existing_sqft": 38654.0,
- "new_pipeline_sqft": 280619.0,
+ "new_sqft": 7959.0,
+ "returned_count": 0,
+ "removed_count": 4,
+ "removed_sqft": 242169.0,
+ "new_existing_sqft": 7959.0,
+ "new_pipeline_sqft": 0,
  "new": [
   {
-   "property_id": "NW-01058",
-   "name": "Units 5 & 6 Premier Park, Acheson Way, Manchester, Greater Manchester",
-   "postcode": "M17 1GA",
-   "town": "Manchester",
-   "county": "Greater Manchester",
-   "submarket": "Trafford Park",
-   "max_sqft": 26583.0,
-   "size_band": "25,000\u201350,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold",
-   "terms": "On application",
-   "agents": [
-    "B8 Real Estate"
-   ],
-   "url": "https://www.b8re.com/properties/units-5-6-premier-park-acheson-way-manchester-greater-manchester/"
-  },
-  {
-   "property_id": "NW-01057",
-   "name": "Unit 7 Bumpers Lane",
-   "postcode": "CH1 4LT",
-   "town": "Chester",
+   "property_id": "NW-01059",
+   "name": "Unit 1, Taylors Row",
+   "postcode": "WA7 5QP",
+   "town": "Runcorn",
    "county": "Cheshire",
-   "submarket": "Cheshire West and Chester",
-   "max_sqft": 8149.0,
+   "submarket": "Runcorn",
+   "max_sqft": 6539.0,
    "size_band": "Under 10,000 sq ft",
    "availability": "Availability Unconfirmed",
    "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a375,000 pa",
+   "tenure": "Freehold",
+   "terms": "",
    "agents": [
     "Legat Owen"
    ],
-   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-former-ats-tyres-sealand-trading-estate-chester-cheshire-ch1-4lt/"
+   "url": "https://legatowen.co.uk/property/unit-1-taylors-row-runcorn-cheshire-wa7-5qp/"
+  },
+  {
+   "property_id": "NW-01060",
+   "name": "Unit 5, Macon Way",
+   "postcode": "CW1 6DG",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 1420.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-5-macon-business-park-macon-way-crewe-cheshire-cw1-6dg/"
   }
  ],
- "returned": [
+ "returned": [],
+ "removed": [
   {
-   "property_id": "NW-00239",
-   "name": "The Croft - Unit 3B Phase 2",
+   "property_id": "NW-00299",
+   "name": "WG225 Winsford Gateway",
+   "postcode": "CW7 3QF",
+   "town": "Winsford Industrial Estate",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 225067.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Design & Build",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/wg225-winsford-gateway-road-six-winsford-industrial-estate-winsford-cheshire-cw7-3qf/"
+  },
+  {
+   "property_id": "NW-00294",
+   "name": "Units 1 & 2",
+   "postcode": "WA7 5QP",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 8962.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "On application",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/units-1-2-taylors-row-runcorn-wa7-5qp/"
+  },
+  {
+   "property_id": "NW-00868",
+   "name": "Unit 2 Elder Court",
+   "postcode": "BB1 2QS",
+   "town": "Lions Drive",
+   "county": "Lancashire",
+   "submarket": "Blackburn",
+   "max_sqft": 4181.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a337,630 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/400/unit-2-elder-court-lions-drive-blackburn-lancashire,bb1-2qs-industrial"
+  },
+  {
+   "property_id": "NW-00241",
+   "name": "The Croft - Unit 3D Phase 2",
    "postcode": "CH62 3PN",
    "town": "Wirral International Business Park",
    "county": "Merseyside",
    "submarket": "Bromborough / Wirral",
-   "max_sqft": 3922.0,
+   "max_sqft": 3959.0,
    "size_band": "Under 10,000 sq ft",
    "availability": "Available Now",
    "build": "Existing",
@@ -66,138 +121,15 @@
    "agents": [
     "Legat Owen"
    ],
-   "url": "https://legatowen.co.uk/property/the-croft-unit-3b-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
-  },
-  {
-   "property_id": "NW-00804",
-   "name": "Bolton 280",
-   "postcode": "BL5 3XU",
-   "town": "",
-   "county": "Greater Manchester",
-   "submarket": "Westhoughton / Bolton West (M61)",
-   "max_sqft": 280619.0,
-   "size_band": "Over 250,000 sq ft",
-   "availability": "Under Construction",
-   "build": "New Build",
-   "tenure": "Leasehold",
-   "terms": "Rent on application",
-   "agents": [
-    "Savills"
-   ],
-   "url": "https://search.savills.com/property-detail/gb0458l389768"
+   "url": "https://legatowen.co.uk/property/the-croft-unit-3d-phase-2-trade-a41-wirral-m53-welton-road-wirral-international-business-park-bromborough-wirral-ch62-3pn/"
   }
  ],
- "removed": [
-  {
-   "property_id": "NW-00740",
-   "name": "Unit D2",
-   "postcode": "WA14 5EW",
-   "town": "",
-   "county": "Greater Manchester",
-   "submarket": "Altrincham / Broadheath",
-   "max_sqft": 9234.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "New Build",
-   "tenure": "Leasehold",
-   "terms": "Rent on application",
-   "agents": [
-    "Savills"
-   ],
-   "url": "https://search.savills.com/property-detail/gb0393l213951"
-  },
-  {
-   "property_id": "NW-01032",
-   "name": "Unit 7 Bumpers Lane",
-   "postcode": "CH1 4LT",
-   "town": "Chester",
-   "county": "Cheshire",
-   "submarket": "Cheshire West and Chester",
-   "max_sqft": 8149.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a375,000 pa",
-   "agents": [
-    "Legat Owen"
-   ],
-   "url": "https://legatowen.co.uk/property/unit-7-bumpers-lane-sealand-trading-estate-chester-cheshire-ch1-4lt/"
-  },
-  {
-   "property_id": "NW-00932",
-   "name": "Zone 3 \u2013 Unit 32B, Bradley Hall Trading Estate",
-   "postcode": "WN6 0XQ",
-   "town": "Wigan",
-   "county": "Greater Manchester",
-   "submarket": "Wigan",
-   "max_sqft": 751.0,
-   "size_band": "Under 10,000 sq ft",
-   "availability": "Available at a Future Date",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a38,900 pa",
-   "agents": [
-    "Indurent (landlord)"
-   ],
-   "url": "https://www.indurent.com/industrial-estates/bradley-hall-trading-estate/zone-3-unit-32b/"
-  }
- ],
- "new_joint_agents": [
-  {
-   "property_id": "NW-00296",
-   "name": "Unit 4 Aston Way, Midpoint 18",
-   "postcode": "CW10 0HS",
-   "town": "Middlewich",
-   "county": "Cheshire",
-   "submarket": "Middlewich",
-   "max_sqft": 20652.0,
-   "size_band": "10,000\u201325,000 sq ft",
-   "availability": "Under Offer",
-   "build": "Existing",
-   "tenure": "Leasehold",
-   "terms": "\u00a3187,000 pa",
-   "agents": [
-    "Indurent (landlord)",
-    "Legat Owen"
-   ],
-   "url": "https://www.indurent.com/industrial-estates/midpoint-18/unit-4-aston-way/",
-   "added_agents": [
-    "Legat Owen"
-   ]
-  },
-  {
-   "property_id": "NW-00580",
-   "name": "Unit A18",
-   "postcode": "L24 9GQ",
-   "town": "Speke",
-   "county": "Merseyside",
-   "submarket": "Speke / Halewood",
-   "max_sqft": 27425.0,
-   "size_band": "25,000\u201350,000 sq ft",
-   "availability": "Availability Unconfirmed",
-   "build": "Existing \u2013 Refurbished",
-   "tenure": "Leasehold",
-   "terms": "Rent on application",
-   "agents": [
-    "Savills",
-    "B8 Real Estate"
-   ],
-   "url": "https://search.savills.com/property-detail/gb0458l328301",
-   "added_agents": [
-    "B8 Real Estate"
-   ]
-  }
- ],
+ "new_joint_agents": [],
  "by_county": {
-  "Cheshire": 1,
-  "Greater Manchester": 2,
-  "Merseyside": 1
+  "Cheshire": 2
  },
  "by_agent": {
-  "Legat Owen": 2,
-  "B8 Real Estate": 1,
-  "Savills": 1
+  "Legat Owen": 2
  },
  "newly_covered_sources": [],
  "sources_not_ok": [
@@ -213,5 +145,5 @@
   }
  ],
  "total_available": 922,
- "total_available_sqft": 43429678.0
+ "total_available_sqft": 43424716.0
 }
