@@ -1,6 +1,6 @@
 # North West Industrial & Logistics Availability – Run Report
 
-Run 11 · 2026-11-21
+Run 12 · 2026-11-22
 
 ## 1. Website coverage
 
@@ -18,10 +18,10 @@ Run 11 · 2026-11-21
 | CPP (Commercial Property Partners) | Success | 250 | 53 | 52 | 53 NW industrial listings from 250 scanned |
 | BC Real Estate | Success | 75 | 69 | 60 | 69 NW industrial listings from 75 scanned |
 | Davies Harrison | Success | 27 | 18 | 16 | 18 NW industrial listings from 27 scanned |
-| Legat Owen | Success | 230 | 106 | 0 | 106 NW industrial listings from 230 scanned |
+| Legat Owen | Success | 230 | 108 | 0 | 108 NW industrial listings from 230 scanned |
 | Lambert Smith Hampton | Success | 315 | 2 | 0 | 2 NW industrial listings from 315 scanned |
-| Savills | Success | 128 | 123 | 110 | 123 NW industrial listings from 128 scanned |
-| Knight Frank | Success | 737 | 54 | 0 | 54 NW industrial listings from 737 scanned |
+| Savills | Success | 129 | 124 | 111 | 124 NW industrial listings from 129 scanned |
+| Knight Frank | Success | 735 | 54 | 0 | 54 NW industrial listings from 735 scanned |
 | Colliers | Blocked | 0 | 0 | 0 | Website blocked automated access – not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403) |
 | Taylor Weaver | Success | 137 | 70 | 0 | 70 NW industrial listings from 137 scanned |
 | LM6 | Success | 24 | 23 | 0 | 23 NW industrial listings from 24 scanned |
@@ -35,32 +35,32 @@ Run 11 · 2026-11-21
 
 ## 2. Property totals
 
-- Agent listings collected (NW industrial, after exclusions): **1,235**
-- Unique properties after de-duplication: **1,005**
-- Advertised available (excluding under offer): **922** properties, **43,424,716 sq ft** (max available area per property, no double counting)
+- Agent listings collected (NW industrial, after exclusions): **1,238**
+- Unique properties after de-duplication: **1,007**
+- Advertised available (excluding under offer): **923** properties, **43,430,903 sq ft** (max available area per property, no double counting)
 
 | Availability status | Properties | sq ft |
 |---|---:|---:|
-| Available Now | 222 | 11,157,111 |
+| Available Now | 221 | 11,134,148 |
 | Available at a Future Date | 75 | 2,248,614 |
 | Under Construction | 40 | 2,564,764 |
-| Proposed / Design and Build | 59 | 9,596,678 |
-| Under Offer | 83 | 911,799 |
-| Availability Unconfirmed | 526 | 17,857,549 |
+| Proposed / Design and Build | 60 | 9,621,178 |
+| Under Offer | 84 | 1,136,866 |
+| Availability Unconfirmed | 527 | 17,862,199 |
 
 | County | Properties | Available sq ft |
 |---|---:|---:|
-| Greater Manchester | 416 | 15,434,785 |
-| Merseyside | 196 | 8,864,724 |
-| Cheshire | 253 | 12,197,867 |
+| Greater Manchester | 417 | 15,439,435 |
+| Merseyside | 196 | 8,866,261 |
+| Cheshire | 254 | 12,197,867 |
 | Lancashire | 135 | 6,878,531 |
 | Cumbria | 5 | 48,809 |
 
 ## 3. Duplicate records
 
-- Properties marketed by more than one of the 19 agents searched (merged into one row): **164**
-- Listing pairs merged: 272 (of which flagged because sizes differ: 19)
-- Ambiguous pairs left separate and flagged for manual checking: **370**
+- Properties marketed by more than one of the 19 agents searched (merged into one row): **165**
+- Listing pairs merged: 273 (of which flagged because sizes differ: 19)
+- Ambiguous pairs left separate and flagged for manual checking: **372**
 - Records excluded from floor-space totals to avoid double counting: 70
 - Records with conflicting information between agents (flagged): 153
 
@@ -75,7 +75,7 @@ Most common joint instructions:
 - B8 Real Estate + BC Real Estate: 6
 - B8 Real Estate + Knight Frank: 6
 - DTRE + Knight Frank: 5
-- B8 Real Estate + Williams Sillitoe: 4
+- Indurent (landlord) + Legat Owen: 5
 
 ## 4. Missing information (share of unique properties where not disclosed)
 
@@ -84,27 +84,28 @@ Most common joint instructions:
 | Full postcode | 38 | 4% |
 | Floor area | 30 | 3% |
 | Eaves height | 391 | 39% |
-| Dock-level doors | 854 | 85% |
-| Level-access doors | 694 | 69% |
-| Yard depth | 881 | 88% |
-| Site area | 917 | 91% |
-| Power supply | 520 | 52% |
-| EPC rating | 724 | 72% |
-| BREEAM rating | 847 | 84% |
-| Sprinklers | 981 | 98% |
-| Availability date | 652 | 65% |
-| Rent £psf | 807 | 80% |
-| Freehold price | 882 | 88% |
-| Warehouse area | 903 | 90% |
-| Office area | 909 | 90% |
+| Dock-level doors | 856 | 85% |
+| Level-access doors | 695 | 69% |
+| Yard depth | 882 | 88% |
+| Site area | 918 | 91% |
+| Power supply | 521 | 52% |
+| EPC rating | 725 | 72% |
+| BREEAM rating | 848 | 84% |
+| Sprinklers | 983 | 98% |
+| Availability date | 655 | 65% |
+| Rent £psf | 809 | 80% |
+| Freehold price | 883 | 88% |
+| Warehouse area | 904 | 90% |
+| Office area | 911 | 90% |
 | PDF brochure link | 60 | 6% |
 | Agent contacts | 1 | 0% |
 
 ## 5. Changes since previous search
 
 - New: 2
+- Re-listed: 2
 - Changed: 1
-- Removed: 4
+- Removed: 2
 
 ## 6. Exclusions applied
 
@@ -128,11 +129,11 @@ Most common joint instructions:
 | Indurent (landlord) | Outside North West coverage | 345 |
 | JLL | Outside North West coverage | 517 |
 | JLL | Not industrial | 3 |
-| Knight Frank | Outside North West coverage | 683 |
+| Knight Frank | Outside North West coverage | 681 |
 | LM6 | Not industrial | 1 |
 | Lambert Smith Hampton | Outside North West coverage | 260 |
 | Lambert Smith Hampton | Not industrial | 53 |
-| Legat Owen | Outside North West coverage | 118 |
+| Legat Owen | Outside North West coverage | 116 |
 | Legat Owen | Land / open storage without a building or design-and-build proposal | 6 |
 | Savills | Land / open storage without a building or design-and-build proposal | 5 |
 | Taylor Weaver | Not industrial | 67 |
