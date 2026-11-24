@@ -23,3 +23,6 @@ UK_GILT_30Y,2026-11-16,5.79,Trading Economics,https://tradingeconomics.com/unite
 UK_GILT_10Y,2026-11-17,5.34,Trading Economics (table dated Nov/17),https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-18,Mortgage Soup reported 'around 5.37%' for the same day - 3bp discrepancy
 UK_GILT_10Y,2026-11-20,5.24,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-23,-0.08pp on day; Bloomberg page showed conflicting/likely mislabelled values
 UK_GILT_2Y,2026-11-20,4.88,Trading Economics (table),https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-23,Single source; Bloomberg page conflicting
+UK_GILT_10Y,2026-11-23,5.20,Trading Economics,https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-24,-0.04pp on day; another TE table shows 5.23% - 3bp discrepancy
+UK_GILT_2Y,2026-11-23,4.89,Trading Economics (table),https://tradingeconomics.com/united-kingdom/government-bond-yield,secondary,,2026-11-24,Single source
+UK_GILT_30Y,2026-11-23,5.69,Trading Economics,https://tradingeconomics.com/united-kingdom/30-year-bond-yield,secondary,,2026-11-24,Another TE table shows 5.66%
