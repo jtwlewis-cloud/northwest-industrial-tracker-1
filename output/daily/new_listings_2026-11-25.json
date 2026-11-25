@@ -1,0 +1,621 @@
+{
+ "sweep_date": "2026-11-25",
+ "sweep_time": "05:19",
+ "compared_with": "2026-11-24 05:08",
+ "run_id": 15,
+ "baseline_run_id": 14,
+ "new_count": 6,
+ "new_sqft": 133926.0,
+ "returned_count": 2,
+ "removed_count": 20,
+ "removed_sqft": 1669734.0,
+ "new_existing_sqft": 130210.0,
+ "new_pipeline_sqft": 3716.0,
+ "new": [
+  {
+   "property_id": "NW-01079",
+   "name": "Interchange 81, Huyton Business Park, Huyton, Merseyside",
+   "postcode": "L36 6JF",
+   "town": "Huyton",
+   "county": "Merseyside",
+   "submarket": "Huyton",
+   "max_sqft": 83165.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/interchange-81-huyton-business-park-huyton-merseyside/"
+  },
+  {
+   "property_id": "NW-01074",
+   "name": "Unit 3, Rhodes Business Park, Manchester Old Road",
+   "postcode": "M24 4NE",
+   "town": "Middleton",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 25090.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/370994-unit-3-rhodes-business-park-manchester-old-road-middleton"
+  },
+  {
+   "property_id": "NW-01077",
+   "name": "Unit 3, Thornton Park",
+   "postcode": "CH65 1AB",
+   "town": "",
+   "county": "Cheshire",
+   "submarket": "Ellesmere Port",
+   "max_sqft": 16148.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/unit-3-thornton-park-ellesmere-port-ch65/6471/"
+  },
+  {
+   "property_id": "NW-01075",
+   "name": "Oakbank Bolesworth",
+   "postcode": "CH3 9HL",
+   "town": "Tattenhall",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 5587.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/oakbank-bolesworth-bolesworth-road-tattenhall-cheshire-ch3-9hl/"
+  },
+  {
+   "property_id": "NW-01080",
+   "name": "Unit 1",
+   "postcode": "",
+   "town": "Vale Business Centre",
+   "county": "Lancashire",
+   "submarket": "Blackburn",
+   "max_sqft": 3716.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a332,500 Per Annum",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/5950/unit-1-vale-business-centre-emerald-street-blackburn-lancashire-industrial"
+  },
+  {
+   "property_id": "NW-01076",
+   "name": "Storage Unit 13 New Russia Hall",
+   "postcode": "CH3 9AH",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 220.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/storage-unit-13-new-russia-hall-bolesworth-gatesheath-chester-cheshire-ch3-9ah/"
+  }
+ ],
+ "returned": [
+  {
+   "property_id": "NW-00268",
+   "name": "Unit 3B Crewe Trade Park",
+   "postcode": "CW1 6JT",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 6073.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a362,500 pa",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/unit-3b-crewe-trade-park-crewe-cheshire-cw1-6jt/"
+  },
+  {
+   "property_id": "NW-00301",
+   "name": "WGT Winsford Gateway",
+   "postcode": "CW7 3QF",
+   "town": "Winsford Industrial Estate",
+   "county": "Cheshire",
+   "submarket": "Winsford",
+   "max_sqft": 3058.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Design & Build",
+   "tenure": "Leasehold / Freehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/wgt-winsford-gateway-road-six-winsford-industrial-estate-winsford-cheshire-cw7-3qf/"
+  }
+ ],
+ "removed": [
+  {
+   "property_id": "NW-00168",
+   "name": "Indurent Omega 420, Omega Warrington",
+   "postcode": "WA5 3PW",
+   "town": "Warrington",
+   "county": "Merseyside",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 420872.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Under Construction",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/236333-indurent-omega-420-omega-warrington-warrington"
+  },
+  {
+   "property_id": "NW-00161",
+   "name": "Oldham 369, Lydia Becker Way",
+   "postcode": "OL9 9JE",
+   "town": "Oldham",
+   "county": "Greater Manchester",
+   "submarket": "Oldham",
+   "max_sqft": 369251.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/180734-oldham-369-lydia-becker-way-oldham"
+  },
+  {
+   "property_id": "NW-00162",
+   "name": "Stakehill 295, Stakehill Industrial Estate",
+   "postcode": "M24 2SJ",
+   "town": "Manchester",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 294458.0,
+   "size_band": "Over 250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/182598-stakehill-295-stakehill-industrial-estate-manchester"
+  },
+  {
+   "property_id": "NW-00749",
+   "name": "Air 66 & Air 84",
+   "postcode": "L24 1YH",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Speke / Halewood",
+   "max_sqft": 152286.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "Savills"
+   ],
+   "url": "https://search.savills.com/property-detail/gb0458l113979"
+  },
+  {
+   "property_id": "NW-00186",
+   "name": "Unit M1, Heywood Distribution Park",
+   "postcode": "OL10 2TT",
+   "town": "Heywood",
+   "county": "Greater Manchester",
+   "submarket": "Heywood (M62 J19)",
+   "max_sqft": 101243.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/345894-unit-m1-heywood-distribution-park-heywood"
+  },
+  {
+   "property_id": "NW-00091",
+   "name": "Green Lane / Sefton Street, Heywood",
+   "postcode": "",
+   "town": "Heywood",
+   "county": "Greater Manchester",
+   "submarket": "Heywood (M62 J19)",
+   "max_sqft": 70000.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Proposed / Design and Build",
+   "build": "Design & Build",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/green-lane-sefton-street-heywood/"
+  },
+  {
+   "property_id": "NW-00158",
+   "name": "Units 8&9, Lowry Park, Grimshaw Lane",
+   "postcode": "M40 2BA",
+   "town": "Manchester",
+   "county": "Greater Manchester",
+   "submarket": "North Manchester",
+   "max_sqft": 56009.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Available Now",
+   "build": "New Build",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/155172-units-8-9-lowry-park-grimshaw-lane-manchester"
+  },
+  {
+   "property_id": "NW-00094",
+   "name": "Omega Drive, Northbank Industrial Estate, Irlam",
+   "postcode": "",
+   "town": "Irlam",
+   "county": "Greater Manchester",
+   "submarket": "Irlam / Port Salford",
+   "max_sqft": 45000.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/omega-drive-northbank-industrial-estate-irlam/"
+  },
+  {
+   "property_id": "NW-00175",
+   "name": "620 Europa Boulevard",
+   "postcode": "WA5 7TX",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 44351.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a3234,000",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/315113-620-europa-boulevard-warrington"
+  },
+  {
+   "property_id": "NW-00196",
+   "name": "Unit 3 & 4, Rhodes Business Park, Manchester Old Road",
+   "postcode": "M24 4NE",
+   "town": "Middleton",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 30327.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "DTRE"
+   ],
+   "url": "https://dtre.com/search/properties/370994-unit-3-4-rhodes-business-park-manchester-old-road-middleton"
+  },
+  {
+   "property_id": "NW-00087",
+   "name": "540 Olympic Court, Salford, M50 2TP",
+   "postcode": "M50 2TP",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Salford Quays",
+   "max_sqft": 28336.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/540-olympic-court-salford-m50-2tp/"
+  },
+  {
+   "property_id": "NW-00086",
+   "name": "Unit 2, Castlehill Industrial Estate, Horsfield Way, Bredbury, SK6 2SU",
+   "postcode": "SK6 2SU",
+   "town": "Stockport",
+   "county": "Greater Manchester",
+   "submarket": "Stockport",
+   "max_sqft": 26991.0,
+   "size_band": "25,000\u201350,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "\u00a313.00 psf",
+   "agents": [
+    "Williams Sillitoe",
+    "B8 Real Estate"
+   ],
+   "url": "https://www.willsill.co.uk/property/unit-2-castlehill-industrial-estate-horsfield-way-bredbury-sk6-2su/"
+  },
+  {
+   "property_id": "NW-00132",
+   "name": "Unit 6C, Arrow Trading Estate, Corporation Road, Audenshaw, M34 5LR",
+   "postcode": "M34 5LR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 5305.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-6c-arrow-trading-estate-corporation-road-audenshaw-m34-5lr/"
+  },
+  {
+   "property_id": "NW-00103",
+   "name": "Unit 1, Haynes Street, Rochdale, OL12 0UW",
+   "postcode": "OL12 0UW",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Rochdale",
+   "max_sqft": 5120.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-1-haynes-street-rochdale-ol12-0uw/"
+  },
+  {
+   "property_id": "NW-00131",
+   "name": "Unit 6B, Arrow Trading Estate, Corporation Road, Audenshaw, M34 5LR",
+   "postcode": "M34 5LR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 5103.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-6b-arrow-trading-estate-corporation-road-audenshaw-m34-5lr/"
+  },
+  {
+   "property_id": "NW-00738",
+   "name": "Units C4, North Cheshire Trading Estate",
+   "postcode": "CH43 3DU",
+   "town": "",
+   "county": "Merseyside",
+   "submarket": "Wirral",
+   "max_sqft": 5100.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "Rent on application",
+   "agents": [
+    "LM6"
+   ],
+   "url": "https://lm6.co.uk/property/units-c4-north-cheshire-trading-estate-prenton-ch43/6580/"
+  },
+  {
+   "property_id": "NW-00129",
+   "name": "Unit 5E, Arrow Trading Estate, Corporation Road, Audenshaw, M34 5LR",
+   "postcode": "M34 5LR",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 5035.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "On application",
+   "agents": [
+    "BC Real Estate"
+   ],
+   "url": "https://bcrealestate.co.uk/property/unit-5e-arrow-trading-estate-corporation-road-audenshaw-m34-5lr/"
+  },
+  {
+   "property_id": "NW-00504",
+   "name": "Unit 15, Beeston Court, Runcorn, Cheshire",
+   "postcode": "WA7 1SS",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 2725.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-15-beeston-court-runcorn-cheshire/"
+  },
+  {
+   "property_id": "NW-00718",
+   "name": "Units 5 & 6 Hampton Heath Industrial Estate",
+   "postcode": "SY14 8LU",
+   "town": "Malpas",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 2002.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/units-5-6-hampton-heath-industrial-estate-a41-malpas-cheshire-sy14-8lu/"
+  },
+  {
+   "property_id": "NW-00236",
+   "name": "Storage Units 12 & 13 New Russia Hall",
+   "postcode": "CH3 9AH",
+   "town": "Chester",
+   "county": "Cheshire",
+   "submarket": "Cheshire West and Chester",
+   "max_sqft": 220.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/storage-units-12-13-new-russia-hall-bolesworth-gatesheath-chester-cheshire-ch3-9ah/"
+  }
+ ],
+ "new_joint_agents": [
+  {
+   "property_id": "NW-00071",
+   "name": "Unit 31, Stakehill Industrial Estate, Middleton, Greater Manchester",
+   "postcode": "M24 2RW",
+   "town": "Middleton",
+   "county": "Greater Manchester",
+   "submarket": "Middleton / Stakehill",
+   "max_sqft": 69387.0,
+   "size_band": "50,000\u2013100,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing \u2013 Refurbished",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate",
+    "BC Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-5-stakehill-industrial-estate-middleton-greater-manchester/",
+   "added_agents": [
+    "BC Real Estate"
+   ]
+  },
+  {
+   "property_id": "NW-00123",
+   "name": "Unit 4D, Transpennine Trading Estate",
+   "postcode": "OL11 2PX",
+   "town": "Rochdale",
+   "county": "Greater Manchester",
+   "submarket": "Rochdale / Kingsway (M62 J20-21)",
+   "max_sqft": 5348.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a343,400 pa",
+   "agents": [
+    "Indurent (landlord)",
+    "BC Real Estate"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/transpennine-trading-estate/unit-4d/",
+   "added_agents": [
+    "BC Real Estate"
+   ]
+  },
+  {
+   "property_id": "NW-00254",
+   "name": "Unit 14, Jensen Court",
+   "postcode": "WA7 1SQ",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 9683.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a384,726 pa",
+   "agents": [
+    "Indurent (landlord)",
+    "Legat Owen"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/jensen-court/unit-14/",
+   "added_agents": [
+    "Legat Owen"
+   ]
+  }
+ ],
+ "by_county": {
+  "Greater Manchester": 1,
+  "Cheshire": 5,
+  "Merseyside": 1,
+  "Lancashire": 1
+ },
+ "by_agent": {
+  "DTRE": 1,
+  "Legat Owen": 4,
+  "LM6": 1,
+  "B8 Real Estate": 1,
+  "Taylor Weaver": 1
+ },
+ "newly_covered_sources": [],
+ "sources_not_ok": [
+  {
+   "agent": "CBRE",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)"
+  },
+  {
+   "agent": "Colliers",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
+  }
+ ],
+ "total_available": 915,
+ "total_available_sqft": 41540737.0
+}
