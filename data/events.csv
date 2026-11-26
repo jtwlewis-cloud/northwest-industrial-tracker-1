@@ -6,3 +6,6 @@ date,event,source_url,notes
 2026-12-09,FOMC rate decision,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm,
 2026-11-18,UK consumer price inflation (October) - 07:00,https://www.ons.gov.uk/releasecalendar,
 2026-11-24,LondonMetric half-year results,https://www.investegate.co.uk/company/LMP,
+2026-11-26,US markets closed (Thanksgiving) - no US closes or Treasury data for 26 Nov,https://www.nyse.com/markets/hours-calendars,NYSE holiday calendar; bond market closed
+2026-11-27,US markets early close (13:00 ET),https://www.nyse.com/markets/hours-calendars,NYSE holiday calendar
+2026-12-17,BoE MPC decision,https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates,Outside 7-day window; next rate decision
