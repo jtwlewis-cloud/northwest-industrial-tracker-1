@@ -740,6 +740,7 @@ FED_TARGET_LOWER,2026-11-22,3.75,FRED DFEDTARL,https://fred.stlouisfed.org/serie
 FED_TARGET_LOWER,2026-11-23,3.75,FRED DFEDTARL,https://fred.stlouisfed.org/series/DFEDTARL,official,,2026-11-24T06:27:41+00:00,FRED: Federal Reserve target range lower limit
 FED_TARGET_LOWER,2026-11-24,3.75,FRED DFEDTARL,https://fred.stlouisfed.org/series/DFEDTARL,official,,2026-11-25T06:27:14+00:00,FRED: Federal Reserve target range lower limit
 FED_TARGET_LOWER,2026-11-25,3.75,FRED DFEDTARL,https://fred.stlouisfed.org/series/DFEDTARL,official,,2026-11-26T06:27:12+00:00,FRED: Federal Reserve target range lower limit
+FED_TARGET_LOWER,2026-11-26,3.75,FRED DFEDTARL,https://fred.stlouisfed.org/series/DFEDTARL,official,,2026-11-27T06:27:03+00:00,FRED: Federal Reserve target range lower limit
 FED_TARGET_UPPER,2025-09-15,4.5,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-09T12:07:13+00:00,FRED: Federal Reserve target range upper limit
 FED_TARGET_UPPER,2025-09-16,4.5,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-09T12:07:13+00:00,FRED: Federal Reserve target range upper limit
 FED_TARGET_UPPER,2025-09-17,4.5,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-09T12:07:13+00:00,FRED: Federal Reserve target range upper limit
@@ -1177,6 +1178,7 @@ FED_TARGET_UPPER,2026-11-22,4,FRED DFEDTARU,https://fred.stlouisfed.org/series/D
 FED_TARGET_UPPER,2026-11-23,4,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-24T06:27:41+00:00,FRED: Federal Reserve target range upper limit
 FED_TARGET_UPPER,2026-11-24,4,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-25T06:27:14+00:00,FRED: Federal Reserve target range upper limit
 FED_TARGET_UPPER,2026-11-25,4,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-26T06:27:12+00:00,FRED: Federal Reserve target range upper limit
+FED_TARGET_UPPER,2026-11-26,4,FRED DFEDTARU,https://fred.stlouisfed.org/series/DFEDTARU,official,,2026-11-27T06:27:03+00:00,FRED: Federal Reserve target range upper limit
 FX_USD_PER_GBP,2025-09-17,1.3661,FRED DEXUSUK,https://fred.stlouisfed.org/series/DEXUSUK,official,,2026-11-11T21:49:48+00:00,"FRED: US dollars per pound sterling, noon buying rate (H.10)"
 FX_USD_PER_GBP,2025-09-18,1.3552,FRED DEXUSUK,https://fred.stlouisfed.org/series/DEXUSUK,official,,2026-11-11T21:49:48+00:00,"FRED: US dollars per pound sterling, noon buying rate (H.10)"
 FX_USD_PER_GBP,2025-09-19,1.3484,FRED DEXUSUK,https://fred.stlouisfed.org/series/DEXUSUK,official,,2026-11-11T21:49:48+00:00,"FRED: US dollars per pound sterling, noon buying rate (H.10)"
@@ -1775,6 +1777,7 @@ SONIA,2026-11-18,3.984,FRED IUDSOIA,https://fred.stlouisfed.org/series/IUDSOIA,o
 SONIA,2026-11-19,3.9841,FRED IUDSOIA,https://fred.stlouisfed.org/series/IUDSOIA,official,,2026-11-24T06:27:41+00:00,FRED republication of Bank of England SONIA overnight fixing
 SONIA,2026-11-20,3.9837,FRED IUDSOIA,https://fred.stlouisfed.org/series/IUDSOIA,official,,2026-11-25T06:27:14+00:00,FRED republication of Bank of England SONIA overnight fixing
 SONIA,2026-11-23,3.9847,FRED IUDSOIA,https://fred.stlouisfed.org/series/IUDSOIA,official,,2026-11-26T06:27:12+00:00,FRED republication of Bank of England SONIA overnight fixing
+SONIA,2026-11-24,3.9861,FRED IUDSOIA,https://fred.stlouisfed.org/series/IUDSOIA,official,,2026-11-27T06:27:03+00:00,FRED republication of Bank of England SONIA overnight fixing
 SPREAD_KF_CITY_PRIME,2026-09-08,15.2,Derived: property yield midpoint less UK 10Y,https://www.knightfrank.co.uk/site-assets/research/report-pdfs/investment-yield-guide/09.-kf-final-september-2026-prime-yield-guide-1.pdf,derived,,,Knight Frank Prime Yield Guide Sep 2026 vs Bank of England Database (IADB)
 SPREAD_KF_CITY_PRIME,2026-09-09,5.8,Derived: property yield midpoint less UK 10Y,https://www.knightfrank.co.uk/site-assets/research/report-pdfs/investment-yield-guide/09.-kf-final-september-2026-prime-yield-guide-1.pdf,derived,,,Knight Frank Prime Yield Guide Sep 2026 vs Bank of England Database (IADB)
 SPREAD_KF_CITY_PRIME,2026-09-10,-6.9,Derived: property yield midpoint less UK 10Y,https://www.knightfrank.co.uk/site-assets/research/report-pdfs/investment-yield-guide/09.-kf-final-september-2026-prime-yield-guide-1.pdf,derived,,,Knight Frank Prime Yield Guide Sep 2026 vs Bank of England Database (IADB)
