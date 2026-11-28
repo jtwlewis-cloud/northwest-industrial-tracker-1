@@ -1,0 +1,159 @@
+{
+ "sweep_date": "2026-11-28",
+ "sweep_time": "05:08",
+ "compared_with": "2026-11-27 05:08",
+ "run_id": 18,
+ "baseline_run_id": 17,
+ "new_count": 3,
+ "new_sqft": 36044.0,
+ "returned_count": 1,
+ "removed_count": 1,
+ "removed_sqft": 10746.0,
+ "new_existing_sqft": 36044.0,
+ "new_pipeline_sqft": 143000.0,
+ "new": [
+  {
+   "property_id": "NW-01086",
+   "name": "Unit 6, Riverview Business Park, Bromborough, Merseyside",
+   "postcode": "CH62 3RR",
+   "town": "Bromborough",
+   "county": "Merseyside",
+   "submarket": "Bromborough / Wirral",
+   "max_sqft": 18500.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-6-riverview-business-park-bromborough-merseyside/"
+  },
+  {
+   "property_id": "NW-01085",
+   "name": "Unit 3 Taurus Park, Europa Boulevard, Warrington, Cheshire",
+   "postcode": "WA5 7ZT",
+   "town": "Warrington",
+   "county": "Cheshire",
+   "submarket": "Warrington West (Omega / M62 J8)",
+   "max_sqft": 16214.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Availability Unconfirmed",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "B8 Real Estate"
+   ],
+   "url": "https://www.b8re.com/properties/unit-3-taurus-park-europa-boulevard-warrington-cheshire/"
+  },
+  {
+   "property_id": "NW-01087",
+   "name": "Unit 3 Kenyon Court",
+   "postcode": "BB9 5TF",
+   "town": "Kenyon Road",
+   "county": "Lancashire",
+   "submarket": "Nelson / Pendle",
+   "max_sqft": 1330.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Freehold",
+   "terms": "\u00a3195,000 for the Freehold",
+   "agents": [
+    "Taylor Weaver"
+   ],
+   "url": "https://www.taylorweaver.co.uk/property/details/5999/unit-3-kenyon-court-kenyon-road-nelson-lancashire-bb9-5tf-industrial"
+  }
+ ],
+ "returned": [
+  {
+   "property_id": "NW-00217",
+   "name": "Crewe 145 Indurent",
+   "postcode": "CW2 5PG",
+   "town": "Crewe",
+   "county": "Cheshire",
+   "submarket": "Crewe",
+   "max_sqft": 143000.0,
+   "size_band": "100,000\u2013250,000 sq ft",
+   "availability": "Available at a Future Date",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "",
+   "agents": [
+    "Legat Owen"
+   ],
+   "url": "https://legatowen.co.uk/property/crewe-145-indurent-m6-radway-green-road-crewe-cheshire-cw2-5pg/"
+  }
+ ],
+ "removed": [
+  {
+   "property_id": "NW-00632",
+   "name": "Manchester Road, Ashton-Under-Lyne, Greater Manchester, OL7 0DA",
+   "postcode": "OL7 0DA",
+   "town": "",
+   "county": "Greater Manchester",
+   "submarket": "Tameside",
+   "max_sqft": 10746.0,
+   "size_band": "10,000\u201325,000 sq ft",
+   "availability": "Under Offer",
+   "build": "Existing",
+   "tenure": "Leasehold / Freehold",
+   "terms": "On application",
+   "agents": [
+    "CPP (Commercial Property Partners)"
+   ],
+   "url": "https://www.commercialpropertypartners.co.uk/properties/manchester-road-ashton-under-lyne-greater-manchester"
+  }
+ ],
+ "new_joint_agents": [
+  {
+   "property_id": "NW-00276",
+   "name": "Unit 5, Jensen Court",
+   "postcode": "WA7 1SQ",
+   "town": "Runcorn",
+   "county": "Cheshire",
+   "submarket": "Runcorn",
+   "max_sqft": 6054.0,
+   "size_band": "Under 10,000 sq ft",
+   "availability": "Available Now",
+   "build": "Existing",
+   "tenure": "Leasehold",
+   "terms": "\u00a351,459 pa",
+   "agents": [
+    "Indurent (landlord)",
+    "Legat Owen"
+   ],
+   "url": "https://www.indurent.com/industrial-estates/jensen-court/unit-5/",
+   "added_agents": [
+    "Legat Owen"
+   ]
+  }
+ ],
+ "by_county": {
+  "Cheshire": 2,
+  "Merseyside": 1,
+  "Lancashire": 1
+ },
+ "by_agent": {
+  "B8 Real Estate": 2,
+  "Taylor Weaver": 1,
+  "Legat Owen": 1
+ },
+ "newly_covered_sources": [],
+ "sources_not_ok": [
+  {
+   "agent": "CBRE",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.cbre.co.uk returned a bot-protection challenge (HTTP 403)"
+  },
+  {
+   "agent": "Colliers",
+   "status": "Blocked",
+   "message": "Website blocked automated access \u2013 not bypassed: www.colliers.com returned a bot-protection challenge (HTTP 403)"
+  }
+ ],
+ "total_available": 925,
+ "total_available_sqft": 41702355.0
+}
